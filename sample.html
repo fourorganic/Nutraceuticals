@@ -1,0 +1,1874 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4ourmidable – Curcumina Líquida para Avicultura</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800;900&family=DM+Serif+Display:ital@0;1&display=swap"
+        rel="stylesheet" />
+
+    <style>
+        /* ── TOKENS ── */
+        :root {
+            --green-900: #0d2b12;
+            --green-800: #1a4220;
+            --green-700: #1f5228;
+            --green-600: #2d7a3a;
+            --green-400: #4aab59;
+            --lime: #a8d840;
+            --orange: #e07b2a;
+            --orange-lt: #f5a84b;
+            --gold: #f5c842;
+            --cream: #f9f6ee;
+            --text-dark: #0d1a0f;
+            --text-mid: #3a5040;
+        }
+
+        /* ── BASE ── */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Manrope', sans-serif;
+            background: var(--cream);
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'DM Serif Display', serif;
+        }
+
+        /* ── NAVBAR ── */
+        .navbar-brand .logo-text {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 900;
+            font-size: 1.5rem;
+            color: #fff;
+            letter-spacing: -1px;
+        }
+
+        .navbar-brand .logo-text span {
+            color: var(--orange);
+        }
+
+        .navbar-brand small {
+            display: block;
+            font-size: .6rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            color: var(--lime);
+            text-transform: uppercase;
+        }
+
+        .navbar {
+            background: var(--green-900);
+            border-bottom: 2px solid var(--green-700);
+        }
+
+        .navbar .nav-link {
+            color: rgba(255, 255, 255, .75) !important;
+            font-weight: 600;
+            font-size: .85rem;
+            letter-spacing: .5px;
+        }
+
+        .navbar .nav-link:hover {
+            color: var(--lime) !important;
+        }
+
+        .btn-nav-cta {
+            background: var(--lime);
+            color: var(--green-900) !important;
+            font-weight: 800;
+            border-radius: 50px;
+            padding: .4rem 1.2rem;
+            font-size: .85rem;
+            transition: background .2s;
+        }
+
+        .btn-nav-cta:hover {
+            background: var(--orange-lt);
+        }
+
+        /* ── HERO ── */
+        #hero {
+            background: linear-gradient(135deg, var(--green-900) 55%, var(--green-700) 100%);
+            min-height: 92vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 60% 80% at 70% 50%, rgba(160, 210, 60, .12) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(168, 216, 64, .18);
+            border: 1px solid var(--lime);
+            color: var(--lime);
+            font-size: .75rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: .35rem 1rem;
+            border-radius: 50px;
+            margin-bottom: 1.2rem;
+        }
+
+        #hero h1 {
+            font-size: clamp(2.6rem, 5.5vw, 4.5rem);
+            color: #fff;
+            line-height: 1.08;
+            margin-bottom: 1.2rem;
+        }
+
+        #hero h1 em {
+            color: var(--orange-lt);
+            font-style: normal;
+        }
+
+        #hero p.lead {
+            color: rgba(255, 255, 255, .75);
+            font-size: 1.05rem;
+            max-width: 520px;
+            line-height: 1.7;
+        }
+
+        .hero-kpis {
+            display: flex;
+            align-items: center;
+            gap: 0;
+            margin: 2rem 0;
+            padding: 0;
+            width: fit-content;
+        }
+
+        .hero-kpi {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: .4rem 1.4rem;
+            gap: .4rem;
+        }
+
+        .kpi-icon {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+        }
+
+        .hero-kpi .lbl {
+            font-size: .72rem;
+            color: rgba(255, 255, 255, .8);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .5px;
+            line-height: 1.3;
+        }
+
+        .kpi-sep {
+            width: 1px;
+            height: 56px;
+            background: rgba(255, 255, 255, .15);
+            flex-shrink: 0;
+        }
+
+        .btn-hero-primary {
+            background: var(--lime);
+            color: var(--green-900);
+            font-weight: 800;
+            font-size: 1rem;
+            padding: .85rem 2rem;
+            border-radius: 50px;
+            border: none;
+            transition: all .2s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+        }
+
+        .btn-hero-primary:hover {
+            background: var(--orange-lt);
+            transform: translateY(-2px);
+        }
+
+        .btn-hero-outline {
+            border: 2px solid rgba(255, 255, 255, .3);
+            color: #fff;
+            font-weight: 700;
+            font-size: 1rem;
+            padding: .85rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            transition: all .2s;
+        }
+
+        .btn-hero-outline:hover {
+            border-color: var(--lime);
+            color: var(--lime);
+        }
+
+        .hero-img-wrap {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-glow {
+            position: absolute;
+            width: 480px;
+            height: 480px;
+            background: radial-gradient(circle, rgba(168, 216, 64, .25) 0%, transparent 70%);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .hero-bottle-placeholder {
+            width: 280px;
+            height: 380px;
+            background: linear-gradient(160deg, var(--green-700), var(--green-800));
+            border-radius: 60px;
+            border: 2px solid rgba(168, 216, 64, .3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, .4);
+            font-size: .8rem;
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, .5);
+        }
+
+        .hero-bottle-placeholder i {
+            font-size: 3rem;
+            margin-bottom: .5rem;
+            color: var(--orange);
+        }
+
+        /* ── STATS BAR ── */
+        .stats-bar {
+            background: #fff;
+            border-top: 4px solid var(--lime);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, .08);
+        }
+
+        .stat-item {
+            padding: 1.5rem 1rem;
+            text-align: center;
+        }
+
+        .stat-item .num {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2.2rem;
+            color: var(--green-800);
+            display: block;
+            line-height: 1;
+        }
+
+        .stat-item .num.accent {
+            color: var(--orange);
+        }
+
+        .stat-item .desc {
+            font-size: .78rem;
+            color: var(--text-mid);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: .5px;
+            margin-top: .25rem;
+        }
+
+        .stat-divider {
+            width: 1px;
+            background: #e5e5e5;
+            margin: 1.5rem 0;
+        }
+
+        /* ── SECTION GENERAL ── */
+        section {
+            padding: 90px 0;
+        }
+
+        .section-tag {
+            display: inline-block;
+            font-size: .72rem;
+            font-weight: 800;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--orange);
+            margin-bottom: .75rem;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 3.5vw, 2.8rem);
+            color: var(--green-900);
+            line-height: 1.15;
+            margin-bottom: 1rem;
+        }
+
+        .section-title em {
+            color: var(--green-600);
+            font-style: normal;
+        }
+
+        /* ── BENEFICIOS ── */
+        #beneficios {
+            background: var(--cream);
+        }
+
+        .benefit-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 2rem;
+            height: 100%;
+            border: 1px solid #e8edea;
+            transition: all .3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .benefit-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            border-radius: 20px 20px 0 0;
+        }
+
+        .benefit-card.green::before {
+            background: var(--green-600);
+        }
+
+        .benefit-card.orange::before {
+            background: var(--orange);
+        }
+
+        .benefit-card.lime::before {
+            background: var(--lime);
+        }
+
+        .benefit-card.gold::before {
+            background: var(--gold);
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, .10);
+        }
+
+        .benefit-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .benefit-icon.green {
+            background: rgba(45, 122, 58, .12);
+            color: var(--green-600);
+        }
+
+        .benefit-icon.orange {
+            background: rgba(224, 123, 42, .12);
+            color: var(--orange);
+        }
+
+        .benefit-icon.lime {
+            background: rgba(168, 216, 64, .18);
+            color: #5a8a00;
+        }
+
+        .benefit-icon.gold {
+            background: rgba(245, 200, 66, .18);
+            color: #b08800;
+        }
+
+        .benefit-card h4 {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 800;
+            font-size: 1rem;
+            margin-bottom: .5rem;
+        }
+
+        .benefit-metric {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2.2rem;
+            line-height: 1;
+            margin-bottom: .3rem;
+        }
+
+        .benefit-metric.green {
+            color: var(--green-600);
+        }
+
+        .benefit-metric.orange {
+            color: var(--orange);
+        }
+
+        .benefit-metric.lime {
+            color: #5a8a00;
+        }
+
+        .benefit-metric.gold {
+            color: #b08800;
+        }
+
+        .benefit-card p {
+            font-size: .88rem;
+            color: var(--text-mid);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* ── CÓMO FUNCIONA ── */
+        #aplicacion {
+            background: var(--green-900);
+        }
+
+        #aplicacion .section-tag {
+            color: var(--lime);
+        }
+
+        #aplicacion .section-title {
+            color: #fff;
+        }
+
+        #aplicacion .section-title em {
+            color: var(--orange-lt);
+        }
+
+        #aplicacion p {
+            color: rgba(255, 255, 255, .7);
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 2.5rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: .75rem;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--lime), var(--orange));
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2.5rem;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -2.5rem;
+            top: .15rem;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background: var(--lime);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: .7rem;
+            font-weight: 900;
+            color: var(--green-900);
+            border: 3px solid var(--green-900);
+            z-index: 2;
+        }
+
+        .timeline-item h5 {
+            color: var(--lime);
+            font-weight: 800;
+            font-size: .9rem;
+            margin-bottom: .3rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .timeline-item p {
+            color: rgba(255, 255, 255, .7);
+            font-size: .9rem;
+            margin: 0;
+        }
+
+        .dosage-card {
+            background: rgba(255, 255, 255, .06);
+            border: 1px solid rgba(168, 216, 64, .25);
+            border-radius: 20px;
+            padding: 2rem;
+        }
+
+        .dosage-row {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .dosage-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .dosage-pill {
+            background: var(--green-700);
+            border-radius: 50px;
+            padding: .4rem 1rem;
+            font-size: .8rem;
+            font-weight: 700;
+            color: var(--lime);
+            white-space: nowrap;
+            min-width: 120px;
+            text-align: center;
+        }
+
+        .dosage-row p {
+            color: rgba(255, 255, 255, .7);
+            font-size: .88rem;
+            margin: 0;
+        }
+
+        /* ── RESULTADOS ── */
+        #resultados {
+            background: #fff;
+        }
+
+        .compare-wrapper {
+            background: var(--green-900);
+            border-radius: 24px;
+            overflow: hidden;
+        }
+
+        .compare-col {
+            padding: 2.5rem;
+        }
+
+        .compare-col.with {
+            background: var(--green-800);
+        }
+
+        .compare-col.without {
+            background: rgba(0, 0, 0, .2);
+        }
+
+        .compare-col h4 {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 900;
+            font-size: 1.05rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+            padding-bottom: .75rem;
+            border-bottom: 2px solid;
+        }
+
+        .compare-col.with h4 {
+            color: var(--lime);
+            border-color: var(--lime);
+        }
+
+        .compare-col.without h4 {
+            color: rgba(255, 255, 255, .4);
+            border-color: rgba(255, 255, 255, .15);
+        }
+
+        .compare-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: .75rem;
+        }
+
+        .compare-row .label {
+            font-size: .83rem;
+            color: rgba(255, 255, 255, .6);
+            font-weight: 600;
+        }
+
+        .compare-row .value {
+            font-weight: 800;
+            font-size: .95rem;
+        }
+
+        .compare-col.with .compare-row .value {
+            color: #fff;
+        }
+
+        .compare-col.without .compare-row .value {
+            color: rgba(255, 255, 255, .5);
+        }
+
+        .compare-highlight {
+            background: rgba(168, 216, 64, .12);
+            border: 1px solid rgba(168, 216, 64, .3);
+            border-radius: 12px;
+            padding: .8rem 1.2rem;
+            margin-top: 1.2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .compare-highlight .ch-label {
+            font-size: .8rem;
+            color: rgba(255, 255, 255, .6);
+            font-weight: 600;
+        }
+
+        .compare-highlight .ch-value {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.8rem;
+            color: var(--lime);
+        }
+
+        .benefit-banner {
+            background: linear-gradient(135deg, var(--green-700), var(--green-900));
+            border-radius: 20px;
+            padding: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .benefit-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            font-size: .88rem;
+            font-weight: 700;
+            color: rgba(255, 255, 255, .85);
+            margin-bottom: .5rem;
+        }
+
+        .benefit-tag i {
+            color: var(--lime);
+            font-size: 1rem;
+        }
+
+        .benefit-tag.gold-tag i {
+            color: var(--gold);
+        }
+
+        /* ── ROI / CALCULADORA ── */
+        #roi {
+            background: var(--cream);
+        }
+
+        .roi-card-main {
+            background: var(--green-900);
+            border-radius: 24px;
+            padding: 3rem;
+            color: #fff;
+        }
+
+        .roi-number {
+            font-family: 'DM Serif Display', serif;
+            font-size: 5rem;
+            color: var(--lime);
+            line-height: 1;
+            display: block;
+        }
+
+        .roi-sub {
+            color: rgba(255, 255, 255, .6);
+            font-size: .9rem;
+            margin-top: .3rem;
+        }
+
+        .roi-steps {
+            margin-top: 2rem;
+        }
+
+        .roi-step {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.2rem;
+            align-items: flex-start;
+        }
+
+        .roi-step-num {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: rgba(168, 216, 64, .2);
+            border: 2px solid var(--lime);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: .8rem;
+            color: var(--lime);
+            flex-shrink: 0;
+        }
+
+        .roi-step div .step-label {
+            font-size: .75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--lime);
+            font-weight: 700;
+        }
+
+        .roi-step div p {
+            font-size: .88rem;
+            color: rgba(255, 255, 255, .7);
+            margin: 0;
+        }
+
+        /* Simple calculator */
+        .calc-card {
+            background: #fff;
+            border-radius: 24px;
+            padding: 2.5rem;
+            border: 2px solid #e8edea;
+            height: 100%;
+        }
+
+        .calc-card h4 {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 800;
+            color: var(--green-900);
+            margin-bottom: 1.5rem;
+        }
+
+        .calc-label {
+            font-size: .82rem;
+            font-weight: 700;
+            color: var(--text-mid);
+            text-transform: uppercase;
+            letter-spacing: .5px;
+            margin-bottom: .4rem;
+        }
+
+        .calc-input {
+            width: 100%;
+            border: 2px solid #dde5de;
+            border-radius: 12px;
+            padding: .7rem 1rem;
+            font-family: 'Manrope', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--green-900);
+            outline: none;
+            transition: border-color .2s;
+            background: #f4f8f4;
+        }
+
+        .calc-input:focus {
+            border-color: var(--green-600);
+        }
+
+        .calc-result {
+            background: var(--green-900);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+            text-align: center;
+        }
+
+        .calc-result .result-label {
+            font-size: .75rem;
+            color: var(--lime);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+        }
+
+        .calc-result .result-num {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2.8rem;
+            color: #fff;
+            line-height: 1.1;
+            display: block;
+            margin: .3rem 0;
+        }
+
+        .calc-result .result-sub {
+            font-size: .8rem;
+            color: rgba(255, 255, 255, .5);
+        }
+
+        .btn-calc {
+            width: 100%;
+            background: var(--lime);
+            color: var(--green-900);
+            font-weight: 800;
+            font-size: 1rem;
+            border: none;
+            padding: .9rem;
+            border-radius: 12px;
+            margin-top: 1rem;
+            cursor: pointer;
+            transition: background .2s;
+        }
+
+        .btn-calc:hover {
+            background: var(--orange-lt);
+        }
+
+        /* ── TECHNOLOGY ── */
+        #tecnologia {
+            background: #fff;
+        }
+
+        .tech-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            background: rgba(45, 122, 58, .08);
+            border: 1px solid rgba(45, 122, 58, .2);
+            border-radius: 50px;
+            padding: .5rem 1.2rem;
+            font-size: .82rem;
+            font-weight: 700;
+            color: var(--green-700);
+            margin: .3rem;
+        }
+
+        .tech-pill i {
+            color: var(--green-600);
+        }
+
+        .product-specs {
+            background: var(--green-900);
+            border-radius: 20px;
+            padding: 2rem;
+            color: #fff;
+        }
+
+        .spec-row {
+            display: flex;
+            justify-content: space-between;
+            padding: .75rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, .08);
+            font-size: .88rem;
+        }
+
+        .spec-row:last-child {
+            border-bottom: none;
+        }
+
+        .spec-row .sk {
+            color: rgba(255, 255, 255, .5);
+            font-weight: 600;
+        }
+
+        .spec-row .sv {
+            color: #fff;
+            font-weight: 700;
+            text-align: right;
+        }
+
+        /* ── CTA FINAL ── */
+        #contacto {
+            background: linear-gradient(135deg, var(--green-900) 0%, var(--green-800) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        #contacto::before {
+            content: '';
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(168, 216, 64, .1) 0%, transparent 70%);
+            top: -200px;
+            right: -200px;
+            pointer-events: none;
+        }
+
+        #contacto .section-title {
+            color: #fff;
+        }
+
+        #contacto p {
+            color: rgba(255, 255, 255, .7);
+        }
+
+        .contact-form {
+            background: rgba(255, 255, 255, .06);
+            border: 1px solid rgba(255, 255, 255, .12);
+            border-radius: 24px;
+            padding: 2.5rem;
+        }
+
+        .contact-form input,
+        .contact-form select,
+        .contact-form textarea {
+            background: rgba(255, 255, 255, .08);
+            border: 1px solid rgba(255, 255, 255, .15);
+            border-radius: 12px;
+            color: #fff;
+            padding: .8rem 1.1rem;
+            width: 100%;
+            margin-bottom: 1rem;
+            font-family: 'Manrope', sans-serif;
+            font-size: .9rem;
+            outline: none;
+            transition: border-color .2s;
+        }
+
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: rgba(255, 255, 255, .35);
+        }
+
+        .contact-form input:focus,
+        .contact-form select:focus,
+        .contact-form textarea:focus {
+            border-color: var(--lime);
+        }
+
+        .contact-form select option {
+            background: var(--green-900);
+            color: #fff;
+        }
+
+        .contact-form textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .btn-submit {
+            width: 100%;
+            background: var(--lime);
+            color: var(--green-900);
+            font-weight: 800;
+            font-size: 1.05rem;
+            border: none;
+            padding: 1rem;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all .2s;
+        }
+
+        .btn-submit:hover {
+            background: var(--orange-lt);
+            transform: translateY(-2px);
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: .75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .trust-badge i {
+            color: var(--lime);
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .trust-badge p {
+            color: rgba(255, 255, 255, .7);
+            font-size: .88rem;
+            margin: 0;
+        }
+
+        .trust-badge strong {
+            color: #fff;
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            background: #060f07;
+            color: rgba(255, 255, 255, .4);
+            padding: 2rem 0;
+            font-size: .82rem;
+        }
+
+        footer a {
+            color: rgba(255, 255, 255, .4);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: var(--lime);
+        }
+
+        /* ── CHART SVG ── */
+        .chart-container {
+            background: #fff;
+            border-radius: 20px;
+            padding: 1.5rem;
+            border: 1px solid #e8edea;
+        }
+
+        /* ── ANIMATIONS ── */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-up {
+            animation: fadeUp .7s ease both;
+        }
+
+        .delay-1 {
+            animation-delay: .1s;
+        }
+
+        .delay-2 {
+            animation-delay: .2s;
+        }
+
+        .delay-3 {
+            animation-delay: .3s;
+        }
+
+        .delay-4 {
+            animation-delay: .4s;
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 768px) {
+            section {
+                padding: 60px 0;
+            }
+
+            #hero {
+                min-height: auto;
+                padding: 100px 0 60px;
+            }
+
+            .hero-kpis {
+                gap: .75rem;
+            }
+
+            .hero-kpi .val {
+                font-size: 1.5rem;
+            }
+
+            .roi-card-main {
+                padding: 2rem;
+            }
+
+            .roi-number {
+                font-size: 3.5rem;
+            }
+
+            .compare-col.with,
+            .compare-col.without {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ═══════════════════ NAVBAR ═══════════════════ -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                <div>
+                    <div class="logo-text"><span>4</span>our<span
+                            style="font-size:.9em;color:rgba(255,255,255,.7)">midable</span></div>
+                    <small>Nutraceutical Sciences</small>
+                </div>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <i class="bi bi-list text-white fs-4"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1 gap-2 py-3 py-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#beneficios">Beneficios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#resultados">Resultados</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#aplicacion">Aplicación</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#roi">Retorno de inversión</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="#contacto" class="btn-nav-cta nav-link">Solicitar asesoría</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ═══════════════════ HERO ═══════════════════ -->
+    <section id="hero">
+        <div class="container">
+            <div class="row align-items-center gy-5">
+
+                <div class="col-lg-7">
+                    <div class="hero-badge fade-up">Suplemento inmunomodulador natural</div>
+                    <h1 class="fade-up delay-1">
+                        Curcumina líquida para <em>maximizar la rentabilidad</em> en avicultura
+                    </h1>
+                    <p class="lead fade-up delay-2">
+                        Tecnología propietaria de extracción en frío que preserva todos los compuestos orgánicos
+                        benéficos para fortalecer el sistema inmune de sus aves desde los primeros días de vida.
+                    </p>
+
+                    <div class="hero-kpis fade-up delay-3">
+                        <div class="hero-kpi">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjA2IiB6b29tQW5kUGFuPSJtYWduaWZ5IiB2aWV3Qm94PSIwIDAgMTU0LjUgMTU5Ljc0OTk5NSIgaGVpZ2h0PSIyMTMiIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaWRZTWlkIG1lZXQiIHZlcnNpb249IjEuMCI+PGRlZnM+PGNsaXBQYXRoIGlkPSIwMDUyOTI2Yjc3Ij48cGF0aCBkPSJNIDQgMC4xMzI4MTIgTCAxNDkgMC4xMzI4MTIgTCAxNDkgMTU5IEwgNCAxNTkgWiBNIDQgMC4xMzI4MTIgIiBjbGlwLXJ1bGU9Im5vbnplcm8iLz48L2NsaXBQYXRoPjxjbGlwUGF0aCBpZD0iZjg3YzBkYjA1ZiI+PHBhdGggZD0iTSAxIDAuMTMyODEyIEwgMTQ0LjU1ODU5NCAwLjEzMjgxMiBMIDE0NC41NTg1OTQgMTU4LjYyNSBMIDEgMTU4LjYyNSBaIE0gMSAwLjEzMjgxMiAiIGNsaXAtcnVsZT0ibm9uemVybyIvPjwvY2xpcFBhdGg+PGNsaXBQYXRoIGlkPSJiNDRhODViOTEzIj48cGF0aCBkPSJNIDM0IDM4IEwgMTEyIDM4IEwgMTEyIDExNiBMIDM0IDExNiBaIE0gMzQgMzggIiBjbGlwLXJ1bGU9Im5vbnplcm8iLz48L2NsaXBQYXRoPjxjbGlwUGF0aCBpZD0iNTZjOGU2NTJmZCI+PHBhdGggZD0iTSA3Mi44MTY0MDYgMC4xMzI4MTIgTCAxNDkuNjA1NDY5IDc2LjkyMTg3NSBMIDcyLjgxNjQwNiAxNTMuNzEwOTM4IEwgLTMuOTcyNjU2IDc2LjkyMTg3NSBaIE0gNzIuODE2NDA2IDAuMTMyODEyICIgY2xpcC1ydWxlPSJub256ZXJvIi8+PC9jbGlwUGF0aD48Y2xpcFBhdGggaWQ9IjAxNzNiMDkwNTgiPjxwYXRoIGQ9Ik0gNzIuODE2NDA2IDAuMTMyODEyIEwgMTQ5LjYwNTQ2OSA3Ni45MjE4NzUgTCA3Mi44MTY0MDYgMTUzLjcxMDkzOCBMIC0zLjk3MjY1NiA3Ni45MjE4NzUgWiBNIDcyLjgxNjQwNiAwLjEzMjgxMiAiIGNsaXAtcnVsZT0ibm9uemVybyIvPjwvY2xpcFBhdGg+PGNsaXBQYXRoIGlkPSI0YzkxMDAyZTM2Ij48cmVjdCB4PSIwIiB3aWR0aD0iMTQ1IiB5PSIwIiBoZWlnaHQ9IjE1OSIvPjwvY2xpcFBhdGg+PC9kZWZzPjxnIGNsaXAtcGF0aD0idXJsKCMwMDUyOTI2Yjc3KSI+PGcgdHJhbnNmb3JtPSJtYXRyaXgoMSwgMCwgMCwgMSwgNCwgMC4wMDAwMDAwMDAwMDAwMDg3NDMpIj48ZyBjbGlwLXBhdGg9InVybCgjNGM5MTAwMmUzNikiPjxnIGNsaXAtcGF0aD0idXJsKCNmODdjMGRiMDVmKSI+PHBhdGggZmlsbD0iI2FlZTUwMCIgZD0iTSA3Mi44NjMyODEgMTU4LjU4NTkzOCBMIDcyLjIzMDQ2OSAxNTguMzk4NDM4IEMgNTIuNDU3MDMxIDE1Mi4yMTg3NSAzNi41MjM0MzggMTQxLjIyMjY1NiAyNC43Njk1MzEgMTI1LjczMDQ2OSBDIDE1LjQyMTg3NSAxMTMuMzc1IDguNzM0Mzc1IDk4LjEzNjcxOSA0LjkzMzU5NCA4MC40ODgyODEgQyAtMS41MjczNDQgNTAuNTQ2ODc1IDIuNDI5Njg4IDI0LjM0Mzc1IDIuNjIxMDk0IDIzLjIzNDM3NSBMIDIuODEyNSAyMS45Mzc1IEwgNzIuODMyMDMxIDAuMTcxODc1IEwgMTQyLjg1MTU2MiAyMS45Mzc1IEwgMTQzLjA0Mjk2OSAyMy4yMzQzNzUgQyAxNDMuMTk5MjE5IDI0LjM0Mzc1IDE0Ny4xNjAxNTYgNTAuNTQ2ODc1IDE0MC43MjY1NjIgODAuNDg4MjgxIEMgMTM2LjkyNTc4MSA5OC4xMzY3MTkgMTMwLjI0MjE4OCAxMTMuMzc1IDEyMC44OTQ1MzEgMTI1LjczMDQ2OSBDIDEwOS4xNzE4NzUgMTQxLjIyMjY1NiA5My4yMDMxMjUgMTUyLjIxODc1IDczLjQzMzU5NCAxNTguMzk4NDM4IFogTSA2LjU4MjAzMSAyNS4xMzY3MTkgQyA1Ljg1MTU2MiAzMC43NzczNDQgMy41MDc4MTIgNTQuMTYwMTU2IDkuMDU0Njg4IDc5LjcyNjU2MiBDIDEyLjcyNjU2MiA5Ni43NzM0MzggMTkuMTYwMTU2IDExMS40MTAxNTYgMjguMTU2MjUgMTIzLjI2MTcxOSBDIDM5LjIxNDg0NCAxMzcuODY3MTg4IDU0LjI2NTYyNSAxNDguMjg5MDYyIDcyLjg2MzI4MSAxNTQuMjE0ODQ0IEMgOTEuNDkyMTg4IDE0OC4yNTc4MTIgMTA2LjU0Mjk2OSAxMzcuODM1OTM4IDExNy42MDE1NjIgMTIzLjE5NTMxMiBDIDEyNi41OTc2NTYgMTExLjMxNjQwNiAxMzIuOTk2MDk0IDk2LjY0NDUzMSAxMzYuNjcxODc1IDc5LjYwMTU2MiBDIDE0Mi4xODc1IDU0LjA2MjUgMTM5LjgzOTg0NCAzMC43NDYwOTQgMTM5LjExMzI4MSAyNS4xMzY3MTkgTCA3Mi44MzIwMzEgNC41NDI5NjkgWiBNIDYuNTgyMDMxIDI1LjEzNjcxOSAiIGZpbGwtb3BhY2l0eT0iMSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PC9nPjxnIGNsaXAtcGF0aD0idXJsKCNiNDRhODViOTEzKSI+PGcgY2xpcC1wYXRoPSJ1cmwoIzU2YzhlNjUyZmQpIj48ZyBjbGlwLXBhdGg9InVybCgjMDE3M2IwOTA1OCkiPjxwYXRoIGZpbGw9IiNhZWU1MDAiIGQ9Ik0gNzcuNjIxMDk0IDgxLjc3NzM0NCBMIDEwNi40MzM1OTQgODEuNzc3MzQ0IEMgMTA5LjA4MjAzMSA4MS43NzczNDQgMTExLjIzODI4MSA3OS42Mjg5MDYgMTExLjIzODI4MSA3Ni45NzY1NjIgQyAxMTEuMjM4MjgxIDc0LjMyODEyNSAxMDkuMDg1OTM4IDcyLjE3MTg3NSAxMDYuNDMzNTk0IDcyLjE3MTg3NSBMIDc3LjYyMTA5NCA3Mi4xNzE4NzUgTCA3Ny42MjEwOTQgNDMuMzYzMjgxIEMgNzcuNjIxMDk0IDQwLjcxMDkzOCA3NS40Njg3NSAzOC41NTQ2ODggNzIuODE2NDA2IDM4LjU1NDY4OCBDIDcwLjE3MTg3NSAzOC41NTQ2ODggNjguMDE1NjI1IDQwLjcwNzAzMSA2OC4wMTU2MjUgNDMuMzYzMjgxIEwgNjguMDE1NjI1IDcyLjE3MTg3NSBMIDM5LjIwMzEyNSA3Mi4xNzE4NzUgQyAzNi41NTA3ODEgNzIuMTcxODc1IDM0LjM5ODQzOCA3NC4zMjQyMTkgMzQuMzk4NDM4IDc2Ljk3NjU2MiBDIDM0LjM5ODQzOCA3OS42MjUgMzYuNTQ2ODc1IDgxLjc3NzM0NCAzOS4yMDMxMjUgODEuNzc3MzQ0IEwgNjguMDE1NjI1IDgxLjc3NzM0NCBMIDY4LjAxNTYyNSAxMTAuNTg5ODQ0IEMgNjguMDE1NjI1IDExMy4yNDIxODggNzAuMTY0MDYyIDExNS4zOTg0MzggNzIuODE2NDA2IDExNS4zOTg0MzggQyA3NS40NjQ4NDQgMTE1LjM5ODQzOCA3Ny42MjEwOTQgMTEzLjI0NjA5NCA3Ny42MjEwOTQgMTEwLjU4OTg0NCBaIE0gNzcuNjIxMDk0IDgxLjc3NzM0NCAiIGZpbGwtb3BhY2l0eT0iMSIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9nPjwvZz48L2c+PC9nPjwvZz48L2c+PC9zdmc+"
+                                alt="Menor Mortalidad" class="kpi-icon">
+                            <div class="lbl">Menor<br>mortalidad</div>
+                        </div>
+                        <div class="kpi-sep"></div>
+                        <div class="hero-kpi">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTU3IiB6b29tQW5kUGFuPSJtYWduaWZ5IiB2aWV3Qm94PSIwIDAgMTE3Ljc1IDE1OS43NDk5OTUiIGhlaWdodD0iMjEzIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBtZWV0IiB2ZXJzaW9uPSIxLjAiPjxkZWZzPjxjbGlwUGF0aCBpZD0iNWMyYTYwNWZiZCI+PHBhdGggZD0iTSAwIDAuMDQyOTY4OCBMIDExNi43NTM5MDYgMC4wNDI5Njg4IEwgMTE2Ljc1MzkwNiAxNTguNzA3MDMxIEwgMCAxNTguNzA3MDMxIFogTSAwIDAuMDQyOTY4OCAiIGNsaXAtcnVsZT0ibm9uemVybyIvPjwvY2xpcFBhdGg+PGNsaXBQYXRoIGlkPSIzMGUyMTc0M2YxIj48cGF0aCBkPSJNIDc3LjMwMDc4MSA0My41MzEyNSBMIDg3Ljc3NzM0NCA0My41MzEyNSBMIDg3Ljc3NzM0NCA1NCBMIDc3LjMwMDc4MSA1NCBaIE0gNzcuMzAwNzgxIDQzLjUzMTI1ICIgY2xpcC1ydWxlPSJub256ZXJvIi8+PC9jbGlwUGF0aD48L2RlZnM+PGcgY2xpcC1wYXRoPSJ1cmwoIzVjMmE2MDVmYmQpIj48cGF0aCBmaWxsPSIjYWVlNTAwIiBkPSJNIDgxLjY5NTMxMiA1Mi4wOTM3NSBDIDgxLjM5ODQzOCA1Mi4wMjM0MzggODEuMTk1MzEyIDUyLjM4MjgxMiA4MS40MDYyNSA1Mi42MDE1NjIgQyA5Ni44MTY0MDYgNjguNTg5ODQ0IDExMC4xOTE0MDYgODguODgyODEyIDExMC4xMjUgMTEyLjA0Mjk2OSBDIDExMC4xMDE1NjIgMTIwLjY4MzU5NCAxMDkuNTgyMDMxIDEyNC45Mzc1IDExMS42Nzk2ODggMTMwLjk5NjA5NCBDIDExMi4xNTYyNSAxMzIuMzY3MTg4IDExMy4yNzczNDQgMTM0LjU4OTg0NCAxMTUuMDUwNzgxIDEzNy42Njc5NjkgQyAxMjAuMjY5NTMxIDE0Ni43MzQzNzUgMTE0LjUxOTUzMSAxNTUuMTgzNTk0IDEwNC4yMTA5MzggMTUzLjU0Mjk2OSBDIDEwMy41ODk4NDQgMTUzLjQ0NTMxMiAxMDAuOTY4NzUgMTUyLjk2NDg0NCA5Ni4zNDc2NTYgMTUyLjA5Mzc1IEMgODUuMDU4NTk0IDE0OS45Njg3NSA3Mi4zOTQ1MzEgMTYyLjkwMjM0NCA0NC4yODEyNSAxNTcuMTk1MzEyIEMgMzkuMTUyMzQ0IDE1Ni4xNTIzNDQgMzIuNzk2ODc1IDE1My43MzA0NjkgMjguMDExNzE5IDE1Mi41MTU2MjUgQyAyMi42NzE4NzUgMTUxLjE2MDE1NiAxOC42Mjg5MDYgMTUyLjU2NjQwNiAxMy4xMTMyODEgMTUzLjU1NDY4OCBDIDMuODAwNzgxIDE1NS4yMjI2NTYgLTMuMTU2MjUgMTQ3LjY2Nzk2OSAxLjQ2ODc1IDEzOC42MzY3MTkgQyAzLjk3MjY1NiAxMzMuNzUgNy43NDYwOTQgMTI5LjEwMTU2MiA3LjAxOTUzMSAxMTkuNDUzMTI1IEMgNS42ODc1IDEwMS43MjI2NTYgMTAuNTI3MzQ0IDg2LjEwMTU2MiAyMC40NzY1NjIgNzEuNDM3NSBDIDI1LjM0Mzc1IDY0LjI1NzgxMiAzMS4yMzQzNzUgNTcuMjUzOTA2IDM4LjEyNSA1MC4zOTA2MjUgQyAzOC40MzM1OTQgNTAuMDgyMDMxIDM4LjQ4MDQ2OSA0OS41OTM3NSAzOC4yMzA0NjkgNDkuMjMwNDY5IEMgMzYuMzM1OTM4IDQ2LjQ2ODc1IDM2LjU0Njg3NSA0My42OTkyMTkgMzguODM1OTM4IDQwLjkzNzUgQyAzOC45Njg3NSA0MC43ODEyNSAzOC45NjQ4NDQgNDAuNTQ2ODc1IDM4LjgxNjQwNiA0MC4zOTg0MzggQyAzMi44NTE1NjIgMzQuMjUgMjguMjUzOTA2IDI3LjA3NDIxOSAyNS4xNTIzNDQgMTguNzQyMTg4IEMgMjIuMTkxNDA2IDEwLjc5Mjk2OSAyNi4yMDMxMjUgNi4zNDc2NTYgMzMuODg2NzE5IDguMDM1MTU2IEMgMzguNDg4MjgxIDkuMDQyOTY5IDQyLjEyNSAxMC4zNTkzNzUgNDUuNjU2MjUgOC4yNDYwOTQgQyA0Ni4wNzQyMTkgNy45OTIxODggNDcuMzMyMDMxIDYuODU1NDY5IDQ5LjQxNzk2OSA0LjgyODEyNSBDIDU0LjAzMTI1IDAuMzU1NDY5IDYwLjM3NSAtMS40OTYwOTQgNjYuMjUgMS42NzE4NzUgQyA2Ny45ODgyODEgMi42MDkzNzUgNzEuNDM3NSA1LjYxNzE4OCA3NS4xMDkzNzUgNS42Mjg5MDYgQyA3Ny40Mjk2ODggNS42MzY3MTkgODAuODU5Mzc1IDMuNTc4MTI1IDgyLjg2MzI4MSAzLjE0MDYyNSBDIDg4LjY3MTg3NSAxLjg4MjgxMiA5My4zNTU0NjkgNS43NzczNDQgOTIuMjE4NzUgMTEuNjYwMTU2IEMgOTEuNzk2ODc1IDEzLjg1NTQ2OSA5MS4xMDkzNzUgMTUuNzA3MDMxIDkwLjE2Nzk2OSAxNy4yMDMxMjUgQyA4NS4xNzE4NzUgMjUuMTUyMzQ0IDgxLjkxNDA2MiAyOS42NzU3ODEgNzkuMDA3ODEyIDM1LjY5OTIxOSBDIDc4LjkxNDA2MiAzNS44ODY3MTkgNzkuMTQ0NTMxIDM2LjA4MjAzMSA3OS4zMTY0MDYgMzUuOTQ5MjE5IEMgODQuNTM1MTU2IDMxLjkwMjM0NCA5NS44NzUgMjUuNzE0ODQ0IDEwMi4wMjM0MzggMjcuOTE3OTY5IEMgMTA4Ljg5ODQzOCAzMC4zODI4MTIgMTEwLjM1NTQ2OSAzNy4yNzM0MzggMTA0LjY1MjM0NCA0Mi4wNzAzMTIgQyAxMDAuODI0MjE5IDQ1LjI5Njg3NSA5NC4yMDMxMjUgNDYuNTk3NjU2IDg5LjA0Mjk2OSA0Ny4xMDkzNzUgQyA4OC44NDM3NSA0Ny4xMjg5MDYgODguNzkyOTY5IDQ3LjM5ODQzOCA4OC45NzY1NjIgNDcuNDg0Mzc1IEMgOTYuMTA1NDY5IDUwLjc4OTA2MiAxMDIuMzc4OTA2IDU0LjUwNzgxMiAxMDcuMTQ0NTMxIDYxLjAxOTUzMSBDIDEwOC4zMDA3ODEgNjIuNTkzNzUgMTA5LjMxNjQwNiA2NC40NzY1NjIgMTA3LjY2MDE1NiA2Ni4xMTcxODggQyAxMDQuNTExNzE5IDY5LjIzNDM3NSAxMDIuMTk1MzEyIDY0LjI4MTI1IDEwMC4yMDMxMjUgNjIuMzE2NDA2IEMgOTQuOTg4MjgxIDU3LjE3OTY4OCA4OC44MDQ2ODggNTMuODAwNzgxIDgxLjY5OTIxOSA1Mi4wOTM3NSBaIE0gMzAuODEyNSAxNC42MDkzNzUgQyAzMi4xMjg5MDYgMjAuMzIwMzEyIDM2LjE3NTc4MSAyNi42MDU0NjkgMzkuODMyMDMxIDMxLjQxNzk2OSBDIDQxLjkzNzUgMzQuMTkxNDA2IDQ1LjU1MDc4MSAzNy41ODU5MzggNDguNzUzOTA2IDM4LjU1ODU5NCBDIDQ5LjA4MjAzMSAzOC42NjAxNTYgNDkuMzg2NzE5IDM4LjMzOTg0NCA0OS4yNjE3MTkgMzguMDE5NTMxIEwgNDUuMTkxNDA2IDI3LjUzNTE1NiBDIDQ0LjYyODkwNiAyNi4wOTM3NSA0NS4xNDg0MzggMjQuMjYxNzE5IDQ3LjA1ODU5NCAyMy40NTMxMjUgQyA0OC4zOTA2MjUgMjIuODk0NTMxIDQ5LjkyNTc4MSAyMy41IDUwLjUwNzgxMiAyNC44MjgxMjUgTCA1Ni41MjczNDQgMzguNTcwMzEyIEMgNTYuNjMyODEyIDM4LjgyNDIxOSA1Ni44ODI4MTIgMzguOTg4MjgxIDU3LjE2MDE1NiAzOC45ODgyODEgTCA1OS44NjMyODEgMzguOTg4MjgxIEMgNjAuMTA1NDY5IDM4Ljk4ODI4MSA2MC4zMjQyMTkgMzguODM1OTM4IDYwLjQxMDE1NiAzOC42MDU0NjkgQyA2Mi4xMTMyODEgMzMuOTg4MjgxIDYzLjQ4ODI4MSAyOS45Njg3NSA2NC41NTQ2ODggMjYuNTU0Njg4IEMgNjUuMjIyNjU2IDI0LjQxNzk2OSA2Ny4yNDIxODggMjMuMzU5Mzc1IDY5LjIxNDg0NCAyNC43NDYwOTQgQyA3MC44MDA3ODEgMjUuODU5Mzc1IDcwLjUwMzkwNiAyOC4wODk4NDQgNjkuOTYwOTM4IDI5LjgwNDY4OCBDIDY5LjU2MjUgMzEuMDcwMzEyIDY4LjY5NTMxMiAzMy44MDA3ODEgNjcuMjkyOTY5IDM3Ljk3MjY1NiBDIDY3LjIxNDg0NCAzOC4yMDMxMjUgNjcuMzc4OTA2IDM4LjQ0MTQwNiA2Ny42MjEwOTQgMzguNDY4NzUgQyA2OC43MjI2NTYgMzguNTc0MjE5IDY5LjYwOTM3NSAzOC4xMzY3MTkgNzAuMjczNDM4IDM3LjE5NTMxMiBDIDcxLjMxNjQwNiAzNS43MTA5MzggNzMuMTcxODc1IDMyLjU5Mzc1IDc1Ljg0Mzc1IDI3LjgzOTg0NCBDIDgwLjY3OTY4OCAxOS4yMzgyODEgODUuODE2NDA2IDEzLjMzOTg0NCA4NS43NTc4MTIgMTAuMTA1NDY5IEMgODUuNzUgOS43MDMxMjUgODUuMzQ3NjU2IDkuNDI1NzgxIDg0Ljk2ODc1IDkuNTYyNSBDIDgzLjMzMjAzMSAxMC4xNjAxNTYgODEuODI4MTI1IDEwLjc0NjA5NCA4MC40NjQ4NDQgMTEuMjk2ODc1IEMgNzYuNzYxNzE5IDEyLjc5Njg3NSA3Mi44OTQ1MzEgMTIuNjQ0NTMxIDY5LjMxNjQwNiAxMS4xNjc5NjkgQyA2NC42MTcxODggOS4yMjY1NjIgNjEuMTkxNDA2IDMuODU5Mzc1IDU1LjEzNjcxOSA4LjU2MjUgQyA1My4zNzUgOS45Mjk2ODggNTEuMzA4NTk0IDEyLjcxNDg0NCA0OS4wMDM5MDYgMTQuMDI3MzQ0IEMgNDMuMjY1NjI1IDE3LjI5Mjk2OSAzNy42Njc5NjkgMTUuNTY2NDA2IDMxLjMwMDc4MSAxNC4xMTMyODEgQyAzMS4wMTE3MTkgMTQuMDQ2ODc1IDMwLjc0NjA5NCAxNC4zMTI1IDMwLjgxNjQwNiAxNC42MDkzNzUgWiBNIDgzLjM5MDYyNSA0MS40NjA5MzggQyA4OC41MTE3MTkgNDEuNDY0ODQ0IDk3LjUzOTA2MiA0MC41IDEwMS4yNSAzNi41NDI5NjkgQyAxMDIuMzMyMDMxIDM1LjM5MDYyNSAxMDIuMTAxNTYyIDM0LjQ0NTMxMiAxMDAuNDcyNjU2IDM0LjEyMTA5NCBDIDk1LjE1MjM0NCAzMy4wNjI1IDg3LjIzODI4MSAzNy41MDc4MTIgODMuMDgyMDMxIDQwLjQ5NjA5NCBDIDgxLjk4MDQ2OSA0MS4yODkwNjIgODEuOTY0ODQ0IDQxLjQ1NzAzMSA4My4zOTA2MjUgNDEuNDYwOTM4IFogTSA1Ny42NTIzNDQgNDguMTE3MTg4IEMgNjIuNDY0ODQ0IDQ4LjIwMzEyNSA2Ni43NjU2MjUgNDcuOTA2MjUgNzEuMTU2MjUgNDYuMjA3MDMxIEMgNzEuMzU5Mzc1IDQ2LjEyODkwNiA3MS4zOTg0MzggNDUuODQzNzUgNzEuMjE0ODQ0IDQ1LjcxODc1IEMgNjkuOTcyNjU2IDQ0Ljg3MTA5NCA2OC43NTc4MTIgNDUuNjkxNDA2IDU3LjY5OTIxOSA0NS40OTYwOTQgQyA0Ni42NDg0MzggNDUuMzAwNzgxIDQ1LjQ1MzEyNSA0NC40NTcwMzEgNDQuMTkxNDA2IDQ1LjI1IEMgNDQgNDUuMzcxMDk0IDQ0LjAyNzM0NCA0NS42NTIzNDQgNDQuMjMwNDY5IDQ1LjczODI4MSBDIDQ4LjU2NjQwNiA0Ny41NzgxMjUgNTIuODQ3NjU2IDQ4LjAzNTE1NiA1Ny42NTIzNDQgNDguMTE3MTg4IFogTSA4Ny44Mzk4NDQgMTQ1LjUxOTUzMSBDIDk1LjcxNDg0NCAxNDQuNDE3OTY5IDk2LjMzOTg0NCAxNDUuMTc1NzgxIDEwMy41MjczNDQgMTQ2LjU5Mzc1IEMgMTA2LjI0MjE4OCAxNDcuMTMyODEyIDExMS42Nzk2ODggMTQ3LjQyOTY4OCAxMTAuMDcwMzEyIDE0Mi45ODA0NjkgQyAxMDguODE2NDA2IDEzOS41MDc4MTIgMTA2LjMwMDc4MSAxMzYuOTcyNjU2IDEwNC44NzEwOTQgMTMyLjU5NzY1NiBDIDEwMi4xMjEwOTQgMTI0LjE4NzUgMTA0LjE1MjM0NCAxMTUuOTY0ODQ0IDEwMy4xMjUgMTA2Ljk1MzEyNSBDIDEwMS43NTM5MDYgOTQuOTQ1MzEyIDk3LjM2NzE4OCA4My44NTU0NjkgODkuOTc2NTYyIDczLjY3OTY4OCBDIDg0Ljk3MjY1NiA2Ni43ODkwNjIgNzkuMTkxNDA2IDYwLjA3ODEyNSA3Mi43MDMxMjUgNTMuNDg0Mzc1IEMgNzIuNDA2MjUgNTMuMTgzNTk0IDcxLjk3MjY1NiA1My4wNzQyMTkgNzEuNTcwMzEyIDUzLjE5NTMxMiBMIDY5LjY1MjM0NCA1My43Njk1MzEgQyA2OS40MjE4NzUgNTMuODM1OTM4IDY5LjMwODU5NCA1NC4wOTc2NTYgNjkuNDIxODc1IDU0LjMwODU5NCBDIDcyLjM4NjcxOSA1OS44NzEwOTQgNzQuNDM3NSA2NS4xMDE1NjIgNzUuNTU4NTk0IDcwLjAxMTcxOSBDIDc1Ljg1NTQ2OSA3MS4zMTI1IDc3LjExMzI4MSA3Ni45MjU3ODEgNzYuMDE5NTMxIDc4LjQ1MzEyNSBDIDc0IDgxLjI3NzM0NCA3MC40MzM1OTQgNzkuNjEzMjgxIDcwLjE2MDE1NiA3Ni40NDE0MDYgQyA2OS40ODgyODEgNjguNzM0Mzc1IDY2LjgzMjAzMSA2MS42MDE1NjIgNjIuMjIyNjU2IDU1LjAwNzgxMiBDIDYyLjA3MDMxMiA1NC43ODkwNjIgNjEuODI0MjE5IDU0LjY2NDA2MiA2MS41NjI1IDU0LjY2NDA2MiBMIDU1LjkxNDA2MiA1NC42NjQwNjIgQyA1NS42Njc5NjkgNTQuNjY0MDYyIDU1LjQ0NTMxMiA1NC43OTI5NjkgNTUuMzIwMzEyIDU0Ljk5NjA5NCBDIDUxLjY5NTMxMiA2MC44MjQyMTkgNDkuMDkzNzUgNjYuNjQ4NDM4IDQ3LjYzMjgxMiA3Mi41NTA3ODEgQyA0Ny4yNDIxODggNzQuMTI4OTA2IDQ1LjY0MDYyNSA3NS4wNzgxMjUgNDQuMDc0MjE5IDc0LjY2MDE1NiBDIDQyLjY3NTc4MSA3NC40Mjk2ODggNDEuMzM1OTM4IDcyLjc2OTUzMSA0MS43NDYwOTQgNzAuOTEwMTU2IEMgNDMuMDYyNSA2NC45MjE4NzUgNDUuNzkyOTY5IDU4Ljc1IDQ4LjIzODI4MSA1NC4zODY3MTkgQyA0OC4zNTkzNzUgNTQuMTc1NzgxIDQ4LjIzNDM3NSA1My45MDYyNSA0Ny45ODgyODEgNTMuODc1IEwgNDQuODU1NDY5IDUzLjQwNjI1IEMgNDQuNjEzMjgxIDUzLjM2NzE4OCA0NC4zNjMyODEgNTMuNDU3MDMxIDQ0LjE5MTQwNiA1My42NDQ1MzEgQyAzOS4xMzY3MTkgNTkuMTM2NzE5IDM1LjEwMTU2MiA2My43MjI2NTYgMzIuMDE5NTMxIDY3LjMyODEyNSBDIDI3LjYwOTM3NSA3Mi40OTIxODggMjMuODAwNzgxIDc4LjIzNDM3NSAyMC41ODk4NDQgODQuNTU4NTk0IEMgMTQuOTI5Njg4IDk1LjY5OTIxOSAxMi42NTIzNDQgMTA3LjYwNTQ2OSAxMy43NDYwOTQgMTIwLjI2OTUzMSBDIDE0LjA1NDY4OCAxMjMuODU1NDY5IDEzLjUyMzQzOCAxMjcuODQzNzUgMTIuMTM2NzE5IDEzMi4yMzQzNzUgQyAxMC4yMTg3NSAxMzguMzA0Njg4IDcuMDAzOTA2IDE0MC45NTMxMjUgNi45NDE0MDYgMTQ0LjY1NjI1IEMgNi45Mjk2ODggMTQ1LjQ0MTQwNiA3LjQxNzk2OSAxNDYuMTQ0NTMxIDguMTU2MjUgMTQ2LjQwMjM0NCBDIDEyLjQwMjM0NCAxNDcuODkwNjI1IDE2LjkyOTY4OCAxNDUuMzYzMjgxIDIxLjMwODU5NCAxNDUuMDMxMjUgQyAyOC41MTE3MTkgMTQ0LjQ5MjE4OCAzNS45NTcwMzEgMTQ4LjE1NjI1IDQxLjc1IDE0OS42NTIzNDQgQyA0OS4wODk4NDQgMTUxLjU1MDc4MSA1Ni40NjQ4NDQgMTUyLjE1MjM0NCA2My44OTA2MjUgMTUxLjQ0NTMxMiBDIDcyLjU3NDIxOSAxNTAuNjIxMDk0IDgwLjM1NTQ2OSAxNDUuNDkyMTg4IDg1LjE2NDA2MiAxMzguNTAzOTA2IEMgODYuODc4OTA2IDEzNi4wMTk1MzEgODcuOTI1NzgxIDEzMy40Mzc1IDg5LjM1MTU2MiAxMzAuMzgyODEyIEMgODkuNDQ5MjE5IDEzMC4xNzE4NzUgODkuNTkzNzUgMTI5Ljk4MDQ2OSA4OS43ODEyNSAxMjkuODI4MTI1IEMgOTAuNTg5ODQ0IDEyOS4xNjQwNjIgOTEuNTU0Njg4IDEyOC45OTIxODggOTIuNjU2MjUgMTI5LjMxNjQwNiBDIDk4LjEwNTQ2OSAxMzAuOTEwMTU2IDg5LjM3NSAxNDMuMjE4NzUgODcuNjkxNDA2IDE0NS4yNTc4MTIgQyA4Ny41OTc2NTYgMTQ1LjM2NzE4OCA4Ny42OTE0MDYgMTQ1LjU0Mjk2OSA4Ny44NDM3NSAxNDUuNTE5NTMxIFogTSA4Ny44Mzk4NDQgMTQ1LjUxOTUzMSAiIGZpbGwtb3BhY2l0eT0iMSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PC9nPjxnIGNsaXAtcGF0aD0idXJsKCMzMGUyMTc0M2YxKSI+PHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTSA3OC45MTc5NjkgNTIuMTg3NSBDIDc4LjkxNzk2OSA1Mi4xODc1IDc4LjkyMTg3NSA1Mi4xODc1IDc4LjkyMTg3NSA1Mi4xODc1IEMgNzguOTY4NzUgNTIuMTg3NSA3OS4wMDc4MTIgNTIuMTcxODc1IDc5LjA0Mjk2OSA1Mi4xNDA2MjUgTCA4MC4wODIwMzEgNTEuMTAxNTYyIEMgODAuMTUyMzQ0IDUxLjAyNzM0NCA4MC4xNTYyNSA1MC45NTMxMjUgODAuMDkzNzUgNTAuODc1IEMgNzkuNjYwMTU2IDUwLjM0Mzc1IDc5LjQ0MTQwNiA0OS43MzQzNzUgNzkuNDQxNDA2IDQ5LjA1MDc4MSBDIDc5LjQ0MTQwNiA0Ny40NTcwMzEgODAuNzM4MjgxIDQ2LjE2NDA2MiA4Mi4zMjgxMjUgNDYuMTY0MDYyIEMgODIuNDQxNDA2IDQ2LjE2NDA2MiA4Mi40OTYwOTQgNDYuMTA5Mzc1IDgyLjQ5NjA5NCA0NS45OTYwOTQgTCA4Mi40OTYwOTQgNDQuNTMxMjUgQyA4Mi40OTYwOTQgNDQuNDE3OTY5IDgyLjQ0MTQwNiA0NC4zNjMyODEgODIuMzI4MTI1IDQ0LjM2MzI4MSBDIDgxLjg3ODkwNiA0NC4zNjMyODEgODEuNDM3NSA0NC40MjU3ODEgODEuMDA3ODEyIDQ0LjU1NDY4OCBDIDgwLjU3NDIxOSA0NC42Nzk2ODggODAuMTY3OTY5IDQ0Ljg2NzE4OCA3OS43OTI5NjkgNDUuMTA5Mzc1IEMgNzkuNDE0MDYyIDQ1LjM1MTU2MiA3OS4wNzgxMjUgNDUuNjQ0NTMxIDc4Ljc4MTI1IDQ1Ljk4NDM3NSBDIDc4LjQ4ODI4MSA0Ni4zMjQyMTkgNzguMjUgNDYuNjk5MjE5IDc4LjA2MjUgNDcuMTA5Mzc1IEMgNzcuODc1IDQ3LjUxOTUzMSA3Ny43NSA0Ny45NDUzMTIgNzcuNjg3NSA0OC4zOTA2MjUgQyA3Ny42MjUgNDguODM1OTM4IDc3LjYyNSA0OS4yODEyNSA3Ny42OTE0MDYgNDkuNzI2NTYyIEMgNzcuNzU3ODEyIDUwLjE3MTg3NSA3Ny44ODI4MTIgNTAuNjAxNTYyIDc4LjA3MDMxMiA1MS4wMDc4MTIgQyA3OC4yNTc4MTIgNTEuNDE3OTY5IDc4LjUgNTEuNzkyOTY5IDc4Ljc5Njg3NSA1Mi4xMjg5MDYgQyA3OC44MjgxMjUgNTIuMTY3OTY5IDc4Ljg2NzE4OCA1Mi4xODc1IDc4LjkxNzk2OSA1Mi4xODc1IFogTSA4Mi4xNjAxNTYgNDQuNzAzMTI1IEwgODIuMTYwMTU2IDQ1LjgzMjAzMSBDIDgwLjQ2MDkzOCA0NS45MTc5NjkgNzkuMTA1NDY5IDQ3LjMyODEyNSA3OS4xMDU0NjkgNDkuMDUwNzgxIEMgNzkuMTA1NDY5IDQ5Ljc1NzgxMiA3OS4zMTY0MDYgNTAuMzk4NDM4IDc5LjczODI4MSA1MC45Njg3NSBMIDc4LjkzMzU5NCA1MS43NzM0MzggQyA3OC4yOTY4NzUgNTAuOTc2NTYyIDc3Ljk3NjU2MiA1MC4wNzAzMTIgNzcuOTc2NTYyIDQ5LjA1MDc4MSBDIDc3Ljk3NjU2MiA0Ni43MDcwMzEgNzkuODM5ODQ0IDQ0Ljc4OTA2MiA4Mi4xNjAxNTYgNDQuNzAzMTI1IFogTSA4MC4yODEyNSA1MS4yOTY4NzUgTCA3OS4yMzgyODEgNTIuMzM1OTM4IEMgNzkuMTU2MjUgNTIuNDIxODc1IDc5LjE1NjI1IDUyLjUwMzkwNiA3OS4yNSA1Mi41ODIwMzEgQyA3OS41ODU5MzggNTIuODc4OTA2IDc5Ljk2MDkzOCA1My4xMjEwOTQgODAuMzcxMDk0IDUzLjMwODU5NCBDIDgwLjc3NzM0NCA1My40OTYwOTQgODEuMjA3MDMxIDUzLjYyMTA5NCA4MS42NTIzNDQgNTMuNjg3NSBDIDgyLjA5NzY1NiA1My43NTM5MDYgODIuNTQyOTY5IDUzLjc1MzkwNiA4Mi45ODgyODEgNTMuNjkxNDA2IEMgODMuNDMzNTk0IDUzLjYyODkwNiA4My44NTkzNzUgNTMuNTAzOTA2IDg0LjI2OTUzMSA1My4zMTY0MDYgQyA4NC42Nzk2ODggNTMuMTI4OTA2IDg1LjA1NDY4OCA1Mi44OTA2MjUgODUuMzk0NTMxIDUyLjU5NzY1NiBDIDg1LjczNDM3NSA1Mi4zMDA3ODEgODYuMDI3MzQ0IDUxLjk2NDg0NCA4Ni4yNjk1MzEgNTEuNTg1OTM4IEMgODYuNTExNzE5IDUxLjIxMDkzOCA4Ni42OTkyMTkgNTAuODA0Njg4IDg2LjgyNDIxOSA1MC4zNzEwOTQgQyA4Ni45NTMxMjUgNDkuOTQxNDA2IDg3LjAxNTYyNSA0OS41IDg3LjAxNTYyNSA0OS4wNTA3ODEgQyA4Ny4wMTU2MjUgNDguOTM3NSA4Ni45NjA5MzggNDguODgyODEyIDg2Ljg0NzY1NiA0OC44ODI4MTIgTCA4NS4zODI4MTIgNDguODgyODEyIEMgODUuMjY5NTMxIDQ4Ljg4MjgxMiA4NS4yMTQ4NDQgNDguOTM3NSA4NS4yMTQ4NDQgNDkuMDUwNzgxIEMgODUuMjE0ODQ0IDUwLjY0MDYyNSA4My45MjE4NzUgNTEuOTM3NSA4Mi4zMjgxMjUgNTEuOTM3NSBDIDgxLjY0NDUzMSA1MS45Mzc1IDgxLjAzNTE1NiA1MS43MTg3NSA4MC41MDM5MDYgNTEuMjg1MTU2IEMgODAuNDI1NzgxIDUxLjIyMjY1NiA4MC4zNTE1NjIgNTEuMjI2NTYyIDgwLjI4MTI1IDUxLjI5Njg3NSBaIE0gODUuNTQ2ODc1IDQ5LjIxODc1IEwgODYuNjc1NzgxIDQ5LjIxODc1IEMgODYuNTg5ODQ0IDUxLjUzOTA2MiA4NC42NzE4NzUgNTMuNDAyMzQ0IDgyLjMyODEyNSA1My40MDIzNDQgQyA4MS4zMDg1OTQgNTMuNDAyMzQ0IDgwLjQwMjM0NCA1My4wODIwMzEgNzkuNjA1NDY5IDUyLjQ0NTMxMiBMIDgwLjQxNDA2MiA1MS42NDA2MjUgQyA4MC45ODA0NjkgNTIuMDYyNSA4MS42MjEwOTQgNTIuMjczNDM4IDgyLjMyODEyNSA1Mi4yNzM0MzggQyA4NC4wNTA3ODEgNTIuMjczNDM4IDg1LjQ2MDkzOCA1MC45MTc5NjkgODUuNTQ2ODc1IDQ5LjIxODc1IFogTSA4Ny44MDA3ODEgNDguNTQ2ODc1IEMgODcuODM1OTM4IDQ4LjUwNzgxMiA4Ny44NTE1NjIgNDguNDY0ODQ0IDg3Ljg0Mzc1IDQ4LjQxNDA2MiBDIDg3Ljc3MzQzOCA0Ny43OTI5NjkgODcuNjAxNTYyIDQ3LjE5OTIxOSA4Ny4zMjgxMjUgNDYuNjM2NzE5IEMgODcuMDU0Njg4IDQ2LjA3MDMxMiA4Ni42OTkyMTkgNDUuNTY2NDA2IDg2LjI1MzkwNiA0NS4xMjUgQyA4NS44MTI1IDQ0LjY4MzU5NCA4NS4zMDg1OTQgNDQuMzI0MjE5IDg0Ljc0MjE4OCA0NC4wNTA3ODEgQyA4NC4xNzk2ODggNDMuNzc3MzQ0IDgzLjU4NTkzOCA0My42MDU0NjkgODIuOTY0ODQ0IDQzLjUzNTE1NiBDIDgyLjgzOTg0NCA0My41MTk1MzEgODIuNzc3MzQ0IDQzLjU3ODEyNSA4Mi43NzczNDQgNDMuNzAzMTI1IEwgODIuNzc3MzQ0IDQ2LjA1ODU5NCBDIDgyLjc3NzM0NCA0Ni4xNDg0MzggODIuODIwMzEyIDQ2LjIwMzEyNSA4Mi45MTAxNTYgNDYuMjIyNjU2IEMgODMuNDc2NTYyIDQ2LjMzOTg0NCA4My45NjQ4NDQgNDYuNjAxNTYyIDg0LjM3MTA5NCA0Ny4wMDc4MTIgQyA4NC43ODEyNSA0Ny40MTQwNjIgODUuMDQyOTY5IDQ3LjkwMjM0NCA4NS4xNTYyNSA0OC40Njg3NSBDIDg1LjE3NTc4MSA0OC41NTg1OTQgODUuMjMwNDY5IDQ4LjYwMTU2MiA4NS4zMjAzMTIgNDguNjAxNTYyIEwgODcuNjc1NzgxIDQ4LjYwMTU2MiBDIDg3LjcyNjU2MiA0OC42MDE1NjIgODcuNzY5NTMxIDQ4LjU4MjAzMSA4Ny44MDA3ODEgNDguNTQ2ODc1IFogTSA4NS40NTcwMzEgNDguMjY1NjI1IEMgODUuMzA4NTk0IDQ3LjY5MTQwNiA4NS4wMjczNDQgNDcuMTkxNDA2IDg0LjYwOTM3NSA0Ni43NzM0MzggQyA4NC4xODc1IDQ2LjM1MTU2MiA4My42OTE0MDYgNDYuMDcwMzEyIDgzLjExMzI4MSA0NS45MjU3ODEgTCA4My4xMTMyODEgNDMuODk0NTMxIEMgODUuMzQ3NjU2IDQ0LjIzNDM3NSA4Ny4xNDg0MzggNDYuMDMxMjUgODcuNDg0Mzc1IDQ4LjI2NTYyNSBaIE0gODMuMzQzNzUgNDcuOTQ5MjE5IEwgODEuNTg1OTM4IDUwLjM0NzY1NiBDIDgxLjUxOTUzMSA1MC40Mzc1IDgxLjQ0MTQwNiA1MC40NDkyMTkgODEuMzUxNTYyIDUwLjM4MjgxMiBDIDgxLjI2MTcxOSA1MC4zMTY0MDYgODEuMjUgNTAuMjM4MjgxIDgxLjMxNjQwNiA1MC4xNDg0MzggTCA4My4wNzAzMTIgNDcuNzUzOTA2IEMgODMuMTM2NzE5IDQ3LjY2MDE1NiA4My4yMTQ4NDQgNDcuNjQ4NDM4IDgzLjMwODU5NCA0Ny43MTQ4NDQgQyA4My4zOTg0MzggNDcuNzgxMjUgODMuNDEwMTU2IDQ3Ljg1OTM3NSA4My4zNDM3NSA0Ny45NDkyMTkgWiBNIDgxLjQ0OTIxOSA0Ny42NjQwNjIgQyA4MS4zMDg1OTQgNDcuNjY0MDYyIDgxLjE5MTQwNiA0Ny43MTQ4NDQgODEuMDg5ODQ0IDQ3LjgxMjUgQyA4MC45OTIxODggNDcuOTEwMTU2IDgwLjk0MTQwNiA0OC4wMzEyNSA4MC45NDE0MDYgNDguMTcxODc1IEwgODAuOTQxNDA2IDQ4LjU3NDIxOSBDIDgwLjk0MTQwNiA0OC43MTQ4NDQgODAuOTkyMTg4IDQ4LjgzNTkzOCA4MS4wODk4NDQgNDguOTM3NSBDIDgxLjE4NzUgNDkuMDM1MTU2IDgxLjMwODU5NCA0OS4wODU5MzggODEuNDQ5MjE5IDQ5LjA4NTkzOCBDIDgxLjU4OTg0NCA0OS4wODU5MzggODEuNzEwOTM4IDQ5LjAzNTE1NiA4MS44MDg1OTQgNDguOTM3NSBDIDgxLjkwNjI1IDQ4LjgzNTkzOCA4MS45NTcwMzEgNDguNzE0ODQ0IDgxLjk1NzAzMSA0OC41NzQyMTkgTCA4MS45NTcwMzEgNDguMTcxODc1IEMgODEuOTU3MDMxIDQ4LjAzMTI1IDgxLjkwNjI1IDQ3LjkxMDE1NiA4MS44MDg1OTQgNDcuODEyNSBDIDgxLjcwNzAzMSA0Ny43MTQ4NDQgODEuNTg5ODQ0IDQ3LjY2NDA2MiA4MS40NDkyMTkgNDcuNjY0MDYyIFogTSA4MS42MjEwOTQgNDguNTc0MjE5IEMgODEuNjIxMDk0IDQ4LjY5MTQwNiA4MS41NjI1IDQ4Ljc0NjA5NCA4MS40NDkyMTkgNDguNzQ2MDk0IEMgODEuMzM1OTM4IDQ4Ljc0NjA5NCA4MS4yNzczNDQgNDguNjkxNDA2IDgxLjI3NzM0NCA0OC41NzQyMTkgTCA4MS4yNzczNDQgNDguMTcxODc1IEMgODEuMjc3MzQ0IDQ4LjA1NDY4OCA4MS4zMzU5MzggNDggODEuNDQ5MjE5IDQ4IEMgODEuNTYyNSA0OCA4MS42MjEwOTQgNDguMDU0Njg4IDgxLjYyMTA5NCA0OC4xNzE4NzUgWiBNIDgyLjcwMzEyNSA0OS41MjM0MzggTCA4Mi43MDMxMjUgNDkuOTI5Njg4IEMgODIuNzAzMTI1IDUwLjA3MDMxMiA4Mi43NSA1MC4xOTE0MDYgODIuODUxNTYyIDUwLjI4OTA2MiBDIDgyLjk0OTIxOSA1MC4zOTA2MjUgODMuMDY2NDA2IDUwLjQ0MTQwNiA4My4yMDcwMzEgNTAuNDQxNDA2IEMgODMuMzQ3NjU2IDUwLjQ0MTQwNiA4My40Njg3NSA1MC4zOTA2MjUgODMuNTY2NDA2IDUwLjI4OTA2MiBDIDgzLjY2Nzk2OSA1MC4xOTE0MDYgODMuNzE0ODQ0IDUwLjA3MDMxMiA4My43MTQ4NDQgNDkuOTI5Njg4IEwgODMuNzE0ODQ0IDQ5LjUyMzQzOCBDIDgzLjcxNDg0NCA0OS4zODY3MTkgODMuNjY0MDYyIDQ5LjI2NTYyNSA4My41NjY0MDYgNDkuMTY3OTY5IEMgODMuNDY4NzUgNDkuMDcwMzEyIDgzLjM0NzY1NiA0OS4wMjM0MzggODMuMjA3MDMxIDQ5LjAyMzQzOCBDIDgzLjA3MDMxMiA0OS4wMjM0MzggODIuOTQ5MjE5IDQ5LjA3MDMxMiA4Mi44NTE1NjIgNDkuMTY3OTY5IEMgODIuNzUzOTA2IDQ5LjI2NTYyNSA4Mi43MDMxMjUgNDkuMzg2NzE5IDgyLjcwMzEyNSA0OS41MjM0MzggWiBNIDgzLjM3ODkwNiA0OS41MjM0MzggTCA4My4zNzg5MDYgNDkuOTI5Njg4IEMgODMuMzc4OTA2IDUwLjA0Mjk2OSA4My4zMjQyMTkgNTAuMTAxNTYyIDgzLjIwNzAzMSA1MC4xMDE1NjIgQyA4My4wOTM3NSA1MC4xMDE1NjIgODMuMDM5MDYyIDUwLjA0Mjk2OSA4My4wMzkwNjIgNDkuOTI5Njg4IEwgODMuMDM5MDYyIDQ5LjUyMzQzOCBDIDgzLjAzOTA2MiA0OS40MTQwNjIgODMuMDk3NjU2IDQ5LjM1NTQ2OSA4My4yMDcwMzEgNDkuMzU1NDY5IEMgODMuMzIwMzEyIDQ5LjM1NTQ2OSA4My4zNzg5MDYgNDkuNDEwMTU2IDgzLjM3ODkwNiA0OS41MjM0MzggWiBNIDgzLjM3ODkwNiA0OS41MjM0MzggIiBmaWxsLW9wYWNpdHk9IjEiIGZpbGwtcnVsZT0ibm9uemVybyIvPjwvZz48L3N2Zz4="
+                                alt="Menor Consumo" class="kpi-icon">
+                            <div class="lbl">Menor<br>consumo</div>
+                        </div>
+                        <div class="kpi-sep"></div>
+                        <div class="hero-kpi">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjIwIiB6b29tQW5kUGFuPSJtYWduaWZ5IiB2aWV3Qm94PSIwIDAgMTY1IDE1OC4yNDk5OTMiIGhlaWdodD0iMjExIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBtZWV0IiB2ZXJzaW9uPSIxLjAiPjxkZWZzPjxjbGlwUGF0aCBpZD0iYTRiZTQwYmRmZCI+PHBhdGggZD0iTSAwLjM5MDYyNSAwIEwgMTYzLjg2MzI4MSAwIEwgMTYzLjg2MzI4MSAxNTYuNzU3ODEyIEwgMC4zOTA2MjUgMTU2Ljc1NzgxMiBaIE0gMC4zOTA2MjUgMCAiIGNsaXAtcnVsZT0ibm9uemVybyIvPjwvY2xpcFBhdGg+PGNsaXBQYXRoIGlkPSI4ODA2ZTIzMGJiIj48cGF0aCBkPSJNIDc3IDE0MS4xMTMyODEgTCA4Ny4zNDM3NSAxNDEuMTEzMjgxIEwgODcuMzQzNzUgMTUxLjU2MjUgTCA3NyAxNTEuNTYyNSBaIE0gNzcgMTQxLjExMzI4MSAiIGNsaXAtcnVsZT0ibm9uemVybyIvPjwvY2xpcFBhdGg+PC9kZWZzPjxnIGNsaXAtcGF0aD0idXJsKCNhNGJlNDBiZGZkKSI+PHBhdGggZmlsbD0iI2FlZTUwMCIgZD0iTSAxNi4wMDc4MTIgMTAyLjA3MDMxMiBMIDM3LjM2NzE4OCAxMDIuMDcwMzEyIEMgMzguNDY4NzUgMTAyLjA3MDMxMiAzOS4zNTkzNzUgMTAyLjk2NDg0NCAzOS4zNTkzNzUgMTA0LjA2NjQwNiBMIDM5LjM1OTM3NSAxNDIuMTkxNDA2IEwgNTAuOTkyMTg4IDE0Mi4xOTE0MDYgTCA1MC45OTIxODggNzMuMjE4NzUgQyA1MC45OTIxODggNzIuMTE3MTg4IDUxLjg4NjcxOSA3MS4yMjI2NTYgNTIuOTg4MjgxIDcxLjIyMjY1NiBMIDc0LjM0NzY1NiA3MS4yMjI2NTYgQyA3NS40NDkyMTkgNzEuMjIyNjU2IDc2LjMzOTg0NCA3Mi4xMTcxODggNzYuMzM5ODQ0IDczLjIxODc1IEwgNzYuMzM5ODQ0IDE0Mi4xOTE0MDYgTCA4Ny45NzI2NTYgMTQyLjE5MTQwNiBMIDg3Ljk3MjY1NiA4OC41NzQyMTkgQyA4Ny45NzI2NTYgODcuNDc2NTYyIDg4Ljg2NzE4OCA4Ni41ODIwMzEgODkuOTY0ODQ0IDg2LjU4MjAzMSBMIDExMS4zMjgxMjUgODYuNTgyMDMxIEMgMTEyLjQyNTc4MSA4Ni41ODIwMzEgMTEzLjMyMDMxMiA4Ny40NzY1NjIgMTEzLjMyMDMxMiA4OC41NzQyMTkgTCAxMTMuMzIwMzEyIDE0Mi4xOTE0MDYgTCAxMjQuOTUzMTI1IDE0Mi4xOTE0MDYgTCAxMjQuOTUzMTI1IDQ4LjgxNjQwNiBDIDEyNC45NTMxMjUgNDcuNzE0ODQ0IDEyNS44NDM3NSA0Ni44MjQyMTkgMTI2Ljk0NTMxMiA0Ni44MjQyMTkgTCAxNDguMzA0Njg4IDQ2LjgyNDIxOSBDIDE0OS40MDYyNSA0Ni44MjQyMTkgMTUwLjMwMDc4MSA0Ny43MTQ4NDQgMTUwLjMwMDc4MSA0OC44MTY0MDYgTCAxNTAuMzAwNzgxIDE0Mi4xOTE0MDYgTCAxNjEuODc4OTA2IDE0Mi4xOTE0MDYgQyAxNjIuOTgwNDY5IDE0Mi4xOTE0MDYgMTYzLjg3MTA5NCAxNDMuMDg1OTM4IDE2My44NzEwOTQgMTQ0LjE4NzUgTCAxNjMuODcxMDk0IDE1NC43NzM0MzggQyAxNjMuODcxMDk0IDE1NS44NzUgMTYyLjk4MDQ2OSAxNTYuNzY1NjI1IDE2MS44Nzg5MDYgMTU2Ljc2NTYyNSBMIDIuNDMzNTk0IDE1Ni43NjU2MjUgQyAxLjMzMjAzMSAxNTYuNzY1NjI1IDAuNDQxNDA2IDE1NS44NzUgMC40NDE0MDYgMTU0Ljc3MzQzOCBMIDAuNDQxNDA2IDE0NC4xODc1IEMgMC40NDE0MDYgMTQzLjA4NTkzOCAxLjMzMjAzMSAxNDIuMTkxNDA2IDIuNDMzNTk0IDE0Mi4xOTE0MDYgTCAxNC4wMTU2MjUgMTQyLjE5MTQwNiBMIDE0LjAxNTYyNSAxMDQuMDY2NDA2IEMgMTQuMDE1NjI1IDEwMi45NjQ4NDQgMTQuOTA2MjUgMTAyLjA3MDMxMiAxNi4wMDc4MTIgMTAyLjA3MDMxMiBaIE0gMTUwLjAwNzgxMiAxLjk2MDkzOCBDIDE1MCAwLjg2MzI4MSAxNDkuMTA1NDY5IC0wLjAxNTYyNSAxNDguMDA3ODEyIC0wLjAwNzgxMjUgTCAxMTkuMjQyMTg4IDAuMjgxMjUgQyAxMTcuMTI4OTA2IDAuMzE2NDA2IDExNS4yMjY1NjIgMS4yMDMxMjUgMTEzLjg2NzE4OCAyLjYwNTQ2OSBDIDExMi41NDI5NjkgMy45Njg3NSAxMTEuNzI2NTYyIDUuODIwMzEyIDExMS43MDcwMzEgNy44NTkzNzUgQyAxMTEuNzAzMTI1IDcuOTE0MDYyIDExMS42OTkyMTkgNy45NzI2NTYgMTExLjY5OTIxOSA4LjAyNzM0NCBMIDExMS43MDcwMzEgOC4wMjczNDQgTCAxMTEuNzA3MDMxIDguMDU4NTk0IEMgMTExLjczODI4MSAxMC4xNzU3ODEgMTEyLjYyNSAxMi4wNzgxMjUgMTE0LjAzMTI1IDEzLjQzNzUgQyAxMTUuMzk0NTMxIDE0Ljc1NzgxMiAxMTcuMjQ2MDk0IDE1LjU3ODEyNSAxMTkuMjgxMjUgMTUuNTk3NjU2IEMgMTE5LjMzOTg0NCAxNS42MDE1NjIgMTE5LjM5NDUzMSAxNS42MDU0NjkgMTE5LjQ1MzEyNSAxNS42MDU0NjkgTCAxMTkuNDUzMTI1IDE1LjU5NzY1NiBMIDEyMy4xODM1OTQgMTUuNTM5MDYyIEwgODYuMjkyOTY5IDUxLjY5NTMxMiBMIDU4LjY2NDA2MiAyNy44MTY0MDYgQyA1Ny4xNzE4NzUgMjYuNTIzNDM4IDU1LjMyMDMxMiAyNS45MTAxNTYgNTMuNDkyMTg4IDI1Ljk1MzEyNSBMIDUzLjQ3MjY1NiAyNS45NTMxMjUgQyA1MS42MTcxODggMjUuOTk2MDk0IDQ5Ljc4NTE1NiAyNi43MDcwMzEgNDguMzYzMjgxIDI4LjA1ODU5NCBMIDExLjQ4ODI4MSA2My4yODkwNjIgQyAxMS40NDE0MDYgNjMuMzI4MTI1IDExLjM5NDUzMSA2My4zNjcxODggMTEuMzUxNTYyIDYzLjQxNDA2MiBMIDExLjM1NTQ2OSA2My40MTc5NjkgQyA5Ljg0NzY1NiA2NC44NzEwOTQgOS4wNjI1IDY2LjgwMDc4MSA5LjAxMTcxOSA2OC43NSBDIDguOTY0ODQ0IDcwLjY2MDE1NiA5LjYyODkwNiA3Mi41ODU5MzggMTEuMDA3ODEyIDc0LjEwMTU2MiBDIDExLjA1NDY4OCA3NC4xNTYyNSAxMS4xMDE1NjIgNzQuMjEwOTM4IDExLjE1MjM0NCA3NC4yNjE3MTkgTCAxMS4xNTYyNSA3NC4yNTc4MTIgQyAxMi42MDkzNzUgNzUuNzY1NjI1IDE0LjUzOTA2MiA3Ni41NTA3ODEgMTYuNDg4MjgxIDc2LjYwMTU2MiBDIDE4LjQ0OTIxOSA3Ni42NDg0MzggMjAuNDI5Njg4IDc1Ljk0OTIxOSAyMS45NjA5MzggNzQuNDkyMTg4IEwgNTMuOTEwMTU2IDQzLjk2ODc1IEwgODEuNDQ5MjE5IDY3Ljc2OTUzMSBMIDgxLjUgNjcuODE2NDA2IEMgODIuOTk2MDk0IDY5LjE2MDE1NiA4NC45MDIzNDQgNjkuODEyNSA4Ni43OTI5NjkgNjkuNzY5NTMxIEMgODguNjc1NzgxIDY5LjcyNjU2MiA5MC41NDY4NzUgNjguOTk2MDk0IDkxLjk5MjE4OCA2Ny41NzQyMTkgTCAxMzQuODkwNjI1IDI1LjUzMTI1IEwgMTM0Ljk3MjY1NiAzMC41OTM3NSBDIDEzNS4wMzEyNSAzNC4yMjY1NjIgMTM3LjA4NTkzOCAzNi41MzUxNTYgMTM5LjY4MzU5NCAzNy41MjczNDQgQyAxNDAuNjQ4NDM4IDM3Ljg5NDUzMSAxNDEuNjk5MjE5IDM4LjA3MDMxMiAxNDIuNzUgMzguMDU0Njg4IEMgMTQzLjgwMDc4MSAzOC4wMzUxNTYgMTQ0LjgzOTg0NCAzNy44MjgxMjUgMTQ1Ljc5Njg3NSAzNy40Mjk2ODggQyAxNDguMzYzMjgxIDM2LjM1NTQ2OSAxNTAuMzQzNzUgMzMuOTg4MjgxIDE1MC4yODkwNjIgMzAuMzUxNTYyIFogTSAxNDYuMzE2NDA2IDMwLjM5ODQzOCBMIDE0Ni4wNTg1OTQgMy45ODA0NjkgTCAxMTkuMzA0Njg4IDQuMjUzOTA2IEMgMTE4LjI4OTA2MiA0LjI2OTUzMSAxMTcuMzc1IDQuNjk5MjE5IDExNi43MTQ4NDQgNS4zNzg5MDYgQyAxMTYuMDg5ODQ0IDYuMDIzNDM4IDExNS42OTkyMTkgNi44OTg0MzggMTE1LjY3NTc4MSA3Ljg1OTM3NSBDIDExNS42ODM1OTQgNy45MTQwNjIgMTE1LjY4MzU5NCA3Ljk3MjY1NiAxMTUuNjgzNTk0IDguMDI3MzQ0IEwgMTE1LjY3OTY4OCA4LjAyNzM0NCBDIDExNS43MDMxMjUgOS4wMzEyNSAxMTYuMTI4OTA2IDkuOTM3NSAxMTYuODAwNzgxIDEwLjU4OTg0NCBDIDExNy40NDkyMTkgMTEuMjE0ODQ0IDExOC4zMjAzMTIgMTEuNjA1NDY5IDExOS4yODEyNSAxMS42MjUgQyAxMTkuMzM5ODQ0IDExLjYyMTA5NCAxMTkuMzk0NTMxIDExLjYxNzE4OCAxMTkuNDUzMTI1IDExLjYxNzE4OCBMIDExOS40NTMxMjUgMTEuNjI1IEwgMTI4LjAxNTYyNSAxMS40ODgyODEgQyAxMjguNTY2NDA2IDExLjQ1NzAzMSAxMjkuMTI4OTA2IDExLjY1MjM0NCAxMjkuNTQ2ODc1IDEyLjA3ODEyNSBDIDEzMC4zMTY0MDYgMTIuODYzMjgxIDEzMC4zMDg1OTQgMTQuMTIxMDk0IDEyOS41MjM0MzggMTQuODkwNjI1IEwgODcuNzY5NTMxIDU1LjgxMjUgQyA4Ny4wMzkwNjIgNTYuNTMxMjUgODUuODY3MTg4IDU2LjU3ODEyNSA4NS4wNzQyMTkgNTUuODk4NDM4IEwgNTYuMDYyNSAzMC44MjAzMTIgQyA1NS4zNDM3NSAzMC4xOTkyMTkgNTQuNDUzMTI1IDI5LjkwMjM0NCA1My41NzAzMTIgMjkuOTIxODc1IEwgNTMuNTYyNSAyOS45MjE4NzUgQyA1Mi42NzE4NzUgMjkuOTQxNDA2IDUxLjc4OTA2MiAzMC4yODUxNTYgNTEuMTA1NDY5IDMwLjkzNzUgTCAxNC4yMzQzNzUgNjYuMTY0MDYyIEwgMTQuMTcxODc1IDY2LjIzMDQ2OSBMIDE0LjE2Nzk2OSA2Ni4yMjY1NjIgTCAxNC4xMzI4MTIgNjYuMjYxNzE5IEMgMTMuMzkwNjI1IDY2Ljk2NDg0NCAxMy4wMDc4MTIgNjcuOTAyMzQ0IDEyLjk4NDM3NSA2OC44NDM3NSBDIDEyLjk2MDkzOCA2OS43NTM5MDYgMTMuMjczNDM4IDcwLjY3MTg3NSAxMy45MjU3ODEgNzEuMzk4NDM4IEwgMTMuOTY4NzUgNzEuNDQxNDA2IEwgMTMuOTY4NzUgNzEuNDQ1MzEyIEwgMTQgNzEuNDgwNDY5IEMgMTQuNzA3MDMxIDcyLjIyMjY1NiAxNS42NDA2MjUgNzIuNjA1NDY5IDE2LjU4MjAzMSA3Mi42Mjg5MDYgQyAxNy41MjczNDQgNzIuNjUyMzQ0IDE4LjQ4MDQ2OSA3Mi4zMTY0MDYgMTkuMjIyNjU2IDcxLjYxMzI4MSBMIDUyLjQ3MjY1NiAzOS44NDM3NSBDIDUzLjIwNzAzMSAzOS4xNDQ1MzEgNTQuMzYzMjgxIDM5LjEwNTQ2OSA1NS4xNDQ1MzEgMzkuNzgxMjUgTCA4NC4wNDI5NjkgNjQuNzU3ODEyIEMgODQuMDgyMDMxIDY0Ljc4OTA2MiA4NC4xMjUgNjQuODI0MjE5IDg0LjE2MDE1NiA2NC44NTU0NjkgQyA4NC44ODI4MTIgNjUuNTAzOTA2IDg1LjgwMDc4MSA2NS44MjAzMTIgODYuNzE0ODQ0IDY1LjgwMDc4MSBDIDg3LjYxMzI4MSA2NS43NzczNDQgODguNTA3ODEyIDY1LjQyNTc4MSA4OS4yMDcwMzEgNjQuNzM4MjgxIEwgMTM1LjQxMDE1NiAxOS40NTcwMzEgQyAxMzUuNzYxNzE5IDE5LjExMzI4MSAxMzYuMjQyMTg4IDE4Ljg5ODQzOCAxMzYuNzczNDM4IDE4Ljg5MDYyNSBDIDEzNy44NjcxODggMTguODcxMDk0IDEzOC43NzM0MzggMTkuNzQ2MDk0IDEzOC43ODkwNjIgMjAuODQzNzUgTCAxMzguOTQ1MzEyIDMwLjUzMTI1IEMgMTM4Ljk3MjY1NiAzMi4yNjU2MjUgMTM5LjkxMDE1NiAzMy4zNTE1NjIgMTQxLjEwMTU2MiAzMy44MDQ2ODggQyAxNDEuNjA5Mzc1IDM0IDE0Mi4xNTIzNDQgMzQuMDg5ODQ0IDE0Mi42ODc1IDM0LjA4MjAzMSBDIDE0My4yMjY1NjIgMzQuMDc0MjE5IDE0My43Njk1MzEgMzMuOTY0ODQ0IDE0NC4yNjk1MzEgMzMuNzUzOTA2IEMgMTQ1LjQ0MTQwNiAzMy4yNjU2MjUgMTQ2LjM0Mzc1IDMyLjE1MjM0NCAxNDYuMzE2NDA2IDMwLjQxNDA2MiBaIE0gMzcuMzY3MTg4IDE0Ni4xNzk2ODggTCA0LjQyNTc4MSAxNDYuMTc5Njg4IEwgNC40MjU3ODEgMTUyLjc4MTI1IEwgMTU5Ljg4MjgxMiAxNTIuNzgxMjUgTCAxNTkuODgyODEyIDE0Ni4xNzk2ODggWiBNIDE0Ni4zMTI1IDUwLjgwODU5NCBMIDEyOC45Mzc1IDUwLjgwODU5NCBMIDEyOC45Mzc1IDE0Mi4xOTE0MDYgTCAxNDYuMzEyNSAxNDIuMTkxNDA2IFogTSAxMDkuMzMyMDMxIDkwLjU3MDMxMiBMIDkxLjk1NzAzMSA5MC41NzAzMTIgTCA5MS45NTcwMzEgMTQyLjE5MTQwNiBMIDEwOS4zMzIwMzEgMTQyLjE5MTQwNiBaIE0gNzIuMzUxNTYyIDc1LjIxMDkzOCBMIDU0Ljk4MDQ2OSA3NS4yMTA5MzggTCA1NC45ODA0NjkgMTQyLjE5MTQwNiBMIDcyLjM1MTU2MiAxNDIuMTkxNDA2IFogTSAzNS4zNzUgMTA2LjA1ODU5NCBMIDE4IDEwNi4wNTg1OTQgTCAxOCAxNDIuMTkxNDA2IEwgMzUuMzc1IDE0Mi4xOTE0MDYgWiBNIDM1LjM3NSAxMDYuMDU4NTk0ICIgZmlsbC1vcGFjaXR5PSIxIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L2c+PGcgY2xpcC1wYXRoPSJ1cmwoIzg4MDZlMjMwYmIpIj48cGF0aCBmaWxsPSIjZmZmZmZmIiBkPSJNIDc4LjUwNzgxMiAxNDkuNzUgQyA3OC41MDc4MTIgMTQ5Ljc1IDc4LjUxMTcxOSAxNDkuNzUgNzguNTExNzE5IDE0OS43NSBDIDc4LjU1ODU5NCAxNDkuNzUgNzguNTk3NjU2IDE0OS43MzA0NjkgNzguNjMyODEyIDE0OS42OTkyMTkgTCA3OS42Njc5NjkgMTQ4LjY2NDA2MiBDIDc5LjczODI4MSAxNDguNTkzNzUgNzkuNzQyMTg4IDE0OC41MTU2MjUgNzkuNjc5Njg4IDE0OC40Mzc1IEMgNzkuMjQ2MDk0IDE0Ny45MTAxNTYgNzkuMDMxMjUgMTQ3LjMwMDc4MSA3OS4wMzEyNSAxNDYuNjIxMDk0IEMgNzkuMDMxMjUgMTQ1LjAzMTI1IDgwLjMyMDMxMiAxNDMuNzM4MjgxIDgxLjkxMDE1NiAxNDMuNzM4MjgxIEMgODIuMDE5NTMxIDE0My43MzgyODEgODIuMDc4MTI1IDE0My42ODM1OTQgODIuMDc4MTI1IDE0My41NzQyMTkgTCA4Mi4wNzgxMjUgMTQyLjExMzI4MSBDIDgyLjA3ODEyNSAxNDIgODIuMDE5NTMxIDE0MS45NDUzMTIgODEuOTEwMTU2IDE0MS45NDUzMTIgQyA4MS40NjA5MzggMTQxLjk0NTMxMiA4MS4wMTk1MzEgMTQyLjAwNzgxMiA4MC41ODk4NDQgMTQyLjEzMjgxMiBDIDgwLjE2MDE1NiAxNDIuMjYxNzE5IDc5Ljc1NzgxMiAxNDIuNDQ1MzEyIDc5LjM3ODkwNiAxNDIuNjg3NSBDIDc5IDE0Mi45Mjk2ODggNzguNjY3OTY5IDE0My4yMjI2NTYgNzguMzcxMDk0IDE0My41NjI1IEMgNzguMDc4MTI1IDE0My45MDIzNDQgNzcuODM5ODQ0IDE0NC4yNzM0MzggNzcuNjUyMzQ0IDE0NC42ODM1OTQgQyA3Ny40Njg3NSAxNDUuMDkzNzUgNzcuMzQzNzUgMTQ1LjUxOTUzMSA3Ny4yODEyNSAxNDUuOTYwOTM4IEMgNzcuMjE4NzUgMTQ2LjQwNjI1IDc3LjIxODc1IDE0Ni44NTE1NjIgNzcuMjg1MTU2IDE0Ny4yOTY4NzUgQyA3Ny4zNDc2NTYgMTQ3LjczODI4MSA3Ny40NzY1NjIgMTQ4LjE2NDA2MiA3Ny42NjQwNjIgMTQ4LjU3NDIxOSBDIDc3Ljg1MTU2MiAxNDguOTgwNDY5IDc4LjA4OTg0NCAxNDkuMzUxNTYyIDc4LjM4NjcxOSAxNDkuNjkxNDA2IEMgNzguNDE3OTY5IDE0OS43MjY1NjIgNzguNDU3MDMxIDE0OS43NDYwOTQgNzguNTA3ODEyIDE0OS43NSBaIE0gODEuNzQyMTg4IDE0Mi4yODEyNSBMIDgxLjc0MjE4OCAxNDMuNDEwMTU2IEMgODAuMDQ2ODc1IDE0My40OTYwOTQgNzguNjk1MzEyIDE0NC45MDIzNDQgNzguNjk1MzEyIDE0Ni42MjEwOTQgQyA3OC42OTUzMTIgMTQ3LjMyNDIxOSA3OC45MDYyNSAxNDcuOTYwOTM4IDc5LjMyNDIxOSAxNDguNTMxMjUgTCA3OC41MjM0MzggMTQ5LjMzMjAzMSBDIDc3Ljg4NjcxOSAxNDguNTM5MDYyIDc3LjU3MDMxMiAxNDcuNjM2NzE5IDc3LjU3MDMxMiAxNDYuNjIxMDk0IEMgNzcuNTcwMzEyIDE0NC4yODEyNSA3OS40MjU3ODEgMTQyLjM3MTA5NCA4MS43NDIxODggMTQyLjI4MTI1IFogTSA3OS44NjcxODggMTQ4Ljg1OTM3NSBMIDc4LjgyODEyNSAxNDkuODk4NDM4IEMgNzguNzQyMTg4IDE0OS45ODA0NjkgNzguNzQ2MDk0IDE1MC4wNjI1IDc4LjgzNTkzOCAxNTAuMTQwNjI1IEMgNzkuMTc1NzgxIDE1MC40Mzc1IDc5LjU0Njg3NSAxNTAuNjc5Njg4IDc5Ljk1NzAzMSAxNTAuODY3MTg4IEMgODAuMzYzMjgxIDE1MS4wNTQ2ODggODAuNzg5MDYyIDE1MS4xNzk2ODggODEuMjM0Mzc1IDE1MS4yNDYwOTQgQyA4MS42NzU3ODEgMTUxLjMwODU5NCA4Mi4xMjEwOTQgMTUxLjMxMjUgODIuNTY2NDA2IDE1MS4yNDYwOTQgQyA4My4wMDc4MTIgMTUxLjE4MzU5NCA4My40Mzc1IDE1MS4wNTg1OTQgODMuODQzNzUgMTUwLjg3NSBDIDg0LjI1MzkwNiAxNTAuNjg3NSA4NC42MjUgMTUwLjQ0OTIxOSA4NC45NjQ4NDQgMTUwLjE1NjI1IEMgODUuMzA0Njg4IDE0OS44NjMyODEgODUuNTk3NjU2IDE0OS41MjczNDQgODUuODM5ODQ0IDE0OS4xNDg0MzggQyA4Ni4wODIwMzEgMTQ4Ljc3MzQzOCA4Ni4yNjU2MjUgMTQ4LjM2NzE4OCA4Ni4zOTQ1MzEgMTQ3LjkzNzUgQyA4Ni41MTk1MzEgMTQ3LjUwNzgxMiA4Ni41ODIwMzEgMTQ3LjA2NjQwNiA4Ni41ODIwMzEgMTQ2LjYyMTA5NCBDIDg2LjU4MjAzMSAxNDYuNTA3ODEyIDg2LjUyNzM0NCAxNDYuNDUzMTI1IDg2LjQxNzk2OSAxNDYuNDUzMTI1IEwgODQuOTU3MDMxIDE0Ni40NTMxMjUgQyA4NC44NDM3NSAxNDYuNDUzMTI1IDg0Ljc4OTA2MiAxNDYuNTA3ODEyIDg0Ljc4OTA2MiAxNDYuNjIxMDk0IEMgODQuNzg5MDYyIDE0OC4yMDcwMzEgODMuNDk2MDk0IDE0OS40OTYwOTQgODEuOTEwMTU2IDE0OS40OTYwOTQgQyA4MS4yMjY1NjIgMTQ5LjQ5NjA5NCA4MC42MjEwOTQgMTQ5LjI4MTI1IDgwLjA4OTg0NCAxNDguODQ3NjU2IEMgODAuMDExNzE5IDE0OC43ODUxNTYgNzkuOTM3NSAxNDguNzg5MDYyIDc5Ljg2NzE4OCAxNDguODU5Mzc1IFogTSA4NS4xMTcxODggMTQ2Ljc4NTE1NiBMIDg2LjI0NjA5NCAxNDYuNzg1MTU2IEMgODYuMTU2MjUgMTQ5LjEwMTU2MiA4NC4yNDYwOTQgMTUwLjk1NzAzMSA4MS45MTAxNTYgMTUwLjk1NzAzMSBDIDgwLjg5NDUzMSAxNTAuOTU3MDMxIDc5Ljk4ODI4MSAxNTAuNjQwNjI1IDc5LjE5NTMxMiAxNTAuMDAzOTA2IEwgNzkuOTk2MDk0IDE0OS4yMDMxMjUgQyA4MC41NjY0MDYgMTQ5LjYyMTA5NCA4MS4yMDMxMjUgMTQ5LjgzMjAzMSA4MS45MTAxNTYgMTQ5LjgzMjAzMSBDIDgzLjYyNSAxNDkuODMyMDMxIDg1LjAzMTI1IDE0OC40ODA0NjkgODUuMTE3MTg4IDE0Ni43ODUxNTYgWiBNIDg3LjM2NzE4OCAxNDYuMTE3MTg4IEMgODcuNDAyMzQ0IDE0Ni4wNzgxMjUgODcuNDE0MDYyIDE0Ni4wMzUxNTYgODcuNDEwMTU2IDE0NS45ODQzNzUgQyA4Ny4zMzk4NDQgMTQ1LjM2MzI4MSA4Ny4xNjc5NjkgMTQ0Ljc3MzQzOCA4Ni44OTQ1MzEgMTQ0LjIxMDkzOCBDIDg2LjYyNSAxNDMuNjQ4NDM4IDg2LjI2NTYyNSAxNDMuMTQ0NTMxIDg1LjgyNDIxOSAxNDIuNzAzMTI1IEMgODUuMzgyODEyIDE0Mi4yNjE3MTkgODQuODc4OTA2IDE0MS45MDYyNSA4NC4zMTY0MDYgMTQxLjYzMjgxMiBDIDgzLjc1MzkwNiAxNDEuMzYzMjgxIDgzLjE2NDA2MiAxNDEuMTkxNDA2IDgyLjU0Mjk2OSAxNDEuMTE3MTg4IEMgODIuNDE3OTY5IDE0MS4xMDU0NjkgODIuMzU1NDY5IDE0MS4xNjAxNTYgODIuMzU1NDY5IDE0MS4yODUxNTYgTCA4Mi4zNTU0NjkgMTQzLjYzNjcxOSBDIDgyLjM1NTQ2OSAxNDMuNzI2NTYyIDgyLjQwMjM0NCAxNDMuNzgxMjUgODIuNDkyMTg4IDE0My44MDA3ODEgQyA4My4wNTQ2ODggMTQzLjkxNDA2MiA4My41MzkwNjIgMTQ0LjE3NTc4MSA4My45NDUzMTIgMTQ0LjU4MjAzMSBDIDg0LjM1NTQ2OSAxNDQuOTg4MjgxIDg0LjYxMzI4MSAxNDUuNDcyNjU2IDg0LjczMDQ2OSAxNDYuMDM5MDYyIEMgODQuNzUgMTQ2LjEyODkwNiA4NC44MDQ2ODggMTQ2LjE3MTg3NSA4NC44OTQ1MzEgMTQ2LjE3MTg3NSBMIDg3LjI0MjE4OCAxNDYuMTcxODc1IEMgODcuMjkyOTY5IDE0Ni4xNzE4NzUgODcuMzM1OTM4IDE0Ni4xNTIzNDQgODcuMzY3MTg4IDE0Ni4xMTcxODggWiBNIDg1LjAyNzM0NCAxNDUuODM1OTM4IEMgODQuODgyODEyIDE0NS4yNjE3MTkgODQuNjAxNTYyIDE0NC43NjU2MjUgODQuMTgzNTk0IDE0NC4zNDc2NTYgQyA4My43NjE3MTkgMTQzLjkyNTc4MSA4My4yNjU2MjUgMTQzLjY0NDUzMSA4Mi42OTE0MDYgMTQzLjUgTCA4Mi42OTE0MDYgMTQxLjQ3NjU2MiBDIDg0LjkyMTg3NSAxNDEuODEyNSA4Ni43MTQ4NDQgMTQzLjYwNTQ2OSA4Ny4wNTA3ODEgMTQ1LjgzNTkzOCBaIE0gODIuOTIxODc1IDE0NS41MjM0MzggTCA4MS4xNjc5NjkgMTQ3LjkxNDA2MiBDIDgxLjEwMTU2MiAxNDguMDAzOTA2IDgxLjAyMzQzOCAxNDguMDE1NjI1IDgwLjkzNzUgMTQ3Ljk0OTIxOSBDIDgwLjg0NzY1NiAxNDcuODgyODEyIDgwLjgzNTkzOCAxNDcuODA0Njg4IDgwLjg5ODQzOCAxNDcuNzE0ODQ0IEwgODIuNjQ4NDM4IDE0NS4zMjQyMTkgQyA4Mi43MTQ4NDQgMTQ1LjIzNDM3NSA4Mi43OTI5NjkgMTQ1LjIxODc1IDgyLjg4MjgxMiAxNDUuMjg1MTU2IEMgODIuOTc2NTYyIDE0NS4zNTE1NjIgODIuOTg4MjgxIDE0NS40MzM1OTQgODIuOTIxODc1IDE0NS41MjM0MzggWiBNIDgxLjAzMTI1IDE0NS4yMzQzNzUgQyA4MC44OTA2MjUgMTQ1LjIzODI4MSA4MC43NzM0MzggMTQ1LjI4NTE1NiA4MC42NzU3ODEgMTQ1LjM4MjgxMiBDIDgwLjU3ODEyNSAxNDUuNDg0Mzc1IDgwLjUyNzM0NCAxNDUuNjAxNTYyIDgwLjUyNzM0NCAxNDUuNzQyMTg4IEwgODAuNTI3MzQ0IDE0Ni4xNDQ1MzEgQyA4MC41MjczNDQgMTQ2LjI4NTE1NiA4MC41NzQyMTkgMTQ2LjQwNjI1IDgwLjY3MTg3NSAxNDYuNTAzOTA2IEMgODAuNzczNDM4IDE0Ni42MDU0NjkgODAuODkwNjI1IDE0Ni42NTIzNDQgODEuMDMxMjUgMTQ2LjY1MjM0NCBDIDgxLjE3MTg3NSAxNDYuNjUyMzQ0IDgxLjI5Mjk2OSAxNDYuNjA1NDY5IDgxLjM5MDYyNSAxNDYuNTAzOTA2IEMgODEuNDg4MjgxIDE0Ni40MDYyNSA4MS41MzkwNjIgMTQ2LjI4NTE1NiA4MS41MzUxNTYgMTQ2LjE0NDUzMSBMIDgxLjUzNTE1NiAxNDUuNzQyMTg4IEMgODEuNTM1MTU2IDE0NS42MDE1NjIgODEuNDg4MjgxIDE0NS40ODQzNzUgODEuMzg2NzE5IDE0NS4zODI4MTIgQyA4MS4yODkwNjIgMTQ1LjI4NTE1NiA4MS4xNzE4NzUgMTQ1LjIzNDM3NSA4MS4wMzEyNSAxNDUuMjM0Mzc1IFogTSA4MS4yMDMxMjUgMTQ2LjE0NDUzMSBDIDgxLjIwMzEyNSAxNDYuMjYxNzE5IDgxLjE0NDUzMSAxNDYuMzE2NDA2IDgxLjAzMTI1IDE0Ni4zMTY0MDYgQyA4MC45MTc5NjkgMTQ2LjMxNjQwNiA4MC44NTkzNzUgMTQ2LjI2MTcxOSA4MC44NjMyODEgMTQ2LjE0NDUzMSBMIDgwLjg2MzI4MSAxNDUuNzQyMTg4IEMgODAuODU5Mzc1IDE0NS42MjUgODAuOTE3OTY5IDE0NS41NzAzMTIgODEuMDMxMjUgMTQ1LjU3MDMxMiBDIDgxLjE0NDUzMSAxNDUuNTcwMzEyIDgxLjIwMzEyNSAxNDUuNjI1IDgxLjIwMzEyNSAxNDUuNzQyMTg4IFogTSA4Mi4yODEyNSAxNDcuMDkzNzUgTCA4Mi4yODEyNSAxNDcuNDk2MDk0IEMgODIuMjgxMjUgMTQ3LjYzNjcxOSA4Mi4zMzIwMzEgMTQ3Ljc1NzgxMiA4Mi40Mjk2ODggMTQ3Ljg1NTQ2OSBDIDgyLjUyNzM0NCAxNDcuOTUzMTI1IDgyLjY0ODQzOCAxNDguMDAzOTA2IDgyLjc4NTE1NiAxNDguMDAzOTA2IEMgODIuOTI1NzgxIDE0OC4wMDM5MDYgODMuMDQ2ODc1IDE0Ny45NTMxMjUgODMuMTQ0NTMxIDE0Ny44NTU0NjkgQyA4My4yNDIxODggMTQ3Ljc1NzgxMiA4My4yOTI5NjkgMTQ3LjYzNjcxOSA4My4yOTI5NjkgMTQ3LjQ5NjA5NCBMIDgzLjI5Mjk2OSAxNDcuMDkzNzUgQyA4My4yOTI5NjkgMTQ2Ljk1MzEyNSA4My4yNDIxODggMTQ2LjgzNTkzOCA4My4xNDQ1MzEgMTQ2LjczODI4MSBDIDgzLjA0Mjk2OSAxNDYuNjQwNjI1IDgyLjkyNTc4MSAxNDYuNTg5ODQ0IDgyLjc4NTE1NiAxNDYuNTg5ODQ0IEMgODIuNjQ4NDM4IDE0Ni41ODk4NDQgODIuNTMxMjUgMTQ2LjY0MDYyNSA4Mi40Mjk2ODggMTQ2LjczODI4MSBDIDgyLjMzMjAzMSAxNDYuODM1OTM4IDgyLjI4MTI1IDE0Ni45NTMxMjUgODIuMjgxMjUgMTQ3LjA5Mzc1IFogTSA4Mi45NTcwMzEgMTQ3LjA5Mzc1IEwgODIuOTU3MDMxIDE0Ny40OTYwOTQgQyA4Mi45NTcwMzEgMTQ3LjYwOTM3NSA4Mi45MDIzNDQgMTQ3LjY2Nzk2OSA4Mi43ODUxNTYgMTQ3LjY2Nzk2OSBDIDgyLjY3MTg3NSAxNDcuNjY3OTY5IDgyLjYxNzE4OCAxNDcuNjA5Mzc1IDgyLjYxNzE4OCAxNDcuNDk2MDk0IEwgODIuNjE3MTg4IDE0Ny4wOTM3NSBDIDgyLjYxNzE4OCAxNDYuOTgwNDY5IDgyLjY3NTc4MSAxNDYuOTI1NzgxIDgyLjc4NTE1NiAxNDYuOTIxODc1IEMgODIuODk4NDM4IDE0Ni45MjE4NzUgODIuOTU3MDMxIDE0Ni45ODA0NjkgODIuOTU3MDMxIDE0Ny4wOTM3NSBaIE0gODIuOTU3MDMxIDE0Ny4wOTM3NSAiIGZpbGwtb3BhY2l0eT0iMSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PC9nPjwvc3ZnPg=="
+                                alt="Mayor Peso" class="kpi-icon">
+                            <div class="lbl">Mayor<br>peso</div>
+                        </div>
+                        <div class="kpi-sep"></div>
+                        <div class="hero-kpi">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjExIiB6b29tQW5kUGFuPSJtYWduaWZ5IiB2aWV3Qm94PSIwIDAgMTU4LjI1IDE1OC4yNTAwMDIiIGhlaWdodD0iMjExIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBtZWV0IiB2ZXJzaW9uPSIxLjAiPjxkZWZzPjxjbGlwUGF0aCBpZD0iNThhNGRjYzhiMiI+PHBhdGggZD0iTSAwIDAgTCAxNTYuNzU3ODEyIDAgTCAxNTYuNzU3ODEyIDE1Ni43NTc4MTIgTCAwIDE1Ni43NTc4MTIgWiBNIDAgMCAiIGNsaXAtcnVsZT0ibm9uemVybyIvPjwvY2xpcFBhdGg+PGNsaXBQYXRoIGlkPSI4NDZkNGRhNDZlIj48cGF0aCBkPSJNIDcxLjQzNzUgMTQ2LjUwMzkwNiBMIDgxLjg5MDYyNSAxNDYuNTAzOTA2IEwgODEuODkwNjI1IDE1Ni45NTMxMjUgTCA3MS40Mzc1IDE1Ni45NTMxMjUgWiBNIDcxLjQzNzUgMTQ2LjUwMzkwNiAiIGNsaXAtcnVsZT0ibm9uemVybyIvPjwvY2xpcFBhdGg+PC9kZWZzPjxnIGNsaXAtcGF0aD0idXJsKCM1OGE0ZGNjOGIyKSI+PHBhdGggZmlsbD0iI2FlZTUwMCIgZD0iTSA3OC41MTE3MTkgMCBDIDM1LjIyMjY1NiAwIDAgMzUuMjIyNjU2IDAgNzguNTA3ODEyIEMgMCAxMjEuODA0Njg4IDM1LjIyMjY1NiAxNTcuMDIzNDM4IDc4LjUxMTcxOSAxNTcuMDIzNDM4IEMgMTIxLjgwNDY4OCAxNTcuMDIzNDM4IDE1Ny4wMjM0MzggMTIxLjgwNDY4OCAxNTcuMDIzNDM4IDc4LjUwNzgxMiBDIDE1Ny4wMjM0MzggMzUuMjIyNjU2IDEyMS44MDQ2ODggMCA3OC41MTE3MTkgMCBaIE0gNzguNTExNzE5IDE0Ni40Mzc1IEMgNDEuMDU4NTk0IDE0Ni40Mzc1IDEwLjU4NTkzOCAxMTUuOTYwOTM4IDEwLjU4NTkzOCA3OC41MDc4MTIgQyAxMC41ODU5MzggNDEuMDU0Njg4IDQxLjA1ODU5NCAxMC41ODU5MzggNzguNTExNzE5IDEwLjU4NTkzOCBDIDExNS45Njg3NSAxMC41ODU5MzggMTQ2LjQzNzUgNDEuMDU0Njg4IDE0Ni40Mzc1IDc4LjUwNzgxMiBDIDE0Ni40Mzc1IDExNS45NjA5MzggMTE1Ljk2ODc1IDE0Ni40Mzc1IDc4LjUxMTcxOSAxNDYuNDM3NSBaIE0gNzguNTExNzE5IDE0Ni40Mzc1ICIgZmlsbC1vcGFjaXR5PSIxIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48L2c+PHBhdGggZmlsbD0iI2FlZTUwMCIgZD0iTSA4MC4zODY3MTkgNzQuMzAwNzgxIEMgNjguMDE5NTMxIDcxLjg3MTA5NCA2Mi4xOTE0MDYgNzAuMDM5MDYyIDYyLjE5MTQwNiA2My44NDc2NTYgQyA2Mi4xOTE0MDYgNTkuMzcxMDk0IDY0LjEzMjgxMiA1Ni4yNTc4MTIgNjguMTE3MTg4IDU0LjMyNDIxOSBDIDc1LjA0Mjk2OSA1MC45NzY1NjIgODYuNTM5MDYyIDUyLjI3NzM0NCA5Mi43MTQ4NDQgNTcuMTM2NzE5IEMgOTUuMDE5NTMxIDU4Ljk1NzAzMSA5OC4zNDM3NSA1OC41NTQ2ODggMTAwLjE0ODQzOCA1Ni4yNSBDIDEwMS45NTcwMzEgNTMuOTUzMTI1IDEwMS41NTg1OTQgNTAuNjI1IDk5LjI1NzgxMiA0OC44MjQyMTkgQyA5NS4wMjczNDQgNDUuNSA4OS41MjczNDQgNDMuMzgyODEyIDgzLjgwMDc4MSA0Mi40NDUzMTIgTCA4My44MDA3ODEgMzMuMDM5MDYyIEMgODMuODAwNzgxIDMwLjExMzI4MSA4MS40MzM1OTQgMjcuNzQ2MDk0IDc4LjUwNzgxMiAyNy43NDYwOTQgQyA3NS41ODIwMzEgMjcuNzQ2MDk0IDczLjIxNDg0NCAzMC4xMTMyODEgNzMuMjE0ODQ0IDMzLjAzOTA2MiBMIDczLjIxNDg0NCA0Mi4xMzY3MTkgQyA2OS43NSA0Mi41MzUxNTYgNjYuNDIxODc1IDQzLjM4MjgxMiA2My40OTIxODggNDQuODA0Njg4IEMgNTUuODI0MjE5IDQ4LjUyNzM0NCA1MS42MDU0NjkgNTUuMjg1MTU2IDUxLjYwNTQ2OSA2My44NDc2NTYgQyA1MS42MDU0NjkgNzkuNDI1NzgxIDY3LjA1ODU5NCA4Mi40NjQ4NDQgNzguMzM5ODQ0IDg0LjY4NzUgQyA5MC41MTE3MTkgODcuMDc0MjE5IDk0LjgzMjAzMSA4OC43MTg3NSA5NC44MzIwMzEgOTMuMTY0MDYyIEMgOTQuODMyMDMxIDk3LjUxOTUzMSA5Mi45OTYwOTQgMTAwLjU4NTkzOCA4OS4yMjY1NjIgMTAyLjUzMTI1IEMgODIuNTc4MTI1IDEwNS45ODQzNzUgNzEuNDU3MDMxIDEwNC45NjA5MzggNjQuOTI1NzgxIDEwMC4zMjgxMjUgQyA2Mi41MzUxNTYgOTguNjUyMzQ0IDU5LjIzNDM3NSA5OS4yMDMxMjUgNTcuNTQ2ODc1IDEwMS41ODk4NDQgQyA1NS44NTU0NjkgMTAzLjk4MDQ2OSA1Ni40MTQwNjIgMTA3LjI3NzM0NCA1OC44MDQ2ODggMTA4Ljk3MjY1NiBDIDYyLjg2MzI4MSAxMTEuODQ3NjU2IDY3Ljk0OTIxOSAxMTMuNjk5MjE5IDczLjIxNDg0NCAxMTQuNTU0Njg4IEwgNzMuMjE0ODQ0IDEyNy4yMTA5MzggQyA3My4yMTQ4NDQgMTMwLjEzNjcxOSA3NS41ODIwMzEgMTMyLjUwMzkwNiA3OC41MDc4MTIgMTMyLjUwMzkwNiBDIDgxLjQzMzU5NCAxMzIuNTAzOTA2IDgzLjgwMDc4MSAxMzAuMTM2NzE5IDgzLjgwMDc4MSAxMjcuMjEwOTM4IEwgODMuODAwNzgxIDExNC42OTUzMTIgQyA4Ny40OTYwOTQgMTE0LjI4MTI1IDkxLjA2MjUgMTEzLjUwMzkwNiA5NC4wODk4NDQgMTExLjk0MTQwNiBDIDEwMS4zOTQ1MzEgMTA4LjE2NDA2MiAxMDUuNDE3OTY5IDEwMS40OTYwOTQgMTA1LjQxNzk2OSA5My4xNjc5NjkgQyAxMDUuNDIxODc1IDc5LjIyMjY1NiA5MS41NDI5NjkgNzYuNDkyMTg4IDgwLjM4NjcxOSA3NC4zMDA3ODEgWiBNIDgwLjM4NjcxOSA3NC4zMDA3ODEgIiBmaWxsLW9wYWNpdHk9IjEiIGZpbGwtcnVsZT0ibm9uemVybyIvPjxnIGNsaXAtcGF0aD0idXJsKCM4NDZkNGRhNDZlKSI+PHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTSA3My4wNTA3ODEgMTU1LjEzNjcxOSBDIDczLjA1MDc4MSAxNTUuMTM2NzE5IDczLjA1NDY4OCAxNTUuMTM2NzE5IDczLjA1NDY4OCAxNTUuMTM2NzE5IEMgNzMuMTAxNTYyIDE1NS4xMzY3MTkgNzMuMTQwNjI1IDE1NS4xMjEwOTQgNzMuMTc1NzgxIDE1NS4wODk4NDQgTCA3NC4yMTA5MzggMTU0LjA1MDc4MSBDIDc0LjI4MTI1IDE1My45ODA0NjkgNzQuMjg1MTU2IDE1My45MDYyNSA3NC4yMjI2NTYgMTUzLjgyODEyNSBDIDczLjc4OTA2MiAxNTMuMjk2ODc1IDczLjU3NDIxOSAxNTIuNjkxNDA2IDczLjU3NDIxOSAxNTIuMDA3ODEyIEMgNzMuNTc0MjE5IDE1MC40MjE4NzUgNzQuODY3MTg4IDE0OS4xMjg5MDYgNzYuNDUzMTI1IDE0OS4xMjg5MDYgQyA3Ni41NjY0MDYgMTQ5LjEyODkwNiA3Ni42MjEwOTQgMTQ5LjA3NDIxOSA3Ni42MjEwOTQgMTQ4Ljk2MDkzOCBMIDc2LjYyMTA5NCAxNDcuNSBDIDc2LjYyMTA5NCAxNDcuMzkwNjI1IDc2LjU2NjQwNiAxNDcuMzMyMDMxIDc2LjQ1MzEyNSAxNDcuMzMyMDMxIEMgNzYuMDAzOTA2IDE0Ny4zMzIwMzEgNzUuNTY2NDA2IDE0Ny4zOTg0MzggNzUuMTMyODEyIDE0Ny41MjM0MzggQyA3NC43MDMxMjUgMTQ3LjY0ODQzOCA3NC4zMDA3ODEgMTQ3LjgzNTkzOCA3My45MjE4NzUgMTQ4LjA3ODEyNSBDIDczLjU0Njg3NSAxNDguMzIwMzEyIDczLjIxMDkzOCAxNDguNjEzMjgxIDcyLjkxNzk2OSAxNDguOTQ5MjE5IEMgNzIuNjIxMDk0IDE0OS4yODkwNjIgNzIuMzgyODEyIDE0OS42NjQwNjIgNzIuMTk1MzEyIDE1MC4wNzQyMTkgQyA3Mi4wMTE3MTkgMTUwLjQ4MDQ2OSA3MS44ODY3MTkgMTUwLjkwNjI1IDcxLjgyNDIxOSAxNTEuMzUxNTYyIEMgNzEuNzYxNzE5IDE1MS43OTY4NzUgNzEuNzYxNzE5IDE1Mi4yNDIxODggNzEuODI4MTI1IDE1Mi42ODM1OTQgQyA3MS44OTA2MjUgMTUzLjEyODkwNiA3Mi4wMTk1MzEgMTUzLjU1NDY4OCA3Mi4yMDcwMzEgMTUzLjk2MDkzOCBDIDcyLjM5NDUzMSAxNTQuMzcxMDk0IDcyLjYzNjcxOSAxNTQuNzQyMTg4IDcyLjkyOTY4OCAxNTUuMDgyMDMxIEMgNzIuOTYwOTM4IDE1NS4xMTcxODggNzMgMTU1LjEzNjcxOSA3My4wNTA3ODEgMTU1LjEzNjcxOSBaIE0gNzYuMjg1MTU2IDE0Ny42NzE4NzUgTCA3Ni4yODUxNTYgMTQ4Ljc5Njg3NSBDIDc0LjU4OTg0NCAxNDguODg2NzE5IDczLjIzODI4MSAxNTAuMjkyOTY5IDczLjIzODI4MSAxNTIuMDA3ODEyIEMgNzMuMjM4MjgxIDE1Mi43MTQ4NDQgNzMuNDQ5MjE5IDE1My4zNTE1NjIgNzMuODcxMDk0IDE1My45MjE4NzUgTCA3My4wNjY0MDYgMTU0LjcyMjY1NiBDIDcyLjQyOTY4OCAxNTMuOTI5Njg4IDcyLjExMzI4MSAxNTMuMDIzNDM4IDcyLjExMzI4MSAxNTIuMDA3ODEyIEMgNzIuMTEzMjgxIDE0OS42NzE4NzUgNzMuOTY4NzUgMTQ3Ljc2MTcxOSA3Ni4yODUxNTYgMTQ3LjY3MTg3NSBaIE0gNzQuNDEwMTU2IDE1NC4yNSBMIDczLjM3MTA5NCAxNTUuMjg5MDYyIEMgNzMuMjg5MDYyIDE1NS4zNzEwOTQgNzMuMjg5MDYyIDE1NS40NTMxMjUgNzMuMzc4OTA2IDE1NS41MzEyNSBDIDczLjcxODc1IDE1NS44MjgxMjUgNzQuMDg5ODQ0IDE1Ni4wNjY0MDYgNzQuNSAxNTYuMjUzOTA2IEMgNzQuOTA2MjUgMTU2LjQ0MTQwNiA3NS4zMzIwMzEgMTU2LjU3MDMxMiA3NS43NzczNDQgMTU2LjYzMjgxMiBDIDc2LjIxODc1IDE1Ni42OTkyMTkgNzYuNjY0MDYyIDE1Ni42OTkyMTkgNzcuMTA5Mzc1IDE1Ni42MzY3MTkgQyA3Ny41NTQ2ODggMTU2LjU3NDIxOSA3Ny45ODA0NjkgMTU2LjQ0OTIxOSA3OC4zODY3MTkgMTU2LjI2NTYyNSBDIDc4Ljc5Njg3NSAxNTYuMDc4MTI1IDc5LjE3MTg3NSAxNTUuODM5ODQ0IDc5LjUxMTcxOSAxNTUuNTQ2ODc1IEMgNzkuODQ3NjU2IDE1NS4yNSA4MC4xNDA2MjUgMTU0LjkxNzk2OSA4MC4zODI4MTIgMTU0LjUzOTA2MiBDIDgwLjYyNSAxNTQuMTYwMTU2IDgwLjgxMjUgMTUzLjc1NzgxMiA4MC45Mzc1IDE1My4zMjgxMjUgQyA4MS4wNjI1IDE1Mi44OTg0MzggODEuMTI4OTA2IDE1Mi40NTcwMzEgODEuMTI4OTA2IDE1Mi4wMDc4MTIgQyA4MS4xMjg5MDYgMTUxLjg5ODQzOCA4MS4wNzAzMTIgMTUxLjgzOTg0NCA4MC45NjA5MzggMTUxLjgzOTg0NCBMIDc5LjUgMTUxLjgzOTg0NCBDIDc5LjM4NjcxOSAxNTEuODM5ODQ0IDc5LjMzMjAzMSAxNTEuODk4NDM4IDc5LjMzMjAzMSAxNTIuMDA3ODEyIEMgNzkuMzMyMDMxIDE1My41OTc2NTYgNzguMDM5MDYyIDE1NC44ODY3MTkgNzYuNDUzMTI1IDE1NC44ODY3MTkgQyA3NS43Njk1MzEgMTU0Ljg4NjcxOSA3NS4xNjQwNjIgMTU0LjY3MTg3NSA3NC42MzI4MTIgMTU0LjIzODI4MSBDIDc0LjU1NDY4OCAxNTQuMTc1NzgxIDc0LjQ4MDQ2OSAxNTQuMTc5Njg4IDc0LjQxMDE1NiAxNTQuMjUgWiBNIDc5LjY2NDA2MiAxNTIuMTc1NzgxIEwgODAuNzg5MDYyIDE1Mi4xNzU3ODEgQyA4MC42OTkyMTkgMTU0LjQ5MjE4OCA3OC43ODkwNjIgMTU2LjM0NzY1NiA3Ni40NTMxMjUgMTU2LjM0NzY1NiBDIDc1LjQzNzUgMTU2LjM0NzY1NiA3NC41MzEyNSAxNTYuMDMxMjUgNzMuNzM4MjgxIDE1NS4zOTQ1MzEgTCA3NC41NDI5NjkgMTU0LjU4OTg0NCBDIDc1LjEwOTM3NSAxNTUuMDExNzE5IDc1Ljc0NjA5NCAxNTUuMjIyNjU2IDc2LjQ1MzEyNSAxNTUuMjIyNjU2IEMgNzguMTY3OTY5IDE1NS4yMjI2NTYgNzkuNTc0MjE5IDE1My44NzEwOTQgNzkuNjY0MDYyIDE1Mi4xNzU3ODEgWiBNIDgxLjkxNDA2MiAxNTEuNTAzOTA2IEMgODEuOTQ1MzEyIDE1MS40Njg3NSA4MS45NjA5MzggMTUxLjQyNTc4MSA4MS45NTMxMjUgMTUxLjM3NSBDIDgxLjg4MjgxMiAxNTAuNzUzOTA2IDgxLjcxMDkzOCAxNTAuMTY0MDYyIDgxLjQzNzUgMTQ5LjYwMTU2MiBDIDgxLjE2Nzk2OSAxNDkuMDM5MDYyIDgwLjgwODU5NCAxNDguNTM1MTU2IDgwLjM2NzE4OCAxNDguMDkzNzUgQyA3OS45MjU3ODEgMTQ3LjY1MjM0NCA3OS40MjU3ODEgMTQ3LjI5Mjk2OSA3OC44NjMyODEgMTQ3LjAyMzQzOCBDIDc4LjMwMDc4MSAxNDYuNzUgNzcuNzA3MDMxIDE0Ni41NzgxMjUgNzcuMDg1OTM4IDE0Ni41MDc4MTIgQyA3Ni45NjA5MzggMTQ2LjQ5MjE4OCA3Ni44OTg0MzggMTQ2LjU1MDc4MSA3Ni44OTg0MzggMTQ2LjY3NTc4MSBMIDc2Ljg5ODQzOCAxNDkuMDIzNDM4IEMgNzYuODk4NDM4IDE0OS4xMTcxODggNzYuOTQ1MzEyIDE0OS4xNzE4NzUgNzcuMDM1MTU2IDE0OS4xODc1IEMgNzcuNTk3NjU2IDE0OS4zMDQ2ODggNzguMDgyMDMxIDE0OS41NjI1IDc4LjQ5MjE4OCAxNDkuOTcyNjU2IEMgNzguODk4NDM4IDE1MC4zNzg5MDYgNzkuMTYwMTU2IDE1MC44NjMyODEgNzkuMjczNDM4IDE1MS40MjU3ODEgQyA3OS4yOTI5NjkgMTUxLjUxNTYyNSA3OS4zNDc2NTYgMTUxLjU2MjUgNzkuNDM3NSAxNTEuNTYyNSBMIDgxLjc4OTA2MiAxNTEuNTYyNSBDIDgxLjgzNTkzOCAxNTEuNTYyNSA4MS44Nzg5MDYgMTUxLjU0Mjk2OSA4MS45MTQwNjIgMTUxLjUwMzkwNiBaIE0gNzkuNTcwMzEyIDE1MS4yMjY1NjIgQyA3OS40MjU3ODEgMTUwLjY1MjM0NCA3OS4xNDQ1MzEgMTUwLjE1NjI1IDc4LjcyNjU2MiAxNDkuNzM0Mzc1IEMgNzguMzA4NTk0IDE0OS4zMTY0MDYgNzcuODA4NTk0IDE0OS4wMzUxNTYgNzcuMjM0Mzc1IDE0OC44OTA2MjUgTCA3Ny4yMzQzNzUgMTQ2Ljg2NzE4OCBDIDc5LjQ2NDg0NCAxNDcuMjAzMTI1IDgxLjI1NzgxMiAxNDguOTk2MDk0IDgxLjU5NzY1NiAxNTEuMjI2NTYyIFogTSA3Ny40NjQ4NDQgMTUwLjkxMDE1NiBMIDc1LjcxMDkzOCAxNTMuMzA0Njg4IEMgNzUuNjQ0NTMxIDE1My4zOTA2MjUgNzUuNTcwMzEyIDE1My40MDIzNDQgNzUuNDgwNDY5IDE1My4zMzk4NDQgQyA3NS4zOTA2MjUgMTUzLjI3MzQzOCA3NS4zNzg5MDYgMTUzLjE5NTMxMiA3NS40NDE0MDYgMTUzLjEwNTQ2OSBMIDc3LjE5MTQwNiAxNTAuNzE0ODQ0IEMgNzcuMjU3ODEyIDE1MC42MjEwOTQgNzcuMzM1OTM4IDE1MC42MDkzNzUgNzcuNDI5Njg4IDE1MC42NzU3ODEgQyA3Ny41MTk1MzEgMTUwLjc0MjE4OCA3Ny41MzEyNSAxNTAuODIwMzEyIDc3LjQ2NDg0NCAxNTAuOTEwMTU2IFogTSA3NS41NzQyMTkgMTUwLjYyNSBDIDc1LjQzNzUgMTUwLjYyNSA3NS4zMTY0MDYgMTUwLjY3NTc4MSA3NS4yMTg3NSAxNTAuNzczNDM4IEMgNzUuMTIxMDk0IDE1MC44NzEwOTQgNzUuMDcwMzEyIDE1MC45OTIxODggNzUuMDcwMzEyIDE1MS4xMjg5MDYgTCA3NS4wNzAzMTIgMTUxLjUzNTE1NiBDIDc1LjA3MDMxMiAxNTEuNjc1NzgxIDc1LjExNzE4OCAxNTEuNzkyOTY5IDc1LjIxODc1IDE1MS44OTQ1MzEgQyA3NS4zMTY0MDYgMTUxLjk5MjE4OCA3NS40MzM1OTQgMTUyLjA0Mjk2OSA3NS41NzQyMTkgMTUyLjA0Mjk2OSBDIDc1LjcxNDg0NCAxNTIuMDQyOTY5IDc1LjgzNTkzOCAxNTEuOTkyMTg4IDc1LjkzMzU5NCAxNTEuODk0NTMxIEMgNzYuMDMxMjUgMTUxLjc5Mjk2OSA3Ni4wODIwMzEgMTUxLjY3NTc4MSA3Ni4wODIwMzEgMTUxLjUzNTE1NiBMIDc2LjA4MjAzMSAxNTEuMTI4OTA2IEMgNzYuMDgyMDMxIDE1MC45OTIxODggNzYuMDMxMjUgMTUwLjg3MTA5NCA3NS45MzM1OTQgMTUwLjc3MzQzOCBDIDc1LjgzMjAzMSAxNTAuNjc1NzgxIDc1LjcxNDg0NCAxNTAuNjI1IDc1LjU3NDIxOSAxNTAuNjI1IFogTSA3NS43NDYwOTQgMTUxLjUzNTE1NiBDIDc1Ljc0NjA5NCAxNTEuNjQ4NDM4IDc1LjY5MTQwNiAxNTEuNzA3MDMxIDc1LjU3NDIxOSAxNTEuNzA3MDMxIEMgNzUuNDYwOTM4IDE1MS43MDcwMzEgNzUuNDAyMzQ0IDE1MS42NDg0MzggNzUuNDA2MjUgMTUxLjUzNTE1NiBMIDc1LjQwNjI1IDE1MS4xMzI4MTIgQyA3NS40MDIzNDQgMTUxLjAxNTYyNSA3NS40NjA5MzggMTUwLjk2MDkzOCA3NS41NzQyMTkgMTUwLjk2MDkzOCBDIDc1LjY5MTQwNiAxNTAuOTYwOTM4IDc1Ljc0NjA5NCAxNTEuMDE1NjI1IDc1Ljc0NjA5NCAxNTEuMTMyODEyIFogTSA3Ni44MjQyMTkgMTUyLjQ4MDQ2OSBMIDc2LjgyNDIxOSAxNTIuODg2NzE5IEMgNzYuODI0MjE5IDE1My4wMjczNDQgNzYuODc1IDE1My4xNDQ1MzEgNzYuOTcyNjU2IDE1My4yNDYwOTQgQyA3Ny4wNzAzMTIgMTUzLjM0Mzc1IDc3LjE5MTQwNiAxNTMuMzk0NTMxIDc3LjMzMjAzMSAxNTMuMzk0NTMxIEMgNzcuNDY4NzUgMTUzLjM5NDUzMSA3Ny41ODk4NDQgMTUzLjM0Mzc1IDc3LjY4NzUgMTUzLjI0NjA5NCBDIDc3Ljc4OTA2MiAxNTMuMTQ0NTMxIDc3LjgzNTkzOCAxNTMuMDI3MzQ0IDc3LjgzNTkzOCAxNTIuODg2NzE5IEwgNzcuODM1OTM4IDE1Mi40ODA0NjkgQyA3Ny44MzU5MzggMTUyLjM0Mzc1IDc3Ljc4NTE1NiAxNTIuMjI2NTYyIDc3LjY4NzUgMTUyLjEyNSBDIDc3LjU4OTg0NCAxNTIuMDI3MzQ0IDc3LjQ2ODc1IDE1MS45ODA0NjkgNzcuMzMyMDMxIDE1MS45ODA0NjkgQyA3Ny4xOTE0MDYgMTUxLjk4MDQ2OSA3Ny4wNzQyMTkgMTUyLjAyNzM0NCA3Ni45NzY1NjIgMTUyLjEyNSBDIDc2Ljg3NSAxNTIuMjI2NTYyIDc2LjgyODEyNSAxNTIuMzQzNzUgNzYuODI0MjE5IDE1Mi40ODA0NjkgWiBNIDc3LjUgMTUyLjQ4MDQ2OSBMIDc3LjUgMTUyLjg4NjcxOSBDIDc3LjUgMTUzIDc3LjQ0NTMxMiAxNTMuMDU4NTk0IDc3LjMzMjAzMSAxNTMuMDU4NTk0IEMgNzcuMjE0ODQ0IDE1My4wNTg1OTQgNzcuMTYwMTU2IDE1MyA3Ny4xNjAxNTYgMTUyLjg4NjcxOSBMIDc3LjE2MDE1NiAxNTIuNDgwNDY5IEMgNzcuMTYwMTU2IDE1Mi4zNzEwOTQgNzcuMjE4NzUgMTUyLjMxMjUgNzcuMzMyMDMxIDE1Mi4zMTI1IEMgNzcuNDQ1MzEyIDE1Mi4zMTI1IDc3LjUgMTUyLjM2NzE4OCA3Ny41IDE1Mi40ODA0NjkgWiBNIDc3LjUgMTUyLjQ4MDQ2OSAiIGZpbGwtb3BhY2l0eT0iMSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PC9nPjwvc3ZnPg=="
+                                alt="Mayor Rentabilidad" class="kpi-icon">
+                            <div class="lbl">Mayor<br>rentabilidad</div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex gap-3 flex-wrap fade-up delay-4">
+                        <a href="#contacto" class="btn-hero-primary">
+                            <i class="bi bi-headset"></i> Solicitar asesoría técnica
+                        </a>
+
+                    </div>
+
+                    <div class="mt-4 fade-up delay-4" style="display:flex;align-items:center;gap:.75rem;">
+                        <div
+                            style="background:rgba(168,216,64,.15);border-radius:50px;padding:.4rem 1.1rem;border:1px solid rgba(168,216,64,.3);">
+                            <i class="bi bi-graph-up-arrow" style="color:var(--lime)"></i>
+                            <span style="color:#fff;font-size:.88rem;font-weight:700;margin-left:.4rem;">Hasta <strong
+                                    style="color:var(--lime)">+$1.096</strong> de retorno por ave</span>
+                        </div>
+                        <span style="color:rgba(255,255,255,.4);font-size:.8rem;">con inversión mínima de
+                            $156/ave</span>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 fade-up delay-2">
+                    <div class="hero-img-wrap">
+                        <div class="hero-glow"></div>
+                        <!-- Reemplaza este bloque con tu imagen real del producto -->
+                        <div class="hero-bottle-placeholder">
+                            <i class="bi bi-droplet-fill"></i>
+                            <div style="margin-top:.5rem;font-weight:700;font-size:.9rem;color:var(--orange)">
+                                4ourmidable</div>
+                            <div style="font-size:.72rem;color:rgba(255,255,255,.4);margin-top:.3rem;">Curcumina
+                                Líquida<br>420 mL</div>
+                            <div style="margin-top:1rem;font-size:.7rem;color:rgba(255,255,255,.25);">← Insertar imagen
+                                del producto aquí</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════ STATS BAR ═══════════════════ -->
+    <div class="stats-bar">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-6 col-md-3">
+                    <div class="stat-item">
+                        <span class="num">−40%</span>
+                        <div class="desc">en mortalidad<br><small class="text-muted fw-normal">de 6,73% a 3,97%</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item">
+                        <span class="num accent">−3,8%</span>
+                        <div class="desc">consumo de alimento<br><small class="text-muted fw-normal">de 4,295 a 4,132
+                                kg/ave</small></div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item">
+                        <span class="num">+150g</span>
+                        <div class="desc">más peso por ave<br><small class="text-muted fw-normal">de 2,285 a 2,440
+                                kg</small></div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item">
+                        <span class="num accent">7,0×</span>
+                        <div class="desc">más retorno<br><small class="text-muted fw-normal">$26M más de utilidad
+                                total</small></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════ BENEFICIOS ═══════════════════ -->
+    <section id="beneficios">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-7">
+                    <div class="section-tag">Beneficios comprobados</div>
+                    <h2 class="section-title">Todo lo que su granja <em>necesita</em> para crecer</h2>
+                    <p class="text-muted" style="font-size:.95rem;line-height:1.7;">
+                        Como inmunomodulador natural de alta biodisponibilidad, nuestra Curcumina líquida
+                        ofrece a sus aves el mejor refuerzo para sobrevivir sus primeros días de vida,
+                        impactando directamente su rentabilidad operativa.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="benefit-card green">
+                        <div class="benefit-icon green"><i class="bi bi-shield-check"></i></div>
+                        <h4>Menor Mortalidad</h4>
+                        <div class="benefit-metric green">−40%</div>
+                        <p>Reducción del lote de 6,73% a 3,97%, garantizando el retorno de la inversión del producto.
+                            Ahorro de <strong>$1.573.200</strong> por lote.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="benefit-card orange">
+                        <div class="benefit-icon orange"><i class="bi bi-basket3"></i></div>
+                        <h4>Menor Consumo</h4>
+                        <div class="benefit-metric orange">−3,8%</div>
+                        <p>Reducción de 4,295 kg a 4,132 kg de alimento por ave gracias a un sistema inmune fortalecido.
+                            Ahorro de <strong>$291 por ave</strong>.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="benefit-card lime">
+                        <div class="benefit-icon lime"><i class="bi bi-graph-up-arrow"></i></div>
+                        <h4>Mayor Peso</h4>
+                        <div class="benefit-metric lime">+155g</div>
+                        <p>Más de 150 gramos de peso extra en promedio por ave gracias a una mejor conversión
+                            alimenticia. Utilidad de <strong>$1.008/ave</strong>.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="benefit-card gold">
+                        <div class="benefit-icon gold"><i class="bi bi-currency-dollar"></i></div>
+                        <h4>Mayor Rentabilidad</h4>
+                        <div class="benefit-metric gold">7,0×</div>
+                        <p>Mayor conversión para obtener el máximo retorno económico en cada lote. <strong>Sin uso de
+                                antibióticos</strong>, reduciendo costos y riesgos regulatorios.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════ APLICACIÓN ═══════════════════ -->
+    <section id="aplicacion">
+        <div class="container">
+            <div class="row gy-5 align-items-center">
+                <div class="col-lg-5">
+                    <div class="section-tag">Protocolo de aplicación</div>
+                    <h2 class="section-title">Simple. <em>Eficaz</em>. En sólo 2 semanas.</h2>
+                    <p>
+                        La aplicación durante las primeras dos semanas de vida garantiza el refuerzo inmunitario clave
+                        para una óptima conversión alimenticia durante todo el ciclo productivo.
+                    </p>
+
+                    <div class="timeline mt-4">
+                        <div class="timeline-item">
+                            <div class="timeline-dot">1</div>
+                            <h5>Días 1–3 · Llegada del pollito</h5>
+                            <p>Aplicación en agua de bebida a dosis de arranque. Estimulación inmune desde la primera
+                                hora de vida.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">2</div>
+                            <h5>Días 4–7 · Consolidación</h5>
+                            <p>Mantenimiento de la dosis para consolidar la respuesta inmune y mejorar la absorción de
+                                nutrientes.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">3</div>
+                            <h5>Días 8–14 · Potenciación</h5>
+                            <p>Refuerzo final que marca la diferencia en conversión y peso durante todo el ciclo hasta
+                                el día 50.</p>
+                        </div>
+                        <div class="timeline-item" style="margin-bottom:0">
+                            <div class="timeline-dot" style="background:var(--orange);">✓</div>
+                            <h5 style="color:var(--orange-lt)">Beneficio sostenido hasta el día 50</h5>
+                            <p>Sin necesidad de reaplicar. La modulación inmune se sostiene y se traduce en mayor peso y
+                                rentabilidad al sacrificio.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <!-- Gráfica de evolución de peso -->
+                    <div class="chart-container mb-4">
+                        <p class="text-muted fw-700 mb-3"
+                            style="font-size:.8rem;text-transform:uppercase;letter-spacing:1px;font-weight:700;">
+                            Evolución del peso promedio (kg) — Con vs. Sin Curcumina</p>
+                        <svg viewBox="0 0 620 280" xmlns="http://www.w3.org/2000/svg" width="100%">
+                            <!-- Grid -->
+                            <defs>
+                                <linearGradient id="fillGrad" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-color="#a8d840" stop-opacity="0.18" />
+                                    <stop offset="100%" stop-color="#a8d840" stop-opacity="0" />
+                                </linearGradient>
+                            </defs>
+                            <!-- Y axis labels -->
+                            <text x="28" y="32" fill="#9aaa9e" font-size="11" text-anchor="end"
+                                font-family="Manrope,sans-serif">2.5</text>
+                            <text x="28" y="82" fill="#9aaa9e" font-size="11" text-anchor="end"
+                                font-family="Manrope,sans-serif">2.0</text>
+                            <text x="28" y="132" fill="#9aaa9e" font-size="11" text-anchor="end"
+                                font-family="Manrope,sans-serif">1.5</text>
+                            <text x="28" y="182" fill="#9aaa9e" font-size="11" text-anchor="end"
+                                font-family="Manrope,sans-serif">1.0</text>
+                            <text x="28" y="232" fill="#9aaa9e" font-size="11" text-anchor="end"
+                                font-family="Manrope,sans-serif">0.5</text>
+                            <!-- Grid lines -->
+                            <line x1="35" y1="28" x2="610" y2="28" stroke="#e8edea" stroke-width="1" />
+                            <line x1="35" y1="78" x2="610" y2="78" stroke="#e8edea" stroke-width="1" />
+                            <line x1="35" y1="128" x2="610" y2="128" stroke="#e8edea" stroke-width="1" />
+                            <line x1="35" y1="178" x2="610" y2="178" stroke="#e8edea" stroke-width="1" />
+                            <line x1="35" y1="228" x2="610" y2="228" stroke="#e8edea" stroke-width="1" />
+                            <!-- Application zone highlight (days 1-15) -->
+                            <rect x="35" y="28" width="166" height="200" fill="rgba(224,123,42,.07)" rx="4" />
+                            <text x="118" y="244" fill="#e07b2a" font-size="10" text-anchor="middle"
+                                font-family="Manrope,sans-serif" font-weight="700">Aplicación Curcumina</text>
+                            <!-- X axis -->
+                            <text x="35" y="258" fill="#9aaa9e" font-size="10" text-anchor="middle"
+                                font-family="Manrope,sans-serif">0</text>
+                            <text x="91" y="258" fill="#9aaa9e" font-size="10" text-anchor="middle"
+                                font-family="Manrope,sans-serif">5</text>
+                            <text x="147" y="258" fill="#9aaa9e" font-size="10" text-anchor="middle"
+                                font-family="Manrope,sans-serif">10</text>
+                            <text x="202" y="258" fill="#9aaa9e" font-size="10" text-anchor="middle"
+                                font-family="Manrope,sans-serif">15</text>
+                            <text x="258" y="258" fill="#9aaa9e" font-size="10" text-anchor="middle"
+                                font-family="Manrope,sans-serif">20</text>
+                            <text x="314" y="258" fill="#9aaa9e" font-size="10" text-anchor="middle"
+                                font-family="Manrope,sans-serif">25</text>
+                            <text x="369" y="258" fill="#9aaa9e" font-size="10" text-anchor="middle"
+                                font-family="Manrope,sans-serif">30</text>
+                            <text x="425" y="258" fill="#9aaa9e" font-size="10" text-anchor="middle"
+                                font-family="Manrope,sans-serif">35</text>
+                            <text x="481" y="258" fill="#9aaa9e" font-size="10" text-anchor="middle"
+                                font-family="Manrope,sans-serif">40</text>
+                            <text x="536" y="258" fill="#9aaa9e" font-size="10" text-anchor="middle"
+                                font-family="Manrope,sans-serif">45</text>
+                            <text x="592" y="258" fill="#9aaa9e" font-size="10" text-anchor="middle"
+                                font-family="Manrope,sans-serif">50</text>
+                            <!-- Area fill con curcumina -->
+                            <path
+                                d="M35,228 C60,222 80,210 91,198 C115,175 140,145 147,130 C160,105 175,80 202,62 C225,47 258,38 314,33 C369,28 425,26 481,24 C520,23 560,22 592,21 L592,228 Z"
+                                fill="url(#fillGrad)" />
+                            <!-- Línea SIN curcumina (verde oscuro) -->
+                            <path
+                                d="M35,228 C60,224 80,215 91,205 C115,185 140,158 147,143 C160,118 175,95 202,78 C225,63 258,54 314,46 C369,40 425,37 481,34 C520,32 560,31 592,30"
+                                stroke="#2d7a3a" stroke-width="2.5" fill="none" stroke-dasharray="5,4" />
+                            <!-- Línea CON curcumina (naranja) -->
+                            <path
+                                d="M35,228 C60,222 80,210 91,198 C115,175 140,145 147,130 C160,105 175,80 202,62 C225,47 258,38 314,33 C369,28 425,26 481,24 C520,23 560,22 592,21"
+                                stroke="#e07b2a" stroke-width="3" fill="none" />
+                            <!-- End dots -->
+                            <circle cx="592" cy="21" r="5" fill="#e07b2a" />
+                            <circle cx="592" cy="30" r="5" fill="#2d7a3a" />
+                            <!-- Labels at end -->
+                            <text x="598" y="19" fill="#e07b2a" font-size="10" font-weight="700"
+                                font-family="Manrope,sans-serif">2.44 kg ↑</text>
+                            <text x="598" y="33" fill="#2d7a3a" font-size="10" font-weight="700"
+                                font-family="Manrope,sans-serif">2.29 kg</text>
+                            <!-- Legend -->
+                            <rect x="38" y="270" width="12" height="4" fill="#e07b2a" rx="2" />
+                            <text x="55" y="276" fill="#555" font-size="11" font-family="Manrope,sans-serif">Con
+                                Curcumina</text>
+                            <line x1="150" y1="272" x2="162" y2="272" stroke="#2d7a3a" stroke-width="2"
+                                stroke-dasharray="4,3" />
+                            <text x="167" y="276" fill="#555" font-size="11" font-family="Manrope,sans-serif">Sin
+                                Curcumina</text>
+                        </svg>
+                    </div>
+
+                    <div class="dosage-card">
+                        <p
+                            style="color:rgba(255,255,255,.5);font-size:.75rem;text-transform:uppercase;letter-spacing:1.5px;font-weight:700;margin-bottom:1.2rem;">
+                            Dosificación referencial</p>
+                        <div class="dosage-row">
+                            <div class="dosage-pill"><i class="bi bi-droplet me-1"></i> 1 ml / litro</div>
+                            <p>Concentración en agua de bebida durante todo el período de aplicación.</p>
+                        </div>
+                        <div class="dosage-row">
+                            <div class="dosage-pill"><i class="bi bi-clock me-1"></i> 14 días</div>
+                            <p>Ventana de aplicación crítica: primeros 14 días de vida del pollito.</p>
+                        </div>
+                        <div class="dosage-row">
+                            <div class="dosage-pill"><i class="bi bi-droplet-half me-1"></i> 420 mL</div>
+                            <p>Presentación concentrada hidrosoluble. Sin sodio, sin pimienta. Diseñado en EE.UU.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════ RESULTADOS COMPARATIVOS ═══════════════════ -->
+    <section id="resultados">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-7">
+                    <div class="section-tag">Datos de campo reales</div>
+                    <h2 class="section-title">Resultados que <em>hablan solos</em></h2>
+                    <p class="text-muted" style="font-size:.95rem;line-height:1.7;">
+                        Comparativa directa entre un lote suplementado con Curcumina (sin antibiótico)
+                        vs. el lote control con antibiótico tradicional. Los números son contundentes.
+                    </p>
+                </div>
+            </div>
+
+            <div class="compare-wrapper mb-4">
+                <div class="row g-0">
+                    <div class="col-md-6">
+                        <div class="compare-col with">
+                            <h4><i class="bi bi-check-circle-fill me-2"></i>Lote CON Curcumina <span
+                                    style="opacity:.6;font-weight:400;font-size:.8rem;">(sin antibiótico)</span></h4>
+                            <div class="compare-row"><span class="label">Peso por ave</span><span class="value"
+                                    style="color:var(--lime)">2,440 kg</span></div>
+                            <div class="compare-row"><span class="label">Consumo alimento</span><span class="value">4,13
+                                    kg/ave</span></div>
+                            <div class="compare-row"><span class="label">Conversión</span><span
+                                    class="value">1,69</span></div>
+                            <div class="compare-row"><span class="label">Mortalidad</span><span class="value"
+                                    style="color:var(--lime)">3,97%</span></div>
+                            <div class="compare-row"><span class="label">Rentabilidad</span><span class="value"
+                                    style="color:var(--lime);font-size:1.1rem;">102,8 millones</span></div>
+                            <div class="compare-highlight">
+                                <span class="ch-label">Retorno de inversión</span>
+                                <span class="ch-value">7,0×</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="compare-col without">
+                            <h4><i class="bi bi-x-circle me-2" style="color:rgba(255,255,255,.3)"></i>Lote SIN Curcumina
+                                <span style="opacity:.6;font-weight:400;font-size:.8rem;">(con antibiótico)</span>
+                            </h4>
+                            <div class="compare-row"><span class="label">Peso por ave</span><span class="value">2,285
+                                    kg</span></div>
+                            <div class="compare-row"><span class="label">Consumo alimento</span><span class="value">4,29
+                                    kg/ave</span></div>
+                            <div class="compare-row"><span class="label">Conversión</span><span
+                                    class="value">1,88</span></div>
+                            <div class="compare-row"><span class="label">Mortalidad</span><span class="value"
+                                    style="color:#ff6b6b">6,73%</span></div>
+                            <div class="compare-row"><span class="label">Rentabilidad</span><span class="value"
+                                    style="font-size:1.1rem;">76,5 millones</span></div>
+                            <div class="compare-highlight"
+                                style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.1)">
+                                <span class="ch-label">Diferencia vs. con Curcumina</span>
+                                <span class="ch-value" style="color:#ff6b6b">−$26M</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Beneficios resumidos -->
+            <div class="benefit-banner">
+                <div class="row g-3">
+                    <div class="col-6 col-md-3">
+                        <div class="benefit-tag"><i class="bi bi-arrow-up-circle-fill"></i>
+                            <div><small>Retorno</small><br><strong style="color:#fff">7,0× más ROI</strong></div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="benefit-tag"><i class="bi bi-arrow-up-circle-fill"></i>
+                            <div><small>Peso extra</small><br><strong style="color:#fff">+0,155 kg/ave</strong></div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="benefit-tag gold-tag"><i class="bi bi-ban"></i>
+                            <div><small>Sin</small><br><strong style="color:#fff">antibióticos</strong></div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="benefit-tag gold-tag"><i class="bi bi-currency-dollar"></i>
+                            <div><small>Utilidad extra</small><br><strong style="color:#fff">$26M / lote</strong></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════ ROI & CALCULADORA ═══════════════════ -->
+    <section id="roi">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-7">
+                    <div class="section-tag">Retorno de inversión</div>
+                    <h2 class="section-title">Una inversión de $156 por ave que <em>rinde $1.096</em></h2>
+                    <p class="text-muted" style="font-size:.95rem;line-height:1.7;">
+                        Calcule cuánto puede ganar su granja con Curcumina 4ourmidable.
+                        Ingrese el tamaño de su lote y vea los resultados en tiempo real.
+                    </p>
+                </div>
+            </div>
+            <div class="row g-4 align-items-start">
+                <div class="col-lg-5">
+                    <div class="roi-card-main">
+                        <span class="roi-number">7,0×</span>
+                        <div class="roi-sub">Tasa interna de retorno por lote</div>
+                        <div class="roi-steps">
+                            <div class="roi-step">
+                                <div class="roi-step-num">1</div>
+                                <div>
+                                    <div class="step-label">Inversión por ave</div>
+                                    <p>$156 por ave suplementada durante 14 días</p>
+                                </div>
+                            </div>
+                            <div class="roi-step">
+                                <div class="roi-step-num">2</div>
+                                <div>
+                                    <div class="step-label">Retorno garantizado</div>
+                                    <p>$1.096 de retorno documentado en campo real</p>
+                                </div>
+                            </div>
+                            <div class="roi-step">
+                                <div class="roi-step-num">3</div>
+                                <div>
+                                    <div class="step-label">Ahorro en mortalidad</div>
+                                    <p>$1.573.200 de ahorro adicional por reducción de bajas</p>
+                                </div>
+                            </div>
+                            <div class="roi-step">
+                                <div class="roi-step-num">4</div>
+                                <div>
+                                    <div class="step-label">Ahorro en alimento</div>
+                                    <p>$291 adicionales por ave por menor consumo</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="calc-card">
+                        <h4><i class="bi bi-calculator me-2" style="color:var(--green-600)"></i>Calculadora de retorno
+                            estimado</h4>
+                        <div class="mb-3">
+                            <div class="calc-label">Número de aves en su lote</div>
+                            <input type="number" class="calc-input" id="inputAves" value="10000" min="1000"
+                                step="1000" />
+                        </div>
+                        <div class="mb-3">
+                            <div class="calc-label">Precio de venta por kg (COP $)</div>
+                            <input type="number" class="calc-input" id="inputPrecio" value="5500" min="1000"
+                                step="100" />
+                        </div>
+                        <button class="btn-calc" onclick="calcularROI()">
+                            <i class="bi bi-lightning-charge-fill me-1"></i> Calcular mi retorno
+                        </button>
+                        <div class="calc-result" id="calcResult">
+                            <div class="result-label">Utilidad estimada adicional</div>
+                            <span class="result-num" id="resultNum">$10.960.000</span>
+                            <div class="result-sub" id="resultSub">Para un lote de 10.000 aves · Inversión: $1.560.000
+                            </div>
+                        </div>
+                        <div id="calcDetail"
+                            style="margin-top:1rem;padding:1rem;background:#f4f8f4;border-radius:12px;display:none;">
+                            <div
+                                style="display:flex;justify-content:space-between;font-size:.83rem;margin-bottom:.4rem;">
+                                <span style="color:var(--text-mid);font-weight:600;">Ahorro en mortalidad</span>
+                                <span id="dMortalidad" style="font-weight:700;color:var(--green-700)"></span>
+                            </div>
+                            <div
+                                style="display:flex;justify-content:space-between;font-size:.83rem;margin-bottom:.4rem;">
+                                <span style="color:var(--text-mid);font-weight:600;">Utilidad por mayor peso</span>
+                                <span id="dPeso" style="font-weight:700;color:var(--green-700)"></span>
+                            </div>
+                            <div style="display:flex;justify-content:space-between;font-size:.83rem;">
+                                <span style="color:var(--text-mid);font-weight:600;">Ahorro en alimento</span>
+                                <span id="dAlimento" style="font-weight:700;color:var(--green-700)"></span>
+                            </div>
+                        </div>
+                        <p class="text-muted mt-3" style="font-size:.75rem;">* Estimación basada en datos de campo
+                            reales. Los resultados pueden variar según condiciones de la granja.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════ TECNOLOGÍA ═══════════════════ -->
+    <section id="tecnologia">
+        <div class="container">
+            <div class="row gy-5 align-items-center">
+                <div class="col-lg-6">
+                    <div class="section-tag">Tecnología propietaria</div>
+                    <h2 class="section-title">¿Por qué nuestra Curcumina es <em>diferente</em>?</h2>
+                    <p class="text-muted" style="font-size:.95rem;line-height:1.7;margin-bottom:1.5rem;">
+                        No toda la curcumina es igual. Nuestra tecnología de extracción en frío preserva el 100%
+                        de los compuestos bioactivos que se pierden en procesos con calor, garantizando máxima
+                        biodisponibilidad y eficacia real en campo.
+                    </p>
+                    <div class="mb-4">
+                        <span class="tech-pill"><i class="bi bi-thermometer-snow"></i> Extracción en frío</span>
+                        <span class="tech-pill"><i class="bi bi-droplet-fill"></i> Hidrosoluble</span>
+                        <span class="tech-pill"><i class="bi bi-shield-check"></i> Sin sodio</span>
+                        <span class="tech-pill"><i class="bi bi-x-circle"></i> Sin pimienta</span>
+                        <span class="tech-pill"><i class="bi bi-award"></i> Designed in USA</span>
+                        <span class="tech-pill"><i class="bi bi-recycle"></i> Sin antibióticos</span>
+                    </div>
+                    <p class="text-muted" style="font-size:.9rem;line-height:1.7;">
+                        La formulación hidrosoluble garantiza una distribución homogénea en el agua de bebida,
+                        asegurando que cada pollito reciba la dosis exacta desde el primer día.
+                    </p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="product-specs">
+                        <p
+                            style="color:var(--lime);font-size:.75rem;text-transform:uppercase;letter-spacing:1.5px;font-weight:700;margin-bottom:1.2rem;">
+                            Especificaciones del producto</p>
+                        <div class="spec-row"><span class="sk">Producto</span><span class="sv">4ourmidable Curcumina
+                                Líquida</span></div>
+                        <div class="spec-row"><span class="sk">Marca</span><span class="sv">4ourmidable – Nutraceutical
+                                Sciences</span></div>
+                        <div class="spec-row"><span class="sk">Presentación</span><span class="sv">420 mL (14.2 FL.
+                                OZ.)</span></div>
+                        <div class="spec-row"><span class="sk">Tipo</span><span class="sv">Alimento líquido concentrado
+                                para preparar bebida</span></div>
+                        <div class="spec-row"><span class="sk">Activo principal</span><span class="sv">Cúrcuma
+                                hidrosoluble</span></div>
+                        <div class="spec-row"><span class="sk">Formulación</span><span class="sv">Sin sodio / Sin
+                                pimienta</span></div>
+                        <div class="spec-row"><span class="sk">Proceso</span><span class="sv">Extracción en frío
+                                (propietario)</span></div>
+                        <div class="spec-row"><span class="sk">Diseño</span><span class="sv">Made / Designed in
+                                USA</span></div>
+                        <div class="spec-row"><span class="sk">Uso recomendado</span><span class="sv">Primeros 14 días
+                                de vida del ave</span></div>
+                        <div class="spec-row"><span class="sk">Inversión por ave</span><span class="sv"
+                                style="color:var(--lime)">$156</span></div>
+                        <div class="spec-row"><span class="sk">Retorno documentado por ave</span><span class="sv"
+                                style="color:var(--lime);font-size:1rem;">$1.096</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════ CTA / CONTACTO ═══════════════════ -->
+    <section id="contacto">
+        <div class="container" style="position:relative;z-index:2;">
+            <div class="row gy-5 align-items-center">
+                <div class="col-lg-5">
+                    <div class="section-tag">Hablemos de su granja</div>
+                    <h2 class="section-title">Solicite su asesoría técnica <em>sin costo</em></h2>
+                    <p class="mb-4">Nuestro equipo técnico le ayudará a calcular el retorno exacto para su operación y
+                        le guiará en la implementación del protocolo.</p>
+
+                    <div class="trust-badge">
+                        <i class="bi bi-headset"></i>
+                        <p><strong>Asesoría técnica gratuita</strong><br>Un especialista en avicultura analizará su
+                            operación.</p>
+                    </div>
+                    <div class="trust-badge">
+                        <i class="bi bi-graph-up"></i>
+                        <p><strong>Cálculo de ROI personalizado</strong><br>Proyección real basada en el tamaño de su
+                            lote.</p>
+                    </div>
+                    <div class="trust-badge">
+                        <i class="bi bi-truck"></i>
+                        <p><strong>Envío y logística</strong><br>Coordinamos entrega directa a su granja o bodega.</p>
+                    </div>
+                    <div class="trust-badge">
+                        <i class="bi bi-patch-check-fill"></i>
+                        <p><strong>Garantía de satisfacción</strong><br>Respaldados por resultados documentados en
+                            campo.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="contact-form">
+                        <p
+                            style="color:var(--lime);font-size:.75rem;text-transform:uppercase;letter-spacing:1.5px;font-weight:700;margin-bottom:1.5rem;">
+                            Complete el formulario — le contactamos en menos de 24h</p>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <input type="text" placeholder="Nombre completo *" />
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" placeholder="Empresa / Granja *" />
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" placeholder="Correo electrónico *" />
+                            </div>
+                            <div class="col-md-6">
+                                <input type="tel" placeholder="WhatsApp / Teléfono *" />
+                            </div>
+                            <div class="col-12">
+                                <select>
+                                    <option value="">Tamaño de su operación (aves/lote)</option>
+                                    <option>Menos de 5.000 aves</option>
+                                    <option>5.000 – 20.000 aves</option>
+                                    <option>20.000 – 50.000 aves</option>
+                                    <option>50.000 – 100.000 aves</option>
+                                    <option>Más de 100.000 aves</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <select>
+                                    <option value="">País / Región</option>
+                                    <option>Colombia</option>
+                                    <option>México</option>
+                                    <option>Perú</option>
+                                    <option>Ecuador</option>
+                                    <option>Chile</option>
+                                    <option>Brasil</option>
+                                    <option>Otro</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <textarea
+                                    placeholder="Cuéntenos sobre su operación o su principal reto actual (opcional)"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button type="button" class="btn-submit">
+                                    <i class="bi bi-send-fill me-2"></i>Solicitar asesoría técnica gratuita
+                                </button>
+                            </div>
+                        </div>
+                        <p style="color:rgba(255,255,255,.3);font-size:.75rem;margin-top:1rem;text-align:center;">
+                            Su información es confidencial. No compartimos datos con terceros.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════ FOOTER ═══════════════════ -->
+    <footer>
+        <div class="container">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+                <div>
+                    <span style="font-weight:900;font-size:1rem;color:rgba(255,255,255,.6);">4ourmidable</span>
+                    <span style="margin-left:.5rem;color:rgba(255,255,255,.3);">Nutraceutical Sciences</span>
+                </div>
+                <div>© 2025 4ourmidable. Todos los derechos reservados. Diseñado en EE.UU.</div>
+                <div class="d-flex gap-3">
+                    <a href="#">Política de privacidad</a>
+                    <a href="#">Términos</a>
+                    <a href="#contacto">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // ── CALCULADORA ROI ──
+        function fmt(n) {
+            return '$' + Math.round(n).toLocaleString('es-CO');
+        }
+
+        function calcularROI() {
+            const aves = parseFloat(document.getElementById('inputAves').value) || 10000;
+            const precio = parseFloat(document.getElementById('inputPrecio').value) || 5500;
+
+            const inversionPorAve = 156;
+            const retornoPorAve = 1096;
+            const pesoPorAve = 0.155;        // kg extra
+            const ahorroAlimento = 291;          // COP por ave
+            const mortalidadCon = 0.0397;
+            const mortalidadSin = 0.0673;
+            const precioAve = 12000;        // COP promedio
+
+            const inversion = aves * inversionPorAve;
+            const utilidadPeso = aves * pesoPorAve * precio;
+            const utilidadAlimento = aves * ahorroAlimento;
+            const avesGuardadas = aves * (mortalidadSin - mortalidadCon);
+            const utilidadMortalidad = avesGuardadas * precioAve;
+            const totalBeneficio = utilidadPeso + utilidadAlimento + utilidadMortalidad;
+            const utilidadNeta = totalBeneficio - inversion;
+
+            document.getElementById('resultNum').textContent = fmt(utilidadNeta);
+            document.getElementById('resultSub').textContent =
+                `Para un lote de ${aves.toLocaleString('es-CO')} aves · Inversión: ${fmt(inversion)}`;
+
+            document.getElementById('dMortalidad').textContent = fmt(utilidadMortalidad);
+            document.getElementById('dPeso').textContent = fmt(utilidadPeso);
+            document.getElementById('dAlimento').textContent = fmt(utilidadAlimento);
+            document.getElementById('calcDetail').style.display = 'block';
+        }
+
+        // Calcular al cargar
+        calcularROI();
+        document.getElementById('inputAves').addEventListener('input', calcularROI);
+        document.getElementById('inputPrecio').addEventListener('input', calcularROI);
+
+        // ── SCROLL ANIMATIONS ──
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('fade-up');
+                    observer.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.benefit-card, .compare-wrapper, .roi-card-main, .calc-card, .product-specs').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+
+</html>

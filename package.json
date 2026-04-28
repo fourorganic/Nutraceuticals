@@ -1,0 +1,18 @@
+{
+  "name": "bootstrap-template",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "sass:build": "sass --no-source-map scss:css",
+    "sass:watch": "sass --no-source-map --watch scss:css"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.8",
+    "sass": "^1.99.0"
+  }
+}

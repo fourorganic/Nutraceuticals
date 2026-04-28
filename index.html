@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fourmidable - Nutraceutical Sciences</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
+    rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+  <!-- ====================================================
+       NAVBAR
+  ===================================================== -->
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+    <div class="container">
+
+      <a class="navbar-brand" href="#">
+        <img src="./img/logo.svg" alt="Fourmidable logo">
+      </a>
+
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+        aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="#benefits">Beneficios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#resultados">Resultados</a></li>
+          <li class="nav-item"><a class="nav-link" href="#aplicacion">Aplicación</a></li>
+          <li class="nav-item"><a class="nav-link" href="#roi">Calculadora</a></li>
+          <li class="nav-item ms-lg-3">
+            <a class="btn btn-nav-cta" href="#contacto">Solicitar asesoría</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- ====================================================
+       HERO
+  ===================================================== -->
+  <section class="hero-section">
+
+    <div class="container hero-body">
+      <div class="row">
+        <div class="col-lg-6 col-xl-5">
+
+          <p class="hero-label">Suplemento inmunomodulador natural</p>
+
+          <h1 class="hero-title">
+            Curcumina líquida para maximizar la rentabilidad en avicultura
+          </h1>
+
+          <p class="hero-copy">
+            Tecnología propietaria de extracción en frío que preserva todos los
+            compuestos orgánicos benéficos para fortalecer el sistema inmune de
+            sus aves desde los primeros días de vida.
+          </p>
+
+          <div class="row g-2 mb-4">
+            <div class="col-3">
+              <div class="hero-feature">
+                <img src="img/less-mortality-1.svg" alt="Menor mortalidad">
+                <span>Menor mortalidad</span>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="hero-feature">
+                <img src="img/less-consumption-1.svg" alt="Menor consumo">
+                <span>Menor consumo</span>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="hero-feature">
+                <img src="img/higher-weight-1.svg" alt="Mayor peso">
+                <span>Mayor peso</span>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="hero-feature">
+                <img src="img/higher-profit-1.svg" alt="Mayor rentabilidad">
+                <span>Mayor rentabilidad</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#" class="btn btn-hero-primary">
+              Solicitar asesoría técnica <i class="bi bi-arrow-right ms-1"></i>
+            </a>
+          </div>
+
+          <div class="hero-highlight">
+            <i class="bi bi-shield-fill-check"></i>
+            Hasta <strong>+$1.096</strong> de retorno por ave con una inversión mínima de <strong>$156</strong> por ave.
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats bar -->
+    <!--
+    <div class="hero-stats">
+      <div class="container">
+        <div class="row g-0 align-items-stretch">
+
+          <div class="col-6 col-md-3">
+            <div class="hero-stat">
+              <img src="img/less-mortality-2.svg" class="hero-stat__icon" alt="">
+              <div>
+                <span class="hero-stat__num">-40%</span>
+                <p class="hero-stat__label">
+                  en mortalidad<br>
+                  <small>de 6,73% a 3,97%</small>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-3">
+            <div class="hero-stat hero-stat--bordered">
+              <img src="img/less-consumption-2.svg" class="hero-stat__icon" alt="">
+              <div>
+                <span class="hero-stat__num">-3,8%</span>
+                <p class="hero-stat__label">
+                  en consumo de alimento<br>
+                  <small>de 4.295 a 4.032 kg por ave</small>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-3">
+            <div class="hero-stat hero-stat--bordered">
+              <img src="img/higher-weight-2.svg" class="hero-stat__icon" alt="">
+              <div>
+                <span class="hero-stat__num">+150 g</span>
+                <p class="hero-stat__label">
+                  más de peso por ave<br>
+                  <small>de 2,280 a 2,460 kg</small>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-3">
+            <div class="hero-stat hero-stat--bordered">
+              <img src="img/higher-profit-2.svg" class="hero-stat__icon" alt="">
+              <div>
+                <span class="hero-stat__num hero-stat__num--accent">7,0x</span>
+                <p class="hero-stat__label">
+                  más retorno<br>
+                  <small>$26 millones de utilidad</small>
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    -->
+
+  </section>
+
+  <!-- ====================================================
+       BENERFITS
+  ===================================================== -->
+  <section class="benefits section-pad-lg" id="benefits">
+    <div class="container">
+
+      <div class="row mb-5">
+        <div class="col-lg-7">
+          <div class="section-tag">Beneficios comprobados</div>
+          <h2 class="section-heading benefits__heading">
+            Todo lo que su granja <em>necesita</em> para crecer
+          </h2>
+          <p class="benefits__intro">
+            Como inmunomodulador natural de alta biodisponibilidad, nuestra Curcumina líquida
+            ofrece a sus aves el mejor refuerzo para sobrevivir sus primeros días de vida,
+            impactando directamente su rentabilidad operativa.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+
+        <div class="col-md-6 col-lg-3">
+          <div class="benefit-card benefit-card--green">
+            <div class="benefit-icon benefit-icon--green">
+              <i class="bi bi-shield-check"></i>
+            </div>
+            <h4>Menor Mortalidad</h4>
+            <div class="benefit-metric benefit-metric--green">−40%</div>
+            <p>Reducción del lote de 6,73% a 3,97%, garantizando el retorno de la inversión del producto.
+              Ahorro de <strong>$1.573.200</strong> por lote.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="benefit-card benefit-card--orange">
+            <div class="benefit-icon benefit-icon--orange">
+              <i class="bi bi-basket3"></i>
+            </div>
+            <h4>Menor Consumo</h4>
+            <div class="benefit-metric benefit-metric--orange">−3,8%</div>
+            <p>Reducción de 4,295 kg a 4,132 kg de alimento por ave gracias a un sistema inmune fortalecido.
+              Ahorro de <strong>$291 por ave</strong>.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="benefit-card benefit-card--lime">
+            <div class="benefit-icon benefit-icon--lime">
+              <i class="bi bi-graph-up-arrow"></i>
+            </div>
+            <h4>Mayor Peso</h4>
+            <div class="benefit-metric benefit-metric--lime">+155g</div>
+            <p>Más de 150 gramos de peso extra en promedio por ave gracias a una mejor conversión
+              alimenticia. Utilidad de <strong>$1.008/ave</strong>.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="benefit-card benefit-card--gold">
+            <div class="benefit-icon benefit-icon--gold">
+              <i class="bi bi-currency-dollar"></i>
+            </div>
+            <h4>Mayor Rentabilidad</h4>
+            <div class="benefit-metric benefit-metric--gold">7,0×</div>
+            <p>Mayor conversión para obtener el máximo retorno económico en cada lote.
+              <strong>Sin uso de antibióticos</strong>, reduciendo costos y riesgos regulatorios.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       APLICACIÓN
+  ===================================================== -->
+  <section class="aplicacion section-pad-lg" id="aplicacion">
+    <div class="container">
+      <div class="row gy-5 align-items-center">
+
+        <!-- Left: timeline -->
+        <div class="col-lg-5">
+          <div class="section-tag">Protocolo de aplicación</div>
+          <h2 class="aplicacion__title">Simple. <em>Eficaz</em>. En sólo 2 semanas.</h2>
+          <p class="aplicacion__intro">
+            La aplicación durante las primeras dos semanas de vida garantiza el refuerzo inmunitario clave
+            para una óptima conversión alimenticia durante todo el ciclo productivo.
+          </p>
+
+          <div class="timeline mt-4">
+            <div class="timeline-item">
+              <div class="timeline-dot">1</div>
+              <h5>Días 1–3 · Llegada del pollito</h5>
+              <p>Aplicación en agua de bebida a dosis de arranque. Estimulación inmune desde la primera hora de vida.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot">2</div>
+              <h5>Días 4–7 · Consolidación</h5>
+              <p>Mantenimiento de la dosis para consolidar la respuesta inmune y mejorar la absorción de nutrientes.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot">3</div>
+              <h5>Días 8–14 · Potenciación</h5>
+              <p>Refuerzo final que marca la diferencia en conversión y peso durante todo el ciclo hasta el día 50.</p>
+            </div>
+            <div class="timeline-item mb-0">
+              <div class="timeline-dot timeline-dot--check">✓</div>
+              <h5 class="timeline-item__final">Beneficio sostenido hasta el día 50</h5>
+              <p>Sin necesidad de reaplicar. La modulación inmune se sostiene y se traduce en mayor peso y rentabilidad al sacrificio.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: chart + dosage -->
+        <div class="col-lg-7">
+
+          <div class="chart-container mb-4">
+            <p class="chart-container__title">Evolución del peso promedio (kg) — Con vs. Sin Curcumina</p>
+            <svg viewBox="0 0 620 280" xmlns="http://www.w3.org/2000/svg" width="100%">
+              <defs>
+                <linearGradient id="fillGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#a7d818" stop-opacity="0.18" />
+                  <stop offset="100%" stop-color="#a7d818" stop-opacity="0" />
+                </linearGradient>
+              </defs>
+              <text x="28" y="32"  fill="#9aaa9e" font-size="11" text-anchor="end" font-family="Inter,sans-serif">2.5</text>
+              <text x="28" y="82"  fill="#9aaa9e" font-size="11" text-anchor="end" font-family="Inter,sans-serif">2.0</text>
+              <text x="28" y="132" fill="#9aaa9e" font-size="11" text-anchor="end" font-family="Inter,sans-serif">1.5</text>
+              <text x="28" y="182" fill="#9aaa9e" font-size="11" text-anchor="end" font-family="Inter,sans-serif">1.0</text>
+              <text x="28" y="232" fill="#9aaa9e" font-size="11" text-anchor="end" font-family="Inter,sans-serif">0.5</text>
+              <line x1="35" y1="28"  x2="610" y2="28"  stroke="#e8edea" stroke-width="1" />
+              <line x1="35" y1="78"  x2="610" y2="78"  stroke="#e8edea" stroke-width="1" />
+              <line x1="35" y1="128" x2="610" y2="128" stroke="#e8edea" stroke-width="1" />
+              <line x1="35" y1="178" x2="610" y2="178" stroke="#e8edea" stroke-width="1" />
+              <line x1="35" y1="228" x2="610" y2="228" stroke="#e8edea" stroke-width="1" />
+              <rect x="35" y="28" width="166" height="200" fill="rgba(240,120,40,.07)" rx="4" />
+              <text x="118" y="244" fill="#f28c00" font-size="10" text-anchor="middle" font-family="Inter,sans-serif" font-weight="700">Aplicación Curcumina</text>
+              <text x="35"  y="258" fill="#9aaa9e" font-size="10" text-anchor="middle" font-family="Inter,sans-serif">0</text>
+              <text x="91"  y="258" fill="#9aaa9e" font-size="10" text-anchor="middle" font-family="Inter,sans-serif">5</text>
+              <text x="147" y="258" fill="#9aaa9e" font-size="10" text-anchor="middle" font-family="Inter,sans-serif">10</text>
+              <text x="202" y="258" fill="#9aaa9e" font-size="10" text-anchor="middle" font-family="Inter,sans-serif">15</text>
+              <text x="258" y="258" fill="#9aaa9e" font-size="10" text-anchor="middle" font-family="Inter,sans-serif">20</text>
+              <text x="314" y="258" fill="#9aaa9e" font-size="10" text-anchor="middle" font-family="Inter,sans-serif">25</text>
+              <text x="369" y="258" fill="#9aaa9e" font-size="10" text-anchor="middle" font-family="Inter,sans-serif">30</text>
+              <text x="425" y="258" fill="#9aaa9e" font-size="10" text-anchor="middle" font-family="Inter,sans-serif">35</text>
+              <text x="481" y="258" fill="#9aaa9e" font-size="10" text-anchor="middle" font-family="Inter,sans-serif">40</text>
+              <text x="536" y="258" fill="#9aaa9e" font-size="10" text-anchor="middle" font-family="Inter,sans-serif">45</text>
+              <text x="592" y="258" fill="#9aaa9e" font-size="10" text-anchor="middle" font-family="Inter,sans-serif">50</text>
+              <path d="M35,228 C60,222 80,210 91,198 C115,175 140,145 147,130 C160,105 175,80 202,62 C225,47 258,38 314,33 C369,28 425,26 481,24 C520,23 560,22 592,21 L592,228 Z" fill="url(#fillGrad)" />
+              <path d="M35,228 C60,224 80,215 91,205 C115,185 140,158 147,143 C160,118 175,95 202,78 C225,63 258,54 314,46 C369,40 425,37 481,34 C520,32 560,31 592,30" stroke="#2e7d32" stroke-width="2.5" fill="none" stroke-dasharray="5,4" />
+              <path d="M35,228 C60,222 80,210 91,198 C115,175 140,145 147,130 C160,105 175,80 202,62 C225,47 258,38 314,33 C369,28 425,26 481,24 C520,23 560,22 592,21" stroke="#f28c00" stroke-width="3" fill="none" />
+              <circle cx="592" cy="21" r="5" fill="#f28c00" />
+              <circle cx="592" cy="30" r="5" fill="#2e7d32" />
+              <text x="598" y="19" fill="#f28c00" font-size="10" font-weight="700" font-family="Inter,sans-serif">2.44 kg ↑</text>
+              <text x="598" y="33" fill="#2e7d32" font-size="10" font-weight="700" font-family="Inter,sans-serif">2.29 kg</text>
+              <rect x="38"  y="270" width="12" height="4" fill="#f28c00" rx="2" />
+              <text x="55"  y="276" fill="#555" font-size="11" font-family="Inter,sans-serif">Con Curcumina</text>
+              <line x1="150" y1="272" x2="162" y2="272" stroke="#2e7d32" stroke-width="2" stroke-dasharray="4,3" />
+              <text x="167" y="276" fill="#555" font-size="11" font-family="Inter,sans-serif">Sin Curcumina</text>
+            </svg>
+          </div>
+
+          <div class="dosage-card">
+            <p class="dosage-card__label">Dosificación referencial</p>
+            <div class="dosage-row">
+              <div class="dosage-pill"><i class="bi bi-droplet me-1"></i> 1 ml / litro</div>
+              <p>Concentración en agua de bebida durante todo el período de aplicación.</p>
+            </div>
+            <div class="dosage-row">
+              <div class="dosage-pill"><i class="bi bi-clock me-1"></i> 14 días</div>
+              <p>Ventana de aplicación crítica: primeros 14 días de vida del pollito.</p>
+            </div>
+            <div class="dosage-row dosage-row--last">
+              <div class="dosage-pill"><i class="bi bi-droplet-half me-1"></i> 420 mL</div>
+              <p>Presentación concentrada hidrosoluble. Sin sodio, sin pimienta. Diseñado en EE.UU.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       RESULTADOS COMPARATIVOS
+  ===================================================== -->
+  <section class="resultados section-pad-lg" id="resultados">
+    <div class="container">
+
+      <div class="row mb-5">
+        <div class="col-lg-7">
+          <div class="section-tag">Datos de campo reales</div>
+          <h2 class="section-heading">Resultados que <em>hablan solos</em></h2>
+          <p class="resultados__intro">
+            Comparativa directa entre un lote suplementado con Curcumina (sin antibiótico)
+            vs. el lote control con antibiótico tradicional. Los números son contundentes.
+          </p>
+        </div>
+      </div>
+
+      <div class="compare-wrapper mb-4">
+        <div class="row g-0">
+          <div class="col-md-6">
+            <div class="compare-col with">
+              <h4><i class="bi bi-check-circle-fill me-2"></i>Lote CON Curcumina <span class="compare-col__sub">(sin antibiótico)</span></h4>
+              <div class="compare-row"><span class="label">Peso por ave</span><span class="value" style="color:#a7d818">2,440 kg</span></div>
+              <div class="compare-row"><span class="label">Consumo alimento</span><span class="value">4,13 kg/ave</span></div>
+              <div class="compare-row"><span class="label">Conversión</span><span class="value">1,69</span></div>
+              <div class="compare-row"><span class="label">Mortalidad</span><span class="value" style="color:#a7d818">3,97%</span></div>
+              <div class="compare-row"><span class="label">Rentabilidad</span><span class="value" style="color:#a7d818;font-size:1.1rem;">102,8 millones</span></div>
+              <div class="compare-highlight">
+                <span class="ch-label">Retorno de inversión</span>
+                <span class="ch-value">7,0×</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="compare-col without">
+              <h4><i class="bi bi-x-circle me-2" style="color:rgba(255,255,255,.3)"></i>Lote SIN Curcumina <span class="compare-col__sub">(con antibiótico)</span></h4>
+              <div class="compare-row"><span class="label">Peso por ave</span><span class="value">2,285 kg</span></div>
+              <div class="compare-row"><span class="label">Consumo alimento</span><span class="value">4,29 kg/ave</span></div>
+              <div class="compare-row"><span class="label">Conversión</span><span class="value">1,88</span></div>
+              <div class="compare-row"><span class="label">Mortalidad</span><span class="value" style="color:#ff6b6b">6,73%</span></div>
+              <div class="compare-row"><span class="label">Rentabilidad</span><span class="value" style="font-size:1.1rem;">76,5 millones</span></div>
+              <div class="compare-highlight compare-highlight--muted">
+                <span class="ch-label">Diferencia vs. con Curcumina</span>
+                <span class="ch-value" style="color:#ff6b6b">−$26M</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Beneficios resumidos -->
+      <div class="benefit-banner">
+        <div class="row g-3">
+          <div class="col-6 col-md-3">
+            <div class="benefit-tag">
+              <i class="bi bi-arrow-up-circle-fill"></i>
+              <div><small>Retorno</small><br><strong>7,0× más ROI</strong></div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="benefit-tag">
+              <i class="bi bi-arrow-up-circle-fill"></i>
+              <div><small>Peso extra</small><br><strong>+0,155 kg/ave</strong></div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="benefit-tag gold-tag">
+              <i class="bi bi-ban"></i>
+              <div><small>Sin</small><br><strong>antibióticos</strong></div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="benefit-tag gold-tag">
+              <i class="bi bi-currency-dollar"></i>
+              <div><small>Utilidad extra</small><br><strong>$26M / lote</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====================================================
+       ROI & CALCULADORA
+  ===================================================== -->
+  <section class="roi-calc section-pad-lg" id="roi">
+    <div class="container">
+
+      <div class="row mb-5">
+        <div class="col-lg-7">
+          <div class="section-tag">Retorno de inversión</div>
+          <h2 class="section-heading">Una inversión de $156 por ave que <em>rinde $1.096</em></h2>
+          <p class="roi-calc__intro">
+            Calcule cuánto puede ganar su granja con Curcumina 4ourmidable.
+            Ingrese el tamaño de su lote y vea los resultados en tiempo real.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4 align-items-start">
+        <div class="col-lg-5">
+          <div class="roi-card-main">
+            <span class="roi-number">7,0×</span>
+            <div class="roi-sub">Tasa interna de retorno por lote</div>
+            <div class="roi-steps">
+              <div class="roi-step">
+                <div class="roi-step-num">1</div>
+                <div>
+                  <div class="step-label">Inversión por ave</div>
+                  <p>$156 por ave suplementada durante 14 días</p>
+                </div>
+              </div>
+              <div class="roi-step">
+                <div class="roi-step-num">2</div>
+                <div>
+                  <div class="step-label">Retorno garantizado</div>
+                  <p>$1.096 de retorno documentado en campo real</p>
+                </div>
+              </div>
+              <div class="roi-step">
+                <div class="roi-step-num">3</div>
+                <div>
+                  <div class="step-label">Ahorro en mortalidad</div>
+                  <p>$1.573.200 de ahorro adicional por reducción de bajas</p>
+                </div>
+              </div>
+              <div class="roi-step">
+                <div class="roi-step-num">4</div>
+                <div>
+                  <div class="step-label">Ahorro en alimento</div>
+                  <p>$291 adicionales por ave por menor consumo</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="calc-card">
+            <h4><i class="bi bi-calculator me-2" style="color:#2e7d32"></i>Calculadora de retorno estimado</h4>
+            <div class="mb-3">
+              <div class="calc-label">Número de aves en su lote</div>
+              <input type="number" class="calc-input" id="inputAves" value="10000" min="1000" step="1000" />
+            </div>
+            <div class="mb-3">
+              <div class="calc-label">Precio de venta por kg (COP $)</div>
+              <input type="number" class="calc-input" id="inputPrecio" value="5500" min="1000" step="100" />
+            </div>
+            <button class="btn-calc" onclick="calcularROI()">
+              <i class="bi bi-lightning-charge-fill me-1"></i> Calcular mi retorno
+            </button>
+            <div class="calc-result" id="calcResult">
+              <div class="result-label">Utilidad estimada adicional</div>
+              <span class="result-num" id="resultNum">$10.960.000</span>
+              <div class="result-sub" id="resultSub">Para un lote de 10.000 aves · Inversión: $1.560.000</div>
+            </div>
+            <div id="calcDetail" style="margin-top:1rem;padding:1rem;background:#f4f8f4;border-radius:12px;display:none;">
+              <div style="display:flex;justify-content:space-between;font-size:.83rem;margin-bottom:.4rem;">
+                <span style="color:#3a5040;font-weight:600;">Ahorro en mortalidad</span>
+                <span id="dMortalidad" style="font-weight:700;color:#1f5228"></span>
+              </div>
+              <div style="display:flex;justify-content:space-between;font-size:.83rem;margin-bottom:.4rem;">
+                <span style="color:#3a5040;font-weight:600;">Utilidad por mayor peso</span>
+                <span id="dPeso" style="font-weight:700;color:#1f5228"></span>
+              </div>
+              <div style="display:flex;justify-content:space-between;font-size:.83rem;">
+                <span style="color:#3a5040;font-weight:600;">Ahorro en alimento</span>
+                <span id="dAlimento" style="font-weight:700;color:#1f5228"></span>
+              </div>
+            </div>
+            <p class="text-muted mt-3" style="font-size:.75rem;">* Estimación basada en datos de campo reales. Los resultados pueden variar según condiciones de la granja.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════ CTA / CONTACTO ═══════════════════ -->
+  <section id="contacto" class="contacto-section">
+    <div class="container" style="position:relative;z-index:2;">
+      <div class="row gy-5 align-items-center">
+        <div class="col-lg-5">
+          <div class="section-tag">Hablemos de su granja</div>
+          <h2 class="section-title">Solicite su asesoría técnica <em>sin costo</em></h2>
+          <p class="mb-4">Nuestro equipo técnico le ayudará a calcular el retorno exacto para su operación y le guiará
+            en la implementación del protocolo.</p>
+
+          <div class="trust-badge">
+            <i class="bi bi-headset"></i>
+            <p><strong>Asesoría técnica gratuita</strong><br>Un especialista en avicultura analizará su operación.</p>
+          </div>
+          <div class="trust-badge">
+            <i class="bi bi-graph-up"></i>
+            <p><strong>Cálculo de ROI personalizado</strong><br>Proyección real basada en el tamaño de su lote.</p>
+          </div>
+          <div class="trust-badge">
+            <i class="bi bi-truck"></i>
+            <p><strong>Envío y logística</strong><br>Coordinamos entrega directa a su granja o bodega.</p>
+          </div>
+          <div class="trust-badge">
+            <i class="bi bi-patch-check-fill"></i>
+            <p><strong>Garantía de satisfacción</strong><br>Respaldados por resultados documentados en campo.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="contact-form">
+            <p class="contact-form__label">Complete el formulario — le contactamos en menos de 24h</p>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <input type="text" placeholder="Nombre completo *" />
+              </div>
+              <div class="col-md-6">
+                <input type="text" placeholder="Empresa / Granja *" />
+              </div>
+              <div class="col-md-6">
+                <input type="email" placeholder="Correo electrónico *" />
+              </div>
+              <div class="col-md-6">
+                <input type="tel" placeholder="WhatsApp / Teléfono *" />
+              </div>
+              <div class="col-12">
+                <select>
+                  <option value="">Tamaño de su operación (aves/lote)</option>
+                  <option>Menos de 5.000 aves</option>
+                  <option>5.000 – 20.000 aves</option>
+                  <option>20.000 – 50.000 aves</option>
+                  <option>50.000 – 100.000 aves</option>
+                  <option>Más de 100.000 aves</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <select>
+                  <option value="">País / Región</option>
+                  <option>Colombia</option>
+                  <option>México</option>
+                  <option>Perú</option>
+                  <option>Ecuador</option>
+                  <option>Chile</option>
+                  <option>Brasil</option>
+                  <option>Otro</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <textarea placeholder="Cuéntenos sobre su operación o su principal reto actual (opcional)"></textarea>
+              </div>
+              <div class="col-12">
+                <button type="button" class="btn-submit">
+                  <i class="bi bi-send-fill me-2"></i>Solicitar asesoría técnica gratuita
+                </button>
+              </div>
+            </div>
+            <p class="contact-form__disclaimer">Su información es confidencial. No compartimos datos con terceros.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       FOOTER
+  ===================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row gy-4">
+
+        <!-- Brand col -->
+        <div class="col-lg-4 col-md-6">
+          <a href="#" class="footer__brand">Four<span>midable</span></a>
+          <p class="footer__desc">
+            Science-backed nutraceuticals for people who refuse to settle for
+            less than peak health. Founded by clinicians, loved by 250K+ customers.
+          </p>
+          <div class="footer__social">
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Twitter/X"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Products col -->
+        <div class="col-lg-2 col-md-6">
+          <div class="footer__heading">Products</div>
+          <ul class="footer__links">
+            <li><a href="#">Omega-3 Fish Oil</a></li>
+            <li><a href="#">Ashwagandha</a></li>
+            <li><a href="#">Probiotics</a></li>
+            <li><a href="#">Vitamin D3+K2</a></li>
+            <li><a href="#">Multivitamins</a></li>
+            <li><a href="#">View All</a></li>
+          </ul>
+        </div>
+
+        <!-- Company col -->
+        <div class="col-lg-2 col-md-6">
+          <div class="footer__heading">Company</div>
+          <ul class="footer__links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Our Science</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+          </ul>
+        </div>
+
+        <!-- Support col -->
+        <div class="col-lg-2 col-md-6">
+          <div class="footer__heading">Support</div>
+          <ul class="footer__links">
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Shipping &amp; Returns</a></li>
+            <li><a href="#">Track Order</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Wholesale</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact col -->
+        <div class="col-lg-2 col-md-6">
+          <div class="footer__heading">Contact</div>
+          <ul class="footer__links">
+            <li>
+              <i class="bi bi-envelope me-2" style="color:rgba(255,255,255,0.35)"></i>
+              hello@fourmidable.com
+            </li>
+            <li>
+              <i class="bi bi-telephone me-2" style="color:rgba(255,255,255,0.35)"></i>
+              1-800-FOURMID
+            </li>
+            <li>
+              <i class="bi bi-geo-alt me-2" style="color:rgba(255,255,255,0.35)"></i>
+              Austin, TX 78701
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <hr class="footer__divider">
+
+      <div class="footer__bottom">
+        <span>© 2026 Fourmidable Nutraceuticals. All rights reserved.</span>
+        <div class="d-flex gap-3">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Cookie Settings</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ====================================================
+       SCRIPTS
+  ===================================================== -->
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Navbar: add .scrolled class once page is scrolled
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    });
+  </script>
+  <script>
+    // ── CALCULADORA ROI ──
+    function fmt(n) {
+      return '$' + Math.round(n).toLocaleString('es-CO');
+    }
+
+    function calcularROI() {
+      const aves = parseFloat(document.getElementById('inputAves').value) || 10000;
+      const precio = parseFloat(document.getElementById('inputPrecio').value) || 5500;
+
+      const inversionPorAve = 156;
+      const retornoPorAve = 1096;
+      const pesoPorAve = 0.155;
+      const ahorroAlimento = 291;
+      const mortalidadCon = 0.0397;
+      const mortalidadSin = 0.0673;
+      const precioAve = 12000;
+
+      const inversion = aves * inversionPorAve;
+      const utilidadPeso = aves * pesoPorAve * precio;
+      const utilidadAlimento = aves * ahorroAlimento;
+      const avesGuardadas = aves * (mortalidadSin - mortalidadCon);
+      const utilidadMortalidad = avesGuardadas * precioAve;
+      const totalBeneficio = utilidadPeso + utilidadAlimento + utilidadMortalidad;
+      const utilidadNeta = totalBeneficio - inversion;
+
+      document.getElementById('resultNum').textContent = fmt(utilidadNeta);
+      document.getElementById('resultSub').textContent =
+        `Para un lote de ${aves.toLocaleString('es-CO')} aves · Inversión: ${fmt(inversion)}`;
+
+      document.getElementById('dMortalidad').textContent = fmt(utilidadMortalidad);
+      document.getElementById('dPeso').textContent = fmt(utilidadPeso);
+      document.getElementById('dAlimento').textContent = fmt(utilidadAlimento);
+      document.getElementById('calcDetail').style.display = 'block';
+    }
+
+    // Calcular al cargar (solo si los elementos existen en el DOM)
+    if (document.getElementById('inputAves')) {
+      calcularROI();
+      document.getElementById('inputAves').addEventListener('input', calcularROI);
+      document.getElementById('inputPrecio').addEventListener('input', calcularROI);
+    }
+
+    // ── SCROLL ANIMATIONS ──
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('fade-up');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.benefit-card, .compare-wrapper, .roi-card-main, .calc-card, .product-specs').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+
+</body>
+
+</html>
