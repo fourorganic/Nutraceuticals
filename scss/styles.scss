@@ -903,6 +903,92 @@ body {
 }
 
 // ============================================================
+// Tecnología
+// ============================================================
+
+.tecnologia {
+  background-color: #fff;
+
+  .section-heading em {
+    font-style: italic;
+    color: $primary;
+  }
+
+  &__intro {
+    font-size: 0.95rem;
+    color: #6c757d;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+
+  &__desc {
+    font-size: 0.9rem;
+    color: #6c757d;
+    line-height: 1.7;
+  }
+}
+
+.tech-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(46, 125, 50, 0.08);
+  border: 1px solid rgba(46, 125, 50, 0.2);
+  border-radius: 50rem;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #1f5228;
+  margin: 0.3rem;
+
+  i {
+    color: $primary;
+  }
+}
+
+.product-specs {
+  background: #0d2b12;
+  border-radius: 1.25rem;
+  padding: 2rem;
+  color: #fff;
+
+  &__label {
+    color: $secondary;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+  }
+}
+
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.88rem;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  .sk {
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 600;
+  }
+
+  .sv {
+    color: #fff;
+    font-weight: 700;
+    text-align: right;
+
+    &--lime { color: $secondary; }
+    &--lg { font-size: 1rem; }
+  }
+}
+
+// ============================================================
 // CTA Banner / Newsletter
 // ============================================================
 
@@ -1229,22 +1315,20 @@ body {
   color: rgba(255, 255, 255, 0.65);
 
   &__brand {
-    font-family: $headings-font-family;
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: #fff;
     display: inline-block;
     margin-bottom: 1rem;
 
-    span {
-      color: $accent;
+    img {
+      width: 180px;
+      height: auto;
+      display: block;
     }
   }
 
   &__desc {
     font-size: 0.875rem;
     line-height: 1.7;
-    max-width: 280px;
+    max-width: 360px;
     margin-bottom: 1.5rem;
   }
 
@@ -1290,6 +1374,8 @@ body {
 
     li {
       margin-bottom: 0.6rem;
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.875rem;
     }
 
     a {
@@ -1300,6 +1386,18 @@ body {
 
       &:hover {
         color: $secondary;
+      }
+    }
+
+    &--contact li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+
+      i {
+        color: rgba(255, 255, 255, 0.35);
+        margin-top: 0.15rem;
+        flex-shrink: 0;
       }
     }
   }
