@@ -12368,7 +12368,7 @@ body {
 }
 
 .compare-wrapper {
-  background: #0d2b12;
+  background: #1d501d;
   border-radius: 1.5rem;
   overflow: hidden;
 }
@@ -12377,7 +12377,7 @@ body {
   padding: 2.5rem;
 }
 .compare-col.with {
-  background: #1a4220;
+  background: #1d501d;
 }
 .compare-col.without {
   background: rgba(0, 0, 0, 0.2);
@@ -12458,7 +12458,7 @@ body {
 }
 
 .benefit-banner {
-  background: linear-gradient(135deg, #1f5228, #0d2b12);
+  background: linear-gradient(135deg, #1d501d, #1d501d);
   border-radius: 1.25rem;
   padding: 2rem;
 }
@@ -12522,7 +12522,7 @@ body {
 }
 
 .roi-card-main {
-  background: #0d2b12;
+  background: #1d501d;
   border-radius: 1.5rem;
   padding: 3rem;
   color: #fff;
@@ -12590,7 +12590,7 @@ body {
 .calc-card h4, .calc-card .h4 {
   font-family: "Manrope", sans-serif;
   font-weight: 800;
-  color: #0d2b12;
+  color: #1d501d;
   margin-bottom: 1.5rem;
 }
 
@@ -12611,7 +12611,7 @@ body {
   font-family: "Manrope", sans-serif;
   font-size: 1rem;
   font-weight: 700;
-  color: #0d2b12;
+  color: #1d501d;
   outline: none;
   transition: border-color 0.2s;
   background: #f4f8f4;
@@ -12621,7 +12621,7 @@ body {
 }
 
 .calc-result {
-  background: #0d2b12;
+  background: #1d501d;
   border-radius: 1rem;
   padding: 1.5rem;
   margin-top: 1.5rem;
@@ -12650,7 +12650,7 @@ body {
 .btn-calc {
   width: 100%;
   background: #a7d818;
-  color: #0d2b12;
+  color: #1d501d;
   font-weight: 800;
   font-size: 1rem;
   border: none;
@@ -12694,7 +12694,7 @@ body {
   padding: 0.5rem 1.2rem;
   font-size: 0.82rem;
   font-weight: 700;
-  color: #1f5228;
+  color: #1d501d;
   margin: 0.3rem;
 }
 .tech-pill i {
@@ -12702,7 +12702,7 @@ body {
 }
 
 .product-specs {
-  background: #0d2b12;
+  background: #1d501d;
   border-radius: 1.25rem;
   padding: 2rem;
   color: #fff;
@@ -12757,7 +12757,7 @@ body {
 }
 
 .contacto-section {
-  background: linear-gradient(160deg, #123c1f 0%, #1a4220 100%);
+  background: linear-gradient(160deg, #123c1f 0%, #1d501d 100%);
   padding: 6rem 0;
   position: relative;
   overflow: hidden;
@@ -12898,7 +12898,7 @@ body {
 }
 
 .roi-calc {
-  background: linear-gradient(160deg, #123c1f 0%, #1a4220 100%);
+  background: linear-gradient(160deg, #123c1f 0%, #1d501d 100%);
 }
 .roi-calc .section-label {
   color: #a7d818;
