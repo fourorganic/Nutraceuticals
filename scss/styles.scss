@@ -444,7 +444,7 @@ body {
   margin-bottom: 2.5rem;
 
   h5 {
-    color: $secondary;
+    color: $primary;
     font-weight: 800;
     font-size: 0.9rem;
     margin-bottom: 0.3rem;
@@ -470,13 +470,13 @@ body {
   width: 26px;
   height: 26px;
   border-radius: 50%;
-  background: $secondary;
+  background: $primary;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 0.7rem;
   font-weight: 900;
-  color: $dark;
+  color: #fff;
   border: 3px solid $dark;
   z-index: 2;
 
@@ -537,7 +537,7 @@ body {
 }
 
 .dosage-pill {
-  background: $green-700;
+  background: $primary;
   border-radius: 50rem;
   padding: 0.4rem 1rem;
   font-size: 0.8rem;

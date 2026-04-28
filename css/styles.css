@@ -12257,7 +12257,7 @@ body {
   margin-bottom: 2.5rem;
 }
 .timeline-item h5, .timeline-item .h5 {
-  color: #a7d818;
+  color: #1d501d;
   font-weight: 800;
   font-size: 0.9rem;
   margin-bottom: 0.3rem;
@@ -12280,13 +12280,13 @@ body {
   width: 26px;
   height: 26px;
   border-radius: 50%;
-  background: #a7d818;
+  background: #1d501d;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 0.7rem;
   font-weight: 900;
-  color: #123c1f;
+  color: #fff;
   border: 3px solid #123c1f;
   z-index: 2;
 }
@@ -12342,7 +12342,7 @@ body {
 }
 
 .dosage-pill {
-  background: #1f5228;
+  background: #1d501d;
   border-radius: 50rem;
   padding: 0.4rem 1rem;
   font-size: 0.8rem;
