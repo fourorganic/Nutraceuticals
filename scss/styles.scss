@@ -120,7 +120,7 @@ body {
 // ============================================================
 
 .hero-section {
-  background: url('../img/Hero-background.jpg') left center / cover no-repeat;
+  background: url('../img/Hero-background.svg') left center / cover no-repeat;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -1469,4 +1469,224 @@ body {
 }
 .text-accent {
   color: $accent !important;
+}
+
+// ============================================================
+// Responsive
+// ============================================================
+
+// ── Navbar toggler (always on dark hero background) ──────────
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255%2C255%2C255%2C0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar.scrolled .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2818%2C60%2C31%2C0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+// ── Tablet (< 992px) ─────────────────────────────────────────
+@media (max-width: 991.98px) {
+  .section-pad-lg {
+    padding: 5rem 0;
+  }
+
+  // Mobile nav menu needs a background to be readable over the hero
+  .navbar-collapse.show,
+  .navbar-collapse.collapsing {
+    background: rgba($dark, 0.97);
+    border-radius: 0.75rem;
+    padding: 1rem 1.25rem;
+    margin-top: 0.5rem;
+  }
+
+  .navbar.scrolled .navbar-collapse.show,
+  .navbar.scrolled .navbar-collapse.collapsing {
+    background: #fff;
+  }
+
+  .navbar.scrolled .navbar-collapse.show .nav-link,
+  .navbar.scrolled .navbar-collapse.collapsing .nav-link {
+    color: $dark;
+  }
+
+  .btn-nav-cta {
+    display: inline-block;
+    margin-top: 0.5rem;
+  }
+
+  .hero-kpis {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .hero-kpi {
+    flex: 1 0 40%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .kpi-sep {
+    display: none;
+  }
+}
+
+// ── Mobile (< 768px) ─────────────────────────────────────────
+@media (max-width: 767.98px) {
+  .section-pad-lg {
+    padding: 4rem 0;
+  }
+
+  // Hero
+  .hero-section {
+    min-height: auto;
+    background-position: 70% center;
+    background-size: cover;
+  }
+
+  .hero-body {
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+  }
+
+  .hero-copy {
+    max-width: 100%;
+  }
+
+  .btn-hero-primary {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  // Beneficios
+  .benefit-card {
+    padding: 1.5rem;
+  }
+
+  // Aplicación
+  .chart-container {
+    overflow-x: auto;
+
+    svg {
+      min-width: 280px;
+    }
+  }
+
+  .dosage-card {
+    padding: 1.25rem;
+  }
+
+  // Resultados
+  .compare-col.with,
+  .compare-col.without {
+    padding: 1.5rem;
+  }
+
+  .compare-highlight .ch-value {
+    font-size: 1.4rem;
+  }
+
+  // ROI
+  .roi-card-main {
+    padding: 2rem;
+  }
+
+  .roi-number {
+    font-size: 3.5rem;
+  }
+
+  .calc-card {
+    padding: 1.75rem;
+  }
+
+  // Tecnología
+  .tech-pill {
+    font-size: 0.78rem;
+    padding: 0.4rem 0.9rem;
+  }
+
+  // Contacto
+  .contacto-section {
+    padding: 4rem 0;
+  }
+
+  // Footer
+  .footer {
+    padding: 3rem 0 1.5rem;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+// ── Small mobile (< 576px) ────────────────────────────────────
+@media (max-width: 575.98px) {
+  .section-pad-lg {
+    padding: 3rem 0;
+  }
+
+  // Hero
+  .hero-body {
+    padding-top: 5.5rem;
+  }
+
+  .hero-title {
+    font-size: 1.9rem;
+  }
+
+  .hero-kpi {
+    flex: 1 0 46%;
+    padding: 0.6rem 0.4rem;
+  }
+
+  .kpi-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  // Compare
+  .compare-wrapper {
+    border-radius: 1rem;
+  }
+
+  .compare-col.with,
+  .compare-col.without {
+    padding: 1.25rem;
+  }
+
+  .compare-highlight {
+    flex-direction: column;
+    gap: 0.25rem;
+    text-align: center;
+  }
+
+  // ROI
+  .roi-card-main {
+    padding: 1.5rem;
+  }
+
+  .roi-number {
+    font-size: 3rem;
+  }
+
+  // Tecnología
+  .product-specs {
+    padding: 1.5rem;
+  }
+
+  // Beneficios banner
+  .benefit-banner {
+    padding: 1.5rem;
+  }
+
+  // Contacto form
+  .contact-form {
+    padding: 1.5rem;
+  }
+
+  // Section heading
+  .section-heading {
+    font-size: 1.75rem;
+  }
 }
