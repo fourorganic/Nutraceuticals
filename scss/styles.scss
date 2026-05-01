@@ -120,7 +120,7 @@ body {
 // ============================================================
 
 .hero-section {
-  background: url('../img/Hero-background.svg') left center / cover no-repeat;
+  background: url('../img/Hero-Background.jpg') center center / cover no-repeat;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -263,6 +263,15 @@ body {
     color: #fff;
     transform: translateY(-2px);
   }
+}
+
+// Mobile-only hero image zone — hidden on desktop
+.hero-mobile-image {
+  display: none;
+}
+
+.hero-mobile-tagline {
+  display: none;
 }
 
 // Hero stats bar
@@ -1535,26 +1544,112 @@ body {
     padding: 4rem 0;
   }
 
-  // Hero
+  // Hero – two-zone mobile layout
   .hero-section {
-    min-height: auto;
-    background-position: 70% center;
-    background-size: cover;
+    background: #1D501C;
+    min-height: 0;
+  }
+
+  .hero-mobile-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 5.5rem 1.5rem 2rem;
+    background: url('../img/HeroMobile-1.jpg') center / cover no-repeat;
+    min-height: 44vh;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.05) 70%);
+      pointer-events: none;
+    }
+
+    .hero-label {
+      position: relative;
+      z-index: 1;
+      color: $secondary;
+      margin-bottom: 0.4rem;
+    }
+  }
+
+  .hero-mobile-tagline {
+    display: block;
+    position: relative;
+    z-index: 1;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+    font-size: 2.25rem;
+    color: #fff;
+    line-height: 1.1;
+    margin: 0;
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.35);
   }
 
   .hero-body {
-    padding-top: 6rem;
-    padding-bottom: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 2.5rem;
+    flex: unset;
+    align-items: flex-start;
+
+    // Hide the label inside hero-body — shown in image zone instead
+    .hero-label {
+      display: none;
+    }
+  }
+
+  .hero-title {
+    font-size: 1.85rem;
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
   }
 
   .hero-copy {
     max-width: 100%;
+    font-size: 0.875rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .hero-kpis {
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 1.25rem 0;
+    justify-content: space-between;
+  }
+
+  .kpi-sep {
+    display: none;
+  }
+
+  .hero-kpi {
+    flex: 0 0 25%;
+    padding: 0.4rem 0.25rem;
+  }
+
+  .kpi-icon {
+    width: 36px;
+    height: 36px;
   }
 
   .btn-hero-primary {
     width: 100%;
     justify-content: center;
     text-align: center;
+    background-color: $secondary;
+    color: $dark;
+
+    &:hover {
+      background-color: darken($secondary, 8%);
+      color: $dark;
+    }
+  }
+
+  .hero-highlight {
+    text-align: center;
+    justify-content: center;
+    font-size: 0.78rem;
   }
 
   // Beneficios

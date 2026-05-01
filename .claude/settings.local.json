@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sips -g pixelWidth -g pixelHeight /Users/icaro/Developer/Fourmidable-Web/Nutraceuticals/img/Hero-background.svg)",
+      "Bash(python3 -c ' *)",
+      "Bash(python3)"
+    ]
+  }
+}
