@@ -354,7 +354,9 @@ body {
   border: 1px solid #e8edea;
   position: relative;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 
   &::before {
     content: '';
@@ -371,10 +373,18 @@ body {
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
   }
 
-  &--green::before { background: $primary; }
-  &--orange::before { background: $accent; }
-  &--lime::before   { background: $secondary; }
-  &--gold::before   { background: #f5c842; }
+  &--green::before {
+    background: $primary;
+  }
+  &--orange::before {
+    background: $accent;
+  }
+  &--lime::before {
+    background: $secondary;
+  }
+  &--gold::before {
+    background: #f5c842;
+  }
 
   h4 {
     font-family: 'Manrope', sans-serif;
@@ -402,10 +412,22 @@ body {
   font-size: 1.5rem;
   margin-bottom: 1.2rem;
 
-  &--green  { background: rgba($primary, 0.12);   color: $primary; }
-  &--orange { background: rgba($accent, 0.12);    color: $accent; }
-  &--lime   { background: rgba($secondary, 0.18); color: #5a8a00; }
-  &--gold   { background: rgba(#f5c842, 0.18);    color: #b08800; }
+  &--green {
+    background: rgba($primary, 0.12);
+    color: $primary;
+  }
+  &--orange {
+    background: rgba($accent, 0.12);
+    color: $accent;
+  }
+  &--lime {
+    background: rgba($secondary, 0.18);
+    color: #5a8a00;
+  }
+  &--gold {
+    background: rgba(#f5c842, 0.18);
+    color: #b08800;
+  }
 }
 
 .benefit-metric {
@@ -414,10 +436,18 @@ body {
   line-height: 1;
   margin-bottom: 0.75rem;
 
-  &--green  { color: $primary; }
-  &--orange { color: $accent; }
-  &--lime   { color: #5a8a00; }
-  &--gold   { color: #b08800; }
+  &--green {
+    color: $primary;
+  }
+  &--orange {
+    color: $accent;
+  }
+  &--lime {
+    color: #5a8a00;
+  }
+  &--gold {
+    color: #b08800;
+  }
 }
 
 // ============================================================
@@ -427,7 +457,9 @@ body {
 .aplicacion {
   background: $dark;
 
-  .section-tag { color: $secondary; }
+  .section-tag {
+    color: $secondary;
+  }
 
   &__title {
     font-family: 'Manrope', sans-serif;
@@ -555,7 +587,9 @@ body {
   gap: 1rem;
   margin-bottom: 1.2rem;
 
-  &--last { margin-bottom: 0; }
+  &--last {
+    margin-bottom: 0;
+  }
 
   p {
     color: rgba(255, 255, 255, 0.7);
@@ -1011,8 +1045,12 @@ body {
     font-weight: 700;
     text-align: right;
 
-    &--lime { color: $secondary; }
-    &--lg { font-size: 1rem; }
+    &--lime {
+      color: $secondary;
+    }
+    &--lg {
+      font-size: 1rem;
+    }
   }
 }
 
@@ -1140,7 +1178,9 @@ body {
       font-size: 0.9rem;
       font-family: 'Manrope', sans-serif;
       outline: none;
-      transition: border-color 0.2s, background-color 0.2s;
+      transition:
+        border-color 0.2s,
+        background-color 0.2s;
       appearance: none;
 
       &::placeholder {
@@ -1195,9 +1235,15 @@ body {
 .roi-calc {
   background: linear-gradient(160deg, $dark 0%, #1a3d20 100%);
 
-  .section-label   { color: $secondary; }
-  .section-heading { color: #fff; }
-  .section-subheading { color: rgba(255, 255, 255, 0.6); }
+  .section-label {
+    color: $secondary;
+  }
+  .section-heading {
+    color: #fff;
+  }
+  .section-subheading {
+    color: rgba(255, 255, 255, 0.6);
+  }
 }
 
 .calc-card {
@@ -1236,7 +1282,9 @@ body {
     font-weight: 700;
     font-family: 'Manrope', sans-serif;
     outline: none;
-    transition: border-color 0.2s, background-color 0.2s;
+    transition:
+      border-color 0.2s,
+      background-color 0.2s;
 
     &:focus {
       border-color: $secondary;
@@ -1546,7 +1594,7 @@ body {
 
   // Hero – two-zone mobile layout
   .hero-section {
-    background: #1D501C;
+    background: #1d501c;
     min-height: 0;
   }
 
@@ -1556,14 +1604,18 @@ body {
     justify-content: flex-start;
     padding: 5.5rem 1.5rem 2rem;
     background: url('../img/HeroMobile-1.jpg') center / cover no-repeat;
-    min-height: 44vh;
+    min-height: 55vh;
     position: relative;
 
     &::after {
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.05) 70%);
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.45) 0%,
+        rgba(0, 0, 0, 0.05) 70%
+      );
       pointer-events: none;
     }
 
